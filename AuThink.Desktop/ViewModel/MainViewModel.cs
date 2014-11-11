@@ -9,9 +9,7 @@ namespace AuThink.Desktop.ViewModel
 
         public MainViewModel()
         {
-            var b = new Class1();
-
-            a = b.Panj;
+            
         }
     }
 }

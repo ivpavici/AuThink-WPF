@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Data\Local\DefaultDataFactory.cs" />
     <Compile Include="Entities\Child.cs" />
@@ -61,6 +60,7 @@
     <Folder Include="Data\External\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Gear.png" />
     <Content Include="Resources\Images\Affiliation\1\kitchen tool_2.png" />
     <Content Include="Resources\Images\Affiliation\1\kitchen tool_3.png" />
     <Content Include="Resources\Images\Affiliation\1\Police-car.png" />
@@ -375,6 +375,11 @@
     <Content Include="Resources\Images\VoiceCommands\Show_size\9\kuhaca.jpg" />
     <Content Include="Resources\Images\VoiceCommands\Show_size\9\mala_kuhaca.png" />
     <Content Include="Resources\Images\VoiceCommands\Show_size\9\zlica.jpg" />
+    <Content Include="Resources\Nagradni ekran\checkmark.png" />
+    <Content Include="Resources\Nagradni ekran\crossmark.png" />
+    <Content Include="Resources\Nagradni ekran\nagradni ekran.png" />
+    <Content Include="Resources\placeholder.png" />
+    <Content Include="Resources\refresh.png" />
     <Content Include="Resources\Sounds\aplauz-dugi.mp3" />
     <Content Include="Resources\Sounds\bravo.mp3" />
     <Content Include="Resources\Sounds\excellent.mp3" />
@@ -500,9 +505,15 @@
     <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\tocno.mp3" />
     <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\upari_boje.mp3" />
     <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\upari_oblik1.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\Thumbs.db" />
+    <Content Include="Resources\TaskIcons\task-affiliation-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-continue-sequence-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-detect-colors-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-detect-different-items-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-detect-same-items-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-order-by-size-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-pair-halves-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-pair-same-items-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-voice-commands-256x256.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

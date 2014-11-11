@@ -13,7 +13,7 @@ namespace AuThink.Desktop.Model.Entities
             string type,
             int difficulty,
 
-            List<Picture> pictures,
+            IEnumerable<Picture> pictures,
             Sound voiceCommand = null
         )
         {
@@ -35,7 +35,7 @@ namespace AuThink.Desktop.Model.Entities
         public string Type { get; private set; }
         public int Difficulty { get; private set; }
 
-        public List<Picture> Pictures { get; private set; }
+        public IEnumerable<Picture> Pictures { get; private set; }
         public Sound VoiceCommand { get; private set; }
     }
 }

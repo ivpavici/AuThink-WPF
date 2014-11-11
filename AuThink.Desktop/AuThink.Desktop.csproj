@@ -66,6 +66,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\DraggableElement.cs" />
+    <Compile Include="Controls\DropPlaceholder.cs" />
+    <Compile Include="Converters\EnableButtonConverter.cs" />
+    <Compile Include="Converters\MultiplyByScreenRatio.cs" />
+    <Compile Include="Converters\VisibilityBottunConvertor.cs" />
+    <Compile Include="Services\InternetConnection.cs" />
+    <Compile Include="Services\Shuffler.cs" />
+    <Compile Include="Services\UIServices.cs" />
+    <Compile Include="Settings\Language.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="View\MainWindow.xaml">
@@ -103,6 +112,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Assets\Fonts\ObelixPro.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +125,21 @@
       <Project>{48739e27-f02b-44de-9aae-6d296c0b189d}</Project>
       <Name>AuThink.Desktop.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\Logo\authink-background.jpg" />
+    <Resource Include="Assets\Logo\authink-lite-logo-white.png" />
+    <Resource Include="Assets\Logo\authink-lite-logo.png" />
+    <Resource Include="Assets\Logo\authink-logo.png" />
+    <Resource Include="Assets\Logo\authink-logo_White.png" />
+    <Resource Include="Assets\Logo\lite-tile.png" />
+    <Resource Include="Assets\Logo\Logo.png" />
+    <Resource Include="Assets\Logo\SmallLogo.png" />
+    <Resource Include="Assets\Logo\SplashLite.png" />
+    <Resource Include="Assets\Logo\SplashScreen.png" />
+    <Resource Include="Assets\Logo\StoreLogo.png" />
+    <Resource Include="Assets\Logo\WideLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

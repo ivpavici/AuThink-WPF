@@ -56,7 +56,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-continue-sequence-256x256.png",
                                    type:        "#004",
                                    difficulty:   2,
-                                   pictures:    new List<Picture>
+                                   pictures:    new List<Picture.AnswerPicture>
                                                 {
                                                      new Picture.AnswerPicture(23, @"ms-appx:///Resources/Images/ContinueSequence/2/coffee cup.png", null, false ),
                                                      new Picture.AnswerPicture(24, @"ms-appx:///Resources/Images/ContinueSequence/2/cup.png",        null, false),
