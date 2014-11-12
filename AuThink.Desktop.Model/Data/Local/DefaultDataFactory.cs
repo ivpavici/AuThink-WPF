@@ -1,39 +1,39 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-using AuThink.Desktop.Model.Entities;
+using ent = AuThink.Desktop.Model.Entities;
 
 namespace AuThink.Desktop.Model.Data.Local
 {
-    public class DefaultDataFactory: IDataProvider
+    public class DefaultDataFactory : IDataProvider
     {
-        public IEnumerable<Test> GetAll()
+        public IEnumerable<ent::Test> GetAll()
         {
             return PrivateDataModel_Hr();
             
             //(string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr"
-            //    ? PrivateDataModel_Hr()
-            //    : PrivateDataModel_En();
+            //? PrivateDataModel_Hr()
+            //: PrivateDataModel_En();
         }
 
-        public IEnumerable<Child> GetAllChildren()
+        public IEnumerable<ent::Child> GetAllChildren()
         {
             throw new System.NotImplementedException();
         }
 
-        private static IEnumerable<Test> PrivateDataModel_Hr()
+        private static IEnumerable<ent::Test> PrivateDataModel_Hr()
         {
             return
                 new[]
                     {
-                        new Test
+                        new ent::Test
                         (
                         id:          2,
                         name:        "Nastavi niz",
                         description: "U ovom testu je potrebno kroz tri zadatka prepoznati koji predmeti nastavljaju zadani niz.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          4,
                                    name:        "Nastavi niz, Težina 1",
@@ -41,14 +41,14 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-continue-sequence-256x256.png",
                                    type:        "#004",
                                    difficulty:   1,
-                                   pictures:    new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new Picture.AnswerPicture(21, @"ms-appx:///Resources/Images/ContinueSequence/1/bowl.png",     null, false ),
-                                                     new Picture.AnswerPicture(22, @"ms-appx:///Resources/Images/ContinueSequence/1/casserole.png",null, false),
+                                                     new ent::Picture.AnswerPicture(21, @"ms-appx:///Resources/Images/ContinueSequence/1/bowl.png",     null, false ),
+                                                     new ent::Picture.AnswerPicture(22, @"ms-appx:///Resources/Images/ContinueSequence/1/casserole.png",null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
                                   ),
-                                  new Task
+                                  new ent::Task
                                    (
                                    id:          5,
                                    name:        "Nastavi niz, Težina 2",
@@ -56,15 +56,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-continue-sequence-256x256.png",
                                    type:        "#004",
                                    difficulty:   2,
-                                   pictures:    new List<Picture.AnswerPicture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new Picture.AnswerPicture(23, @"ms-appx:///Resources/Images/ContinueSequence/2/coffee cup.png", null, false ),
-                                                     new Picture.AnswerPicture(24, @"ms-appx:///Resources/Images/ContinueSequence/2/cup.png",        null, false),
-                                                     new Picture.AnswerPicture(25, @"ms-appx:///Resources/Images/ContinueSequence/2/frying pan.png", null, false),
+                                                     new ent::Picture.AnswerPicture(23, @"ms-appx:///Resources/Images/ContinueSequence/2/coffee cup.png", null, false ),
+                                                     new ent::Picture.AnswerPicture(24, @"ms-appx:///Resources/Images/ContinueSequence/2/cup.png",        null, false),
+                                                     new ent::Picture.AnswerPicture(25, @"ms-appx:///Resources/Images/ContinueSequence/2/frying pan.png", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
                                   ),
-                                  new Task
+                                  new ent::Task
                                    (
                                    id:          6,
                                    name:        "Nastavi niz, Težina 3",
@@ -72,24 +72,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-continue-sequence-256x256.png",
                                    type:        "#004",
                                    difficulty:   3,
-                                   pictures:    new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new Picture.AnswerPicture(26, @"ms-appx:///Resources/Images/ContinueSequence/3/full.png",          null, false ),
-                                                     new Picture.AnswerPicture(27, @"ms-appx:///Resources/Images/ContinueSequence/3/jug.png",           null, false),
-                                                     new Picture.AnswerPicture(28, @"ms-appx:///Resources/Images/ContinueSequence/3/kitchen chair.png", null, false),
-                                                     new Picture.AnswerPicture(29, @"ms-appx:///Resources/Images/ContinueSequence/3/glass.png",         null, false),
+                                                     new ent::Picture.AnswerPicture(26, @"ms-appx:///Resources/Images/ContinueSequence/3/full.png",          null, false ),
+                                                     new ent::Picture.AnswerPicture(27, @"ms-appx:///Resources/Images/ContinueSequence/3/jug.png",           null, false),
+                                                     new ent::Picture.AnswerPicture(28, @"ms-appx:///Resources/Images/ContinueSequence/3/kitchen chair.png", null, false),
+                                                     new ent::Picture.AnswerPicture(29, @"ms-appx:///Resources/Images/ContinueSequence/3/glass.png",         null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
                                   ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          3,
                         name:        "Prepoznaj boju kojom je obojen predmet",
                         description: "U ovom testu je potrebno kroz tri zadatka prepoznati kojom su bojom obojani zadani predmeti iz kuhinje.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          7,
                                    name:        "Prepoznaj boju kojom je obojen predmet, Težina 1",
@@ -97,18 +97,18 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-colors-256x256.png",
                                    type:        "#003",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.ColorPicture>
                                                 {
-                                                    new Picture.ColorPicture(30, @"ms-appx:///Resources/Images/DetectColors/1/bowl.png",               null, new List<Color>{new Color(1, "#0000FF", true, 28),new Color(1, "#FF0000", false, 28)}),
-                                                    new Picture.ColorPicture(31, @"ms-appx:///Resources/Images/DetectColors/1/red-casserole.png",      null, new List<Color>{new Color(1, "#FF0000", true, 28),new Color(1, "#A52A2A", false, 29)}),
-                                                    new Picture.ColorPicture(32, @"ms-appx:///Resources/Images/DetectColors/1/blue coffee cup.png",    null, new List<Color>{new Color(1, "#0000FF", true, 28),new Color(1, "#800080", false, 30)}),
-                                                    new Picture.ColorPicture(33, @"ms-appx:///Resources/Images/DetectColors/1/greenCup.png",           null, new List<Color>{new Color(1, "#008000", true, 28),new Color(1, "#FFA500", false, 31)}),
-                                                    new Picture.ColorPicture(34, @"ms-appx:///Resources/Images/DetectColors/1/red glass.png",          null, new List<Color>{new Color(1, "#FF0000", true, 28),new Color(1, "#008000", false, 32)}),
-                                                    new Picture.ColorPicture(35, @"ms-appx:///Resources/Images/DetectColors/1/green kitchen chair.png",null, new List<Color>{new Color(1, "#008000", true, 28),new Color(1, "#0000FF", false, 33)})
+                                                    new ent::Picture.ColorPicture(30, @"ms-appx:///Resources/Images/DetectColors/1/bowl.png",               null, new List<ent::Color>{new ent::Color(1, "#0000FF", true, 28),new ent::Color(1, "#FF0000", false, 28)}),
+                                                    new ent::Picture.ColorPicture(31, @"ms-appx:///Resources/Images/DetectColors/1/red-casserole.png",      null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#A52A2A", false, 29)}),
+                                                    new ent::Picture.ColorPicture(32, @"ms-appx:///Resources/Images/DetectColors/1/blue coffee cup.png",    null, new List<ent::Color>{new ent::Color(1, "#0000FF", true, 28),new ent::Color(1, "#800080", false, 30)}),
+                                                    new ent::Picture.ColorPicture(33, @"ms-appx:///Resources/Images/DetectColors/1/greenCup.png",           null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#FFA500", false, 31)}),
+                                                    new ent::Picture.ColorPicture(34, @"ms-appx:///Resources/Images/DetectColors/1/red glass.png",          null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 32)}),
+                                                    new ent::Picture.ColorPicture(35, @"ms-appx:///Resources/Images/DetectColors/1/green kitchen chair.png",null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#0000FF", false, 33)})
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          8,
                                    name:        "Prepoznaj boju kojom je obojen predmet, Težina 2",
@@ -116,16 +116,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-colors-256x256.png",
                                    type:        "#003",
                                    difficulty:   2,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.ColorPicture>
                                                 {
-                                                    new Picture.ColorPicture(36, @"ms-appx:///Resources/Images/DetectColors/2/bowl.png",                 null, new List<Color>{new Color(1, "#0000FF", true, 28),new Color(1, "#008000", false, 34),new Color(1, "#A52A2A", false, 28),new Color(1, "#FFA500", false, 34)}),
-                                                    new Picture.ColorPicture(37, @"ms-appx:///Resources/Images/DetectColors/2/greenCup.png",             null, new List<Color>{new Color(1, "#008000", true, 28),new Color(1, "#FFA500", false, 35),new Color(1, "#0000FF", false, 28),new Color(1, "#A52A2A", false, 35)}),
-                                                    new Picture.ColorPicture(38, @"ms-appx:///Resources/Images/DetectColors/2/red kitchen chair.png",    null, new List<Color>{new Color(1, "#FF0000", true, 28),new Color(1, "#008000", false, 36),new Color(1, "#FFA500", false, 28),new Color(1, "#0000FF", false, 36)}),
-                                                    new Picture.ColorPicture(39, @"ms-appx:///Resources/Images/DetectColors/2/yellow kitchen tool_3.png",null, new List<Color>{new Color(1, "#FFFF00", true, 28),new Color(1, "#0000FF", false, 37),new Color(1, "#FFA500", false, 28),new Color(1, "#008000", false, 37)})
+                                                    new ent::Picture.ColorPicture(36, @"ms-appx:///Resources/Images/DetectColors/2/bowl.png",                 null, new List<ent::Color>{new ent::Color(1, "#0000FF", true, 28),new ent::Color(1, "#008000", false, 34),new ent::Color(1, "#A52A2A", false, 28),new ent::Color(1, "#FFA500", false, 34)}),
+                                                    new ent::Picture.ColorPicture(37, @"ms-appx:///Resources/Images/DetectColors/2/greenCup.png",             null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#FFA500", false, 35),new ent::Color(1, "#0000FF", false, 28),new ent::Color(1, "#A52A2A", false, 35)}),
+                                                    new ent::Picture.ColorPicture(38, @"ms-appx:///Resources/Images/DetectColors/2/red kitchen chair.png",    null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 36),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#0000FF", false, 36)}),
+                                                    new ent::Picture.ColorPicture(39, @"ms-appx:///Resources/Images/DetectColors/2/yellow kitchen tool_3.png",null, new List<ent::Color>{new ent::Color(1, "#FFFF00", true, 28),new ent::Color(1, "#0000FF", false, 37),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#008000", false, 37)})
                                                 }                                                                                                    ,
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")                                                                                                                
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")                                                                                                                
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          9,
                                    name:        "Prepoznaj boju kojom je obojen predmet, Težina 3",
@@ -133,21 +133,21 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-colors-256x256.png",
                                    type:        "#003",
                                    difficulty:   2,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.ColorPicture>
                                                 {
-                                                    new Picture.ColorPicture(40, @"ms-appx:///Resources/Images/DetectColors/3/red kitchen chair.png",null, new List<Color>{new Color(1, "#FF0000", true, 28),new Color(1, "#008000", false, 34),new Color(1, "#FFA500", false, 28),new Color(1, "#0000FF", false, 34),new Color(1, "#A52A2A", false, 34),new Color(1, "#FFFF00", false, 34)}),
-                                                    new Picture.ColorPicture(41, @"ms-appx:///Resources/Images/DetectColors/3/greenCup.png",         null, new List<Color>{new Color(1, "#008000", true, 28),new Color(1, "#FF0000", false, 35),new Color(1, "#0000FF", false, 28),new Color(1, "#FFA500", false, 35),new Color(1, "#FFFF00", false, 35),new Color(1, "#A52A2A", false, 35)})
+                                                    new ent::Picture.ColorPicture(40, @"ms-appx:///Resources/Images/DetectColors/3/red kitchen chair.png",null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 34),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#0000FF", false, 34),new ent::Color(1, "#A52A2A", false, 34),new ent::Color(1, "#FFFF00", false, 34)}),
+                                                    new ent::Picture.ColorPicture(41, @"ms-appx:///Resources/Images/DetectColors/3/greenCup.png",         null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#FF0000", false, 35),new ent::Color(1, "#0000FF", false, 28),new ent::Color(1, "#FFA500", false, 35),new ent::Color(1, "#FFFF00", false, 35),new ent::Color(1, "#A52A2A", false, 35)})
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")
                                    )}),
-                        new Test
+                        new ent::Test
                         (
                         id:          4,
                         name:        "Prepoznaj različit predmet",
                         description: "U ovom testu je potrebno kroz tri zadatka prepoznati različite predmete iz niza istih predmeta.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          10,
                                    name:        "Prepoznaj različit predmet, Težina 1",
@@ -155,18 +155,18 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-different-items-256x256.png",
                                    type:        "#002",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(42, "ms-appx:///Resources/Images/DetectDifferentItems/1/bowl.png",           null, true ),
-                                                    new Picture.AnswerPicture(43, "ms-appx:///Resources/Images/DetectDifferentItems/1/casserole.png",      null, false),
-                                                    new Picture.AnswerPicture(44, "ms-appx:///Resources/Images/DetectDifferentItems/1/frying pan.png",     null, false),
-                                                    new Picture.AnswerPicture(45, "ms-appx:///Resources/Images/DetectDifferentItems/1/glass.png",          null, false),
-                                                    new Picture.AnswerPicture(46, "ms-appx:///Resources/Images/DetectDifferentItems/1/kitchen tool_2.png", null, false),
-                                                    new Picture.AnswerPicture(47, "ms-appx:///Resources/Images/DetectDifferentItems/1/plate_1.png",        null, false)
+                                                    new ent::Picture.AnswerPicture(42, "ms-appx:///Resources/Images/DetectDifferentItems/1/bowl.png",           null, true ),
+                                                    new ent::Picture.AnswerPicture(43, "ms-appx:///Resources/Images/DetectDifferentItems/1/casserole.png",      null, false),
+                                                    new ent::Picture.AnswerPicture(44, "ms-appx:///Resources/Images/DetectDifferentItems/1/frying pan.png",     null, false),
+                                                    new ent::Picture.AnswerPicture(45, "ms-appx:///Resources/Images/DetectDifferentItems/1/glass.png",          null, false),
+                                                    new ent::Picture.AnswerPicture(46, "ms-appx:///Resources/Images/DetectDifferentItems/1/kitchen tool_2.png", null, false),
+                                                    new ent::Picture.AnswerPicture(47, "ms-appx:///Resources/Images/DetectDifferentItems/1/plate_1.png",        null, false)
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          11,
                                    name:        "Prepoznaj različit predmet, Težina 2",
@@ -174,15 +174,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-different-items-256x256.png",
                                    type:        "#002",
                                    difficulty:   2,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(48, "ms-appx:///Resources/Images/DetectDifferentItems/2/lonac.png",            null, true ),
-                                                    new Picture.AnswerPicture(49, "ms-appx:///Resources/Images/DetectDifferentItems/2/Red_cambridge_mug.png", null, false),
+                                                    new ent::Picture.AnswerPicture(48, "ms-appx:///Resources/Images/DetectDifferentItems/2/lonac.png",            null, true ),
+                                                    new ent::Picture.AnswerPicture(49, "ms-appx:///Resources/Images/DetectDifferentItems/2/Red_cambridge_mug.png", null, false),
                                                     
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          12,
                                    name:        "Prepoznaj različit predmet, Težina 3",
@@ -190,21 +190,21 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-different-items-256x256.png",
                                    type:        "#002",
                                    difficulty:   3,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(50, "ms-appx:///Resources/Images/DetectDifferentItems/3/individual-red-mug.png", null, true ),
-                                                    new Picture.AnswerPicture(51, "ms-appx:///Resources/Images/DetectDifferentItems/3/Red_cambridge_mug.png",  null, false),
+                                                    new ent::Picture.AnswerPicture(50, "ms-appx:///Resources/Images/DetectDifferentItems/3/individual-red-mug.png", null, true ),
+                                                    new ent::Picture.AnswerPicture(51, "ms-appx:///Resources/Images/DetectDifferentItems/3/Red_cambridge_mug.png",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
                                    )}),
-                        new Test
+                        new ent::Test
                         (
                         id:          6,
                         name:        "Upari polovice",
                         description: "U ovom testu je potrebno kroz tri zadatka prepoznati i spojiti polovice svakom pojedinom predmetu.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          16,
                                    name:        "Upari polovice, Težina 1",
@@ -212,15 +212,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-halves-256x256.png",
                                    type:        "#005",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.BasicDetails>
                                                 {
-                                                   new Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/1/bowl.png"),
-                                                   new Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/1/casserole.png"),
-                                                   new Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/1/plate_1.png"),
+                                                   new ent::Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/1/bowl.png"),
+                                                   new ent::Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/1/casserole.png"),
+                                                   new ent::Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/1/plate_1.png"),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          17,
                                    name:        "Upari polovice, Težina 2",
@@ -228,17 +228,17 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-halves-256x256.png",
                                    type:        "#005",
                                    difficulty:   2,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.BasicDetails>
                                                 {
-                                                   new Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/2/bowl.png"),
-                                                   new Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/2/casserole.png"),
-                                                   new Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/2/coffee cup.png"),
-                                                   new Picture.BasicDetails(70, @"ms-appx:///Resources/Images/PairHalfs/2/full.png"),
-                                                   new Picture.BasicDetails(71, @"ms-appx:///Resources/Images/PairHalfs/2/jug.png"),
+                                                   new ent::Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/2/bowl.png"),
+                                                   new ent::Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/2/casserole.png"),
+                                                   new ent::Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/2/coffee cup.png"),
+                                                   new ent::Picture.BasicDetails(70, @"ms-appx:///Resources/Images/PairHalfs/2/full.png"),
+                                                   new ent::Picture.BasicDetails(71, @"ms-appx:///Resources/Images/PairHalfs/2/jug.png"),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          18,
                                    name:        "Upari polovice, Težina 3",
@@ -246,26 +246,26 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-halves-256x256.png",
                                    type:        "#005",
                                    difficulty:   2,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.BasicDetails>
                                                 {
-                                                   new Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/3/bowl.png"),
-                                                   new Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/3/casserole.png"),
-                                                   new Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/3/coffee cup.png"),
-                                                   new Picture.BasicDetails(70, @"ms-appx:///Resources/Images/PairHalfs/3/full.png"),
-                                                   new Picture.BasicDetails(71, @"ms-appx:///Resources/Images/PairHalfs/3/jug.png"),
-                                                   new Picture.BasicDetails(72, @"ms-appx:///Resources/Images/PairHalfs/3/kitchen tool_2.png"),
-                                                   new Picture.BasicDetails(73, @"ms-appx:///Resources/Images/PairHalfs/3/plate_1.png"),
+                                                   new ent::Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/3/bowl.png"),
+                                                   new ent::Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/3/casserole.png"),
+                                                   new ent::Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/3/coffee cup.png"),
+                                                   new ent::Picture.BasicDetails(70, @"ms-appx:///Resources/Images/PairHalfs/3/full.png"),
+                                                   new ent::Picture.BasicDetails(71, @"ms-appx:///Resources/Images/PairHalfs/3/jug.png"),
+                                                   new ent::Picture.BasicDetails(72, @"ms-appx:///Resources/Images/PairHalfs/3/kitchen tool_2.png"),
+                                                   new ent::Picture.BasicDetails(73, @"ms-appx:///Resources/Images/PairHalfs/3/plate_1.png"),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
                                    )}),
-                        new Test
+                        new ent::Test
                         (
                         id:          7,
                         name:        "Upari isti predmet",
                         description: "U ovom testu je potrebno kroz tri zadatka prepoznati i upariti dane predmete.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          19,
                                    name:        "Upari isti predmet, Težina 1",
@@ -273,16 +273,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-same-items-256x256.png",
                                    type:        "#001",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(95, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_2.png", null, true),
-                                                    new Picture.AnswerPicture(96, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_3.png", null, true),
-                                                    new Picture.AnswerPicture(97, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_6.png", null, true),
+                                                    new ent::Picture.AnswerPicture(95, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_2.png", null, true),
+                                                    new ent::Picture.AnswerPicture(96, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_3.png", null, true),
+                                                    new ent::Picture.AnswerPicture(97, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_6.png", null, true),
                                                    
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
                                    ),
-                                    new Task
+                                    new ent::Task
                                    (
                                    id:          20,
                                    name:        "Upari isti predmet, Težina 2",
@@ -290,17 +290,17 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-same-items-256x256.png",
                                    type:        "#001",
                                    difficulty:   2,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(98, @"ms-appx:///Resources/Images/PairSameItems/2/bowl.png",           null, true),
-                                                    new Picture.AnswerPicture(99, @"ms-appx:///Resources/Images/PairSameItems/2/casserole.png",      null, true),
-                                                    new Picture.AnswerPicture(100, @"ms-appx:///Resources/Images/PairSameItems/2/cup.png",           null, true),
-                                                    new Picture.AnswerPicture(101, @"ms-appx:///Resources/Images/PairSameItems/2/kitchen chair.png", null, true),
-                                                    new Picture.AnswerPicture(102, @"ms-appx:///Resources/Images/PairSameItems/2/frying pan.png",    null, true)
+                                                    new ent::Picture.AnswerPicture(98, @"ms-appx:///Resources/Images/PairSameItems/2/bowl.png",           null, true),
+                                                    new ent::Picture.AnswerPicture(99, @"ms-appx:///Resources/Images/PairSameItems/2/casserole.png",      null, true),
+                                                    new ent::Picture.AnswerPicture(100, @"ms-appx:///Resources/Images/PairSameItems/2/cup.png",           null, true),
+                                                    new ent::Picture.AnswerPicture(101, @"ms-appx:///Resources/Images/PairSameItems/2/kitchen chair.png", null, true),
+                                                    new ent::Picture.AnswerPicture(102, @"ms-appx:///Resources/Images/PairSameItems/2/frying pan.png",    null, true)
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          21,
                                    name:        "Upari isti predmet, Težina 3",
@@ -308,27 +308,27 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-same-items-256x256.png",
                                    type:        "#001",
                                    difficulty:   3,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(101, @"ms-appx:///Resources/Images/PairSameItems/3/17622157-orange-juice-in-a-jug.png", null, true),
-                                                    new Picture.AnswerPicture(102, @"ms-appx:///Resources/Images/PairSameItems/3/693024_1.png",                       null, true),
-                                                    new Picture.AnswerPicture(103, @"ms-appx:///Resources/Images/PairSameItems/3/9620-08240.png",                     null, true),
-                                                    new Picture.AnswerPicture(104, @"ms-appx:///Resources/Images/PairSameItems/3/casa1.png",                          null, true),
-                                                    new Picture.AnswerPicture(105, @"ms-appx:///Resources/Images/PairSameItems/3/kitchen-tool_2.png",                 null, true),
-                                                    new Picture.AnswerPicture(106, @"ms-appx:///Resources/Images/PairSameItems/3/plate_1.png",                        null, true)
+                                                    new ent::Picture.AnswerPicture(101, @"ms-appx:///Resources/Images/PairSameItems/3/17622157-orange-juice-in-a-jug.png", null, true),
+                                                    new ent::Picture.AnswerPicture(102, @"ms-appx:///Resources/Images/PairSameItems/3/693024_1.png",                       null, true),
+                                                    new ent::Picture.AnswerPicture(103, @"ms-appx:///Resources/Images/PairSameItems/3/9620-08240.png",                     null, true),
+                                                    new ent::Picture.AnswerPicture(104, @"ms-appx:///Resources/Images/PairSameItems/3/casa1.png",                          null, true),
+                                                    new ent::Picture.AnswerPicture(105, @"ms-appx:///Resources/Images/PairSameItems/3/kitchen-tool_2.png",                 null, true),
+                                                    new ent::Picture.AnswerPicture(106, @"ms-appx:///Resources/Images/PairSameItems/3/plate_1.png",                        null, true)
                                                     
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
                                    )
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          8,
                         name:        "Poredaj po veličini",
                         description: "U ovom testu je potrebno kroz tri zadatka posložiti zadane predmete po veličini.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          22,
                                    name:        "Poredaj po veličini, Težina 1",
@@ -336,15 +336,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-order-by-size-256x256.png",
                                    type:        "#008",
                                    difficulty:   3,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(107, @"ms-appx:///Resources/Images/SortBySize/1/jug-1.png", null, true),
-                                                    new Picture.AnswerPicture(108, @"ms-appx:///Resources/Images/SortBySize/1/jug-2.png", null, true),
-                                                    new Picture.AnswerPicture(109, @"ms-appx:///Resources/Images/SortBySize/1/jug-3.png", null, true),
+                                                    new ent::Picture.AnswerPicture(107, @"ms-appx:///Resources/Images/SortBySize/1/jug-1.png", null, true),
+                                                    new ent::Picture.AnswerPicture(108, @"ms-appx:///Resources/Images/SortBySize/1/jug-2.png", null, true),
+                                                    new ent::Picture.AnswerPicture(109, @"ms-appx:///Resources/Images/SortBySize/1/jug-3.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          23,
                                    name:        "Poredaj po veličini, Težina 2",
@@ -352,16 +352,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-order-by-size-256x256.png",
                                    type:        "#008",
                                    difficulty:   5,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(110, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-1.png", null, true),
-                                                    new Picture.AnswerPicture(111, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-2.png", null, true),
-                                                    new Picture.AnswerPicture(112, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-3.png", null, true),
-                                                    new Picture.AnswerPicture(113, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-4.png", null, true),
+                                                    new ent::Picture.AnswerPicture(110, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-1.png", null, true),
+                                                    new ent::Picture.AnswerPicture(111, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-2.png", null, true),
+                                                    new ent::Picture.AnswerPicture(112, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-3.png", null, true),
+                                                    new ent::Picture.AnswerPicture(113, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-4.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          24,
                                    name:        "Poredaj po veličini, Težina 3",
@@ -369,25 +369,25 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-order-by-size-256x256.png",
                                    type:        "#008",
                                    difficulty:   6,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(114, @"ms-appx:///Resources/Images/SortBySize/3/cup-1.png", null, true),
-                                                    new Picture.AnswerPicture(115, @"ms-appx:///Resources/Images/SortBySize/3/cup-2.png", null, true),
-                                                    new Picture.AnswerPicture(116, @"ms-appx:///Resources/Images/SortBySize/3/cup-3.png", null, true),
-                                                    new Picture.AnswerPicture(117, @"ms-appx:///Resources/Images/SortBySize/3/cup-4.png", null, true),
-                                                    new Picture.AnswerPicture(118, @"ms-appx:///Resources/Images/SortBySize/3/cup-5.png", null, true),
+                                                    new ent::Picture.AnswerPicture(114, @"ms-appx:///Resources/Images/SortBySize/3/cup-1.png", null, true),
+                                                    new ent::Picture.AnswerPicture(115, @"ms-appx:///Resources/Images/SortBySize/3/cup-2.png", null, true),
+                                                    new ent::Picture.AnswerPicture(116, @"ms-appx:///Resources/Images/SortBySize/3/cup-3.png", null, true),
+                                                    new ent::Picture.AnswerPicture(117, @"ms-appx:///Resources/Images/SortBySize/3/cup-4.png", null, true),
+                                                    new ent::Picture.AnswerPicture(118, @"ms-appx:///Resources/Images/SortBySize/3/cup-5.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
                                    )
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          9,
                         name:        "Pokaži predmet",
                         description: "U ovom testu je potrebno kroz niz zadataka pokazati na točan predmet prema glasovnoj uputi.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          25,
                                    name:        "Pokaži čašu",
@@ -395,16 +395,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/casa.jpg",   null, true),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/ubrus.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/casa.jpg",   null, true),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_casu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_casu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          26,
                                    name:        "Pokaži bat",
@@ -412,16 +412,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   2,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/casa.jpg",  null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/bat.jpg",   null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/tava.jpg",  null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/ubrus.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/casa.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/bat.jpg",   null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/tava.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/ubrus.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_bat.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_bat.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          27,
                                    name:        "Pokaži dasku",
@@ -429,16 +429,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   3,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/bat.jpg",   null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/casa.jpg",  null, false),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/tava.jpg",  null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/daska.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/bat.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/casa.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/tava.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/daska.jpg", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_dasku1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_dasku1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          28,
                                    name:        "Pokaži kuhinju",
@@ -446,16 +446,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/bat.jpg",       null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/casa.jpg",      null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/kitchen41.jpg", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/daska.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/bat.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/casa.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/kitchen41.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/daska.jpg",     null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_kuhinju.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_kuhinju.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          29,
                                    name:        "Pokaži lonac",
@@ -463,16 +463,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(134, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(135, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/lonac.png",  null, true),
-                                                    new Picture.AnswerPicture(136, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(137, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/ubrus.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(134, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(135, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/lonac.png",  null, true),
+                                                    new ent::Picture.AnswerPicture(136, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(137, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_lonac1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_lonac1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          30,
                                    name:        "Pokaži nož",
@@ -480,16 +480,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(138, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(139, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/noz.jpg",    null, true),
-                                                    new Picture.AnswerPicture(140, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(141, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/ubrus.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(138, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(139, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/noz.jpg",    null, true),
+                                                    new ent::Picture.AnswerPicture(140, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(141, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_noz.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_noz.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          31,
                                    name:        "Pokaži šalicu",
@@ -497,16 +497,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(142, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(143, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/salica.jpg", null, true),
-                                                    new Picture.AnswerPicture(144, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(145, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/ubrus.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(142, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(143, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/salica.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(144, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(145, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_salicu.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_salicu.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          32,
                                    name:        "Pokaži slavinu",
@@ -514,16 +514,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(146, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/tanjur.jpg",  null, false),
-                                                    new Picture.AnswerPicture(147, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/slavina.jpg", null, true),
-                                                    new Picture.AnswerPicture(148, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/casa.jpg",    null, false),
-                                                    new Picture.AnswerPicture(149, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/daska.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(146, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/tanjur.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(147, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/slavina.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(148, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/casa.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(149, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_slavinu.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_slavinu.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          33,
                                    name:        "Pokaži sudoper",
@@ -531,16 +531,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(150, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/tanjur.jpg",  null, false),
-                                                    new Picture.AnswerPicture(151, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/sudoper.jpg", null, true),
-                                                    new Picture.AnswerPicture(152, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/casa.jpg",    null, false),
-                                                    new Picture.AnswerPicture(153, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/daska.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(150, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/tanjur.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(151, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/sudoper.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(152, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/casa.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(153, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_sudoper.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_sudoper.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          34,
                                    name:        "Pokaži tanjur",
@@ -548,16 +548,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(154, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/slavina.jpg", null, false),
-                                                    new Picture.AnswerPicture(155, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/tanjur.jpg",  null, true),
-                                                    new Picture.AnswerPicture(156, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/casa.jpg",    null, false),
-                                                    new Picture.AnswerPicture(157, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/daska.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(154, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/slavina.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(155, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/tanjur.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(156, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/casa.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(157, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_tanjur.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_tanjur.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          35,
                                    name:        "Pokaži tavu",
@@ -565,16 +565,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(158, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/bat.jpg",   null, false),
-                                                    new Picture.AnswerPicture(159, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/tava.jpg",  null, true),
-                                                    new Picture.AnswerPicture(160, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/casa.jpg",  null, false),
-                                                    new Picture.AnswerPicture(161, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/ubrus.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(158, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/bat.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(159, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/tava.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(160, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/casa.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(161, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/ubrus.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_tavu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_tavu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          36,
                                    name:        "Pokaži ubrus",
@@ -582,16 +582,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(162, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(163, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(164, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/casa.jpg",   null, false),
-                                                    new Picture.AnswerPicture(165, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/ubrus.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(162, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(163, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(164, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/casa.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(165, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/ubrus.jpg",  null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_ubrus.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_ubrus.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          37,
                                    name:        "Pokaži vilicu",
@@ -599,16 +599,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(166, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/tanjur.jpg",       null, false),
-                                                    new Picture.AnswerPicture(167, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/zuti_tanjur.jpeg", null, false),
-                                                    new Picture.AnswerPicture(168, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/ubrus2.jpg",       null, false),
-                                                    new Picture.AnswerPicture(169, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/fork.png",         null, true),
+                                                    new ent::Picture.AnswerPicture(166, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/tanjur.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(167, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/zuti_tanjur.jpeg", null, false),
+                                                    new ent::Picture.AnswerPicture(168, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/ubrus2.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(169, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/fork.png",         null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_vilicu.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_vilicu.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          38,
                                    name:        "Pokaži vrč",
@@ -616,16 +616,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(170, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/noz.jpg",           null, false),
-                                                    new Picture.AnswerPicture(171, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/duboki_tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(172, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/vrč.jpg",           null, true),
-                                                    new Picture.AnswerPicture(173, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/zlica.jpg",         null, false),
+                                                    new ent::Picture.AnswerPicture(170, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/noz.jpg",           null, false),
+                                                    new ent::Picture.AnswerPicture(171, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/duboki_tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(172, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/vrč.jpg",           null, true),
+                                                    new ent::Picture.AnswerPicture(173, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/zlica.jpg",         null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_vrc.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_vrc.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          39,
                                    name:        "Pokaži žlicu",
@@ -633,16 +633,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(174, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/slavina.jpg",         null, false),
-                                                    new Picture.AnswerPicture(175, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/tanjur.jpg",          null, false),
-                                                    new Picture.AnswerPicture(176, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/zlica.jpg",           null, true),
-                                                    new Picture.AnswerPicture(177, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/mali_zeleni_vrc.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(174, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/slavina.jpg",         null, false),
+                                                    new ent::Picture.AnswerPicture(175, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/tanjur.jpg",          null, false),
+                                                    new ent::Picture.AnswerPicture(176, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/zlica.jpg",           null, true),
+                                                    new ent::Picture.AnswerPicture(177, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/mali_zeleni_vrc.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_zlicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_zlicu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          40,
                                    name:        "Pokaži kuhaču",
@@ -650,24 +650,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(178, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/duboki2.jpg", null, false),
-                                                    new Picture.AnswerPicture(179, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/tanjur.jpg",  null, false),
-                                                    new Picture.AnswerPicture(180, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/slavina.jpg", null, false),
-                                                    new Picture.AnswerPicture(181, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/kuhaca.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(178, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/duboki2.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(179, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/tanjur.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(180, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/slavina.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(181, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/kuhaca.jpg",  null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/pokazi_kuhacu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/pokazi_kuhacu1.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          10,
                         name:        "Pokaži obojeni predmet",
                         description: "U ovom testu je potrebno kroz niz zadataka pokazati na točno obojan predmet prema glasovnoj uputi.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          41,
                                    name:        "Pokaži crveni tanjur",
@@ -675,16 +675,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_lonac_picto.png", null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_tanjur.jpg",      null, true),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_vrc.png",         null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/salica.jpg",             null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_lonac_picto.png", null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_tanjur.jpg",      null, true),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_vrc.png",         null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/salica.jpg",             null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_crveni_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_crveni_tanjur1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          42,
                                    name:        "Pokaži plavi lonac",
@@ -692,16 +692,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/ljubicasti_lonac_picto.jpg", null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/plavi_lonac.jpeg",           null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/zeleni_lonac_picto.jpg",     null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/zuti_lonac_picto.png",       null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/ljubicasti_lonac_picto.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/plavi_lonac.jpeg",           null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/zeleni_lonac_picto.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/zuti_lonac_picto.png",       null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_plavi_lonac1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_plavi_lonac1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          43,
                                    name:        "Pokaži zelenu vilicu",
@@ -709,16 +709,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/bowl.png",              null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/red kitchen chair.png", null, false),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/greenCup.png",          null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/greenFork.png",         null, true),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/bowl.png",              null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/red kitchen chair.png", null, false),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/greenCup.png",          null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/greenFork.png",         null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_zelenu_vilicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_zelenu_vilicu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          44,
                                    name:        "Pokaži žutu šalicu",
@@ -726,24 +726,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/red glass.png",           null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/red-casserole.png",       null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/yellowCup.png",           null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/green kitchen chair.png", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/red glass.png",           null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/red-casserole.png",       null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/yellowCup.png",           null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/green kitchen chair.png", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_zutu_salicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_zutu_salicu1.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          11,
                         name:        "Pokaži predmet određene boje i veličine",
                         description: "U ovom testu je potrebno kroz niz zadataka pokazati na predmet točne boje i veličine prema glasovnoj uputi.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          45,
                                    name:        "Pokaži mali plavi lonac",
@@ -751,16 +751,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/crveni_lonac.jpg",       null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/mali_plavi_lonac.png",   null, true),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/plavi_vrc.jpeg",         null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/veliki_plavi_lonac.png", null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/crveni_lonac.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/mali_plavi_lonac.png",   null, true),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/plavi_vrc.jpeg",         null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/veliki_plavi_lonac.png", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_m_plavi_lonac1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_m_plavi_lonac1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          46,
                                    name:        "Pokaži mali zeleni vrč",
@@ -768,16 +768,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/plavi_vrc.jpeg",     null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/mali_zeleni_vrc.png",null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/zeleni_vrc.jpg",     null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/zuti_vrc.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/plavi_vrc.jpeg",     null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/mali_zeleni_vrc.png",null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/zeleni_vrc.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/zuti_vrc.jpg",       null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_mali_zeleni_vrc1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_mali_zeleni_vrc1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          47,
                                    name:        "Pokaži veliku crvenu šalicu",
@@ -785,16 +785,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/roza salica.jpeg", null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/salica.jpg",       null, true),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/salica.png",       null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/zuti_vrc.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/roza salica.jpeg", null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/salica.jpg",       null, true),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/salica.png",       null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/zuti_vrc.jpg",     null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_v_crvenu_salicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_v_crvenu_salicu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          48,
                                    name:        "Pokaži veliki žuti tanjur",
@@ -802,24 +802,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.png",   null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/tanjur.jpg",        null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.jpeg",  null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zeleni_tanjur.jpeg",null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.png",   null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/tanjur.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.jpeg",  null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zeleni_tanjur.jpeg",null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_v_zuti_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_v_zuti_tanjur1.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          12,
                         name:        "Pokaži predmet prema funkciji",
                         description: "U ovom testu je potrebno kroz niz zadataka pokazati na predmet po njegovoj funkciji prema glasovnoj uputi.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          49,
                                    name:        "Cime brišeš?",
@@ -827,16 +827,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/casa.jpg",   null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/ubrus2.jpg", null, true),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/zlica.jpg",  null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/casa.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/ubrus2.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/zlica.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_brises.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_brises.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          50,
                                    name:        "Čime jedeš?",
@@ -844,16 +844,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/casa.jpg",   null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/fork.png",   null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/slavina.jpg",null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/casa.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/fork.png",   null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/slavina.jpg",null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_jedes.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_jedes.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          51,
                                    name:        "Čime jedeš juhu?",
@@ -861,16 +861,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/casa.jpg",   null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/ubrus2.jpg", null, false),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/zlica.jpg",  null, true),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/casa.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/ubrus2.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/zlica.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_jedes_juhu.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_jedes_juhu.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          52,
                                    name:        "Čime režeš?",
@@ -878,16 +878,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/casa.jpg",  null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/noz.jpg",   null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/zlica.jpg", null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/tanjur.jpg",null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/casa.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/noz.jpg",   null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/zlica.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/tanjur.jpg",null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_rezes.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_rezes.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          53,
                                    name:        "Iz čega piješ?",
@@ -895,16 +895,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/casa.jpg",   null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/noz.jpg",    null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/zlica.jpg",  null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/casa.jpg",   null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/noz.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/zlica.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/iz_cega_pijes1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/iz_cega_pijes1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          54,
                                    name:        "U čemu se kuha?",
@@ -912,24 +912,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/kuhaca.jpg",       null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/noz.jpg",          null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/plavi_lonac.jpeg", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/zlica.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/kuhaca.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/noz.jpg",          null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/plavi_lonac.jpeg", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/zlica.jpg",        null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/u_cemu_se_kuha1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/u_cemu_se_kuha1.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          13,
                         name:        "Pokaži radnju",
                         description: "U ovom testu je potrebno kroz niz zadataka mora pokazati tko izvodi određenu radnju.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          55,
                                    name:        "Tko briše?",
@@ -937,16 +937,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/brise.jpg",       null, true),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/eating-soup.jpg", null, false),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/guli.jpg",        null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/kuha.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/brise.jpg",       null, true),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/eating-soup.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/guli.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_brise1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_brise1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          56,
                                    name:        "Tko guli?",
@@ -954,16 +954,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/brise.jpg",       null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/eating-soup.jpg", null, false),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/guli.jpg",        null, true),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/kuha.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/brise.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/eating-soup.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/guli.jpg",        null, true),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_guli1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_guli1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          57,
                                    name:        "Tko jede?",
@@ -971,16 +971,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/brise.jpg",       null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/eating-soup.jpg", null, true),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/guli.jpg",        null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/kuha.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/brise.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/eating-soup.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/guli.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_jede1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_jede1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          58,
                                    name:        "Tko kuha?",
@@ -988,16 +988,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/brise.jpg",       null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/eating-soup.jpg", null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/guli.jpg",        null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/kuha.jpg",        null, true),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/brise.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/eating-soup.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/guli.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/kuha.jpg",        null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_kuha1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_kuha1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          59,
                                    name:        "Tko pere?",
@@ -1005,16 +1005,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/brise.jpg", null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/pere.jpg",  null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/guli.jpg",  null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/kuha.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/brise.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/pere.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/guli.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/kuha.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_pere1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_pere1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          60,
                                    name:        "Tko pije?",
@@ -1022,16 +1022,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/brise.jpg", null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/pije.jpg",  null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/pere.jpg",  null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/kuha.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/brise.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/pije.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/pere.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/kuha.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_pije1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_pije1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          61,
                                    name:        "Tko reže?",
@@ -1039,16 +1039,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/reze.jpg", null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/pere.jpg", null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/guli.jpg", null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/kuha.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/reze.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/pere.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/guli.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/kuha.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_reze1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_reze1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          62,
                                    name:        "Tko riba?",
@@ -1056,24 +1056,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/reze.jpg", null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/pere.jpg", null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/ribanje.jpg", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/kuha.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/reze.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/pere.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/ribanje.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/kuha.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_riba1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_riba1.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          14,
                         name:        "Pokaži predmet određene veličine",
                         description: "U ovom testu je potrebno kroz niz zadataka pokazati na predmet određene veličine.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          63,
                                    name:        "Pokaži duboki tanjur!",
@@ -1081,16 +1081,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/tanjur.jpg",        null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/crveni_tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/zuti_tanjur.jpeg",  null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/duboki_tanjur.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/tanjur.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/crveni_tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/zuti_tanjur.jpeg",  null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/duboki_tanjur.jpg", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_duboki_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_duboki_tanjur1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          64,
                                    name:        "Pokaži mali nož!",
@@ -1098,16 +1098,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/tava.jpg",       null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/noz.png",        null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/veliki_noz.jpg", null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/zlica.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/tava.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/noz.png",        null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/veliki_noz.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/zlica.jpg",      null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_mali_noz1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_mali_noz1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          65,
                                    name:        "Pokaži mali vrč!",
@@ -1115,16 +1115,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/zuti_vrc.jpg",    null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/zeleni_vrc.jpg",  null, false),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/plavi_vrc.jpeg",  null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/crveni_vrc.png", null, true),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/zuti_vrc.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/zeleni_vrc.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/plavi_vrc.jpeg",  null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/crveni_vrc.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_mali_vrc.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_mali_vrc.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          66,
                                    name:        "Pokaži malu kuhaču!",
@@ -1132,16 +1132,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/bat.jpg",         null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/kuhaca.jpg",      null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/mala_kuhaca.png", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/zlica.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/bat.jpg",         null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/kuhaca.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/mala_kuhaca.png", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/zlica.jpg",       null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_malu_kuhacu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_malu_kuhacu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          67,
                                    name:        "Pokaži malu žlicu!",
@@ -1149,16 +1149,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/bat.jpg",        null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/kuhaca.jpg",     null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/mala_zlica.jpg", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/zlica.png",      null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/bat.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/kuhaca.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/mala_zlica.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/zlica.png",      null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_malu_zlicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_malu_zlicu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          68,
                                    name:        "Pokaži najmanju dasku!",
@@ -1166,16 +1166,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/m_daska.png", null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/kuhaca.jpg",  null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/daska.jpg",   null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/v_daska.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/m_daska.png", null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/kuhaca.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/daska.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/v_daska.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_najmanju_dasku1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_najmanju_dasku1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          69,
                                    name:        "Pokaži največu tavu!",
@@ -1183,16 +1183,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/pan.jpg",    null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/v_tava.png", null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/tava.png",   null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/pan.jpg",    null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/v_tava.png", null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/tava.png",   null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_najvecu_tavu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_najvecu_tavu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          70,
                                    name:        "Pokaži plitki tanjur!",
@@ -1200,16 +1200,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/tanjur.jpg",        null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/d_plate.jpg",       null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/d_plate2.jpg",      null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/duboki_tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/tanjur.jpg",        null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/d_plate.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/d_plate2.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/duboki_tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_plitki_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_plitki_tanjur1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          71,
                                    name:        "Pokaži veliku kuhaču!",
@@ -1217,16 +1217,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/bat.jpg",         null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/kuhaca.jpg",      null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/mala_kuhaca.png", null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/zlica.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/bat.jpg",         null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/kuhaca.jpg",      null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/mala_kuhaca.png", null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/zlica.jpg",       null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliku_kuhacu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliku_kuhacu1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          72,
                                    name:        "Pokaži veliki lonac!",
@@ -1234,16 +1234,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/crveni_lonac.jpg",       null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/mali_plavi_lonac.png",   null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/pan.jpg",                null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/veliki_plavi_lonac.png", null, true),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/crveni_lonac.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/mali_plavi_lonac.png",   null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/pan.jpg",                null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/veliki_plavi_lonac.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliki_lonac1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliki_lonac1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          73,
                                    name:        "Pokaži veliki tanjur!",
@@ -1251,16 +1251,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/tanjur.png",   null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/m_tanjur.jpg", null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/pan.jpg",      null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/daska.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/tanjur.png",   null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/m_tanjur.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/pan.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/daska.jpg",    null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliki_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliki_tanjur1.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          74,
                                    name:        "Pokaži veliku čašu!",
@@ -1268,32 +1268,32 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/vrč.jpg",        null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/casa.png",       null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/v_casa.jpg",     null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/zuta_salica.png",null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/vrč.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/casa.png",       null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/v_casa.jpg",     null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/zuta_salica.png",null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliku_casu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliku_casu1.mp3", "title")
                                    ),
                                }),
                     }
                     .ToList();
         }
-        private static IEnumerable<Test> PrivateDataModel_En()
+        private static IEnumerable<ent::Test> PrivateDataModel_En()
         {
             return
                 new[]
                     {
-                        new Test
+                        new ent::Test
                         (
                         id:          2,
                         name:        "Continue sequence",
                         description: "The objective of this test is to recognize through three tasks which items continue a given sequence of items.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          4,
                                    name:        "Continue sequence, Difficulty 1",
@@ -1302,14 +1302,14 @@ namespace AuThink.Desktop.Model.Data.Local
                                    type:        "#004",
                                    difficulty:   1,
                                           
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new Picture.AnswerPicture(21, @"ms-appx:///Resources/Images/ContinueSequence/1/bowl.png",     null, false ),
-                                                     new Picture.AnswerPicture(22, @"ms-appx:///Resources/Images/ContinueSequence/1/casserole.png",null, false),
+                                                     new ent::Picture.AnswerPicture(21, @"ms-appx:///Resources/Images/ContinueSequence/1/bowl.png",     null, false ),
+                                                     new ent::Picture.AnswerPicture(22, @"ms-appx:///Resources/Images/ContinueSequence/1/casserole.png",null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
                                   ),
-                                  new Task
+                                  new ent::Task
                                    (
                                    id:          5,
                                    name:        "Continue sequence, Difficulty 2",
@@ -1317,15 +1317,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-continue-sequence-256x256.png",
                                    type:        "#004",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new Picture.AnswerPicture(23, @"ms-appx:///Resources/Images/ContinueSequence/2/coffee cup.png", null, false ),
-                                                     new Picture.AnswerPicture(24, @"ms-appx:///Resources/Images/ContinueSequence/2/cup.png",        null, false),
-                                                     new Picture.AnswerPicture(25, @"ms-appx:///Resources/Images/ContinueSequence/2/frying pan.png", null, false),
+                                                     new ent::Picture.AnswerPicture(23, @"ms-appx:///Resources/Images/ContinueSequence/2/coffee cup.png", null, false ),
+                                                     new ent::Picture.AnswerPicture(24, @"ms-appx:///Resources/Images/ContinueSequence/2/cup.png",        null, false),
+                                                     new ent::Picture.AnswerPicture(25, @"ms-appx:///Resources/Images/ContinueSequence/2/frying pan.png", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
                                   ),
-                                  new Task
+                                  new ent::Task
                                    (
                                    id:          6,
                                    name:        "Continue sequence, Difficulty 3",
@@ -1333,24 +1333,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-continue-sequence-256x256.png",
                                    type:        "#004",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new Picture.AnswerPicture(25, @"ms-appx:///Resources/Images/ContinueSequence/3/full.png",          null, false ),
-                                                     new Picture.AnswerPicture(26, @"ms-appx:///Resources/Images/ContinueSequence/3/jug.png",           null, false),
-                                                     new Picture.AnswerPicture(22, @"ms-appx:///Resources/Images/ContinueSequence/3/kitchen chair.png", null, false),
-                                                     new Picture.AnswerPicture(27, @"ms-appx:///Resources/Images/ContinueSequence/3/glass.png",         null, false),
+                                                     new ent::Picture.AnswerPicture(25, @"ms-appx:///Resources/Images/ContinueSequence/3/full.png",          null, false ),
+                                                     new ent::Picture.AnswerPicture(26, @"ms-appx:///Resources/Images/ContinueSequence/3/jug.png",           null, false),
+                                                     new ent::Picture.AnswerPicture(22, @"ms-appx:///Resources/Images/ContinueSequence/3/kitchen chair.png", null, false),
+                                                     new ent::Picture.AnswerPicture(27, @"ms-appx:///Resources/Images/ContinueSequence/3/glass.png",         null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
                                   ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          3,
                         name:        "Detect colors",
                         description: "The objective of this test is to recognize through three tasks the colors of given items.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          7,
                                    name:        "Detect colors, Difficulty 1",
@@ -1358,18 +1358,18 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-colors-256x256.png",
                                    type:        "#003",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.ColorPicture>
                                                 {
-                                                    new Picture.ColorPicture(30, @"ms-appx:///Resources/Images/DetectColors/1/bowl.png",                null, new List<Color>{new Color(1, "#0000FF", true, 28),new Color(1, "#FF0000", false, 28)}),
-                                                    new Picture.ColorPicture(31, @"ms-appx:///Resources/Images/DetectColors/1/red-casserole.png",      null, new List<Color>{new Color(1, "#FF0000", true, 28),new Color(1, "#A52A2A", false, 29)}),
-                                                    new Picture.ColorPicture(32, @"ms-appx:///Resources/Images/DetectColors/1/blue coffee cup.png",    null, new List<Color>{new Color(1, "#0000FF", true, 28),new Color(1, "#800080", false, 30)}),
-                                                    new Picture.ColorPicture(33, @"ms-appx:///Resources/Images/DetectColors/1/greenCup.png",           null, new List<Color>{new Color(1, "#008000", true, 28),new Color(1, "#FFA500", false, 31)}),
-                                                    new Picture.ColorPicture(34, @"ms-appx:///Resources/Images/DetectColors/1/red glass.png",          null, new List<Color>{new Color(1, "#FF0000", true, 28),new Color(1, "#008000", false, 32)}),
-                                                    new Picture.ColorPicture(35, @"ms-appx:///Resources/Images/DetectColors/1/green kitchen chair.png",null, new List<Color>{new Color(1, "#008000", true, 28),new Color(1, "#0000FF", false, 33)})
+                                                    new ent::Picture.ColorPicture(30, @"ms-appx:///Resources/Images/DetectColors/1/bowl.png",                null, new List<ent::Color>{new ent::Color(1, "#0000FF", true, 28),new ent::Color(1, "#FF0000", false, 28)}),
+                                                    new ent::Picture.ColorPicture(31, @"ms-appx:///Resources/Images/DetectColors/1/red-casserole.png",      null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#A52A2A", false, 29)}),
+                                                    new ent::Picture.ColorPicture(32, @"ms-appx:///Resources/Images/DetectColors/1/blue coffee cup.png",    null, new List<ent::Color>{new ent::Color(1, "#0000FF", true, 28),new ent::Color(1, "#800080", false, 30)}),
+                                                    new ent::Picture.ColorPicture(33, @"ms-appx:///Resources/Images/DetectColors/1/greenCup.png",           null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#FFA500", false, 31)}),
+                                                    new ent::Picture.ColorPicture(34, @"ms-appx:///Resources/Images/DetectColors/1/red glass.png",          null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 32)}),
+                                                    new ent::Picture.ColorPicture(35, @"ms-appx:///Resources/Images/DetectColors/1/green kitchen chair.png",null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#0000FF", false, 33)})
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detect_colors.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detect_colors.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          8,
                                    name:        "Detect colors, Difficulty 2",
@@ -1377,16 +1377,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-colors-256x256.png",
                                    type:        "#003",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.ColorPicture>
                                                 {
-                                                    new Picture.ColorPicture(36, @"ms-appx:///Resources/Images/DetectColors/2/bowl.png",                 null, new List<Color>{new Color(1, "#0000FF", true, 28),new Color(1, "#008000", false, 34),new Color(1, "#A52A2A", false, 28),new Color(1, "#FFA500", false, 34)}),
-                                                    new Picture.ColorPicture(37, @"ms-appx:///Resources/Images/DetectColors/2/greenCup.png",             null, new List<Color>{new Color(1, "#008000", true, 28),new Color(1, "#FFA500", false, 35),new Color(1, "#0000FF", false, 28),new Color(1, "#A52A2A", false, 35)}),
-                                                    new Picture.ColorPicture(38, @"ms-appx:///Resources/Images/DetectColors/2/red kitchen chair.png",    null, new List<Color>{new Color(1, "#FF0000", true, 28),new Color(1, "#008000", false, 36),new Color(1, "#FFA500", false, 28),new Color(1, "#0000FF", false, 36)}),
-                                                    new Picture.ColorPicture(39, @"ms-appx:///Resources/Images/DetectColors/2/yellow kitchen tool_3.png",null, new List<Color>{new Color(1, "#FFFF00", true, 28),new Color(1, "#0000FF", false, 37),new Color(1, "#FFA500", false, 28),new Color(1, "#008000", false, 37)})
+                                                    new ent::Picture.ColorPicture(36, @"ms-appx:///Resources/Images/DetectColors/2/bowl.png",                 null, new List<ent::Color>{new ent::Color(1, "#0000FF", true, 28),new ent::Color(1, "#008000", false, 34),new ent::Color(1, "#A52A2A", false, 28),new ent::Color(1, "#FFA500", false, 34)}),
+                                                    new ent::Picture.ColorPicture(37, @"ms-appx:///Resources/Images/DetectColors/2/greenCup.png",             null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#FFA500", false, 35),new ent::Color(1, "#0000FF", false, 28),new ent::Color(1, "#A52A2A", false, 35)}),
+                                                    new ent::Picture.ColorPicture(38, @"ms-appx:///Resources/Images/DetectColors/2/red kitchen chair.png",    null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 36),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#0000FF", false, 36)}),
+                                                    new ent::Picture.ColorPicture(39, @"ms-appx:///Resources/Images/DetectColors/2/yellow kitchen tool_3.png",null, new List<ent::Color>{new ent::Color(1, "#FFFF00", true, 28),new ent::Color(1, "#0000FF", false, 37),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#008000", false, 37)})
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detect_colors.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detect_colors.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          9,
                                    name:        "Detect colors, Difficulty 3",
@@ -1394,21 +1394,21 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-colors-256x256.png",
                                    type:        "#003",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.ColorPicture>
                                                 {
-                                                    new Picture.ColorPicture(40, @"ms-appx:///Resources/Images/DetectColors/3/red kitchen chair.png",null, new List<Color>{new Color(1, "#FF0000", true, 28),new Color(1, "#008000", false, 34),new Color(1, "#FFA500", false, 28),new Color(1, "#0000FF", false, 34),new Color(1, "#A52A2A", false, 34),new Color(1, "#FFFF00", false, 34)}),
-                                                    new Picture.ColorPicture(41, @"ms-appx:///Resources/Images/DetectColors/3/greenCup.png",         null, new List<Color>{new Color(1, "#008000", true, 28),new Color(1, "#FF0000", false, 35),new Color(1, "#0000FF", false, 28),new Color(1, "#FFA500", false, 35),new Color(1, "#FFFF00", false, 35),new Color(1, "#A52A2A", false, 35)})
+                                                    new ent::Picture.ColorPicture(40, @"ms-appx:///Resources/Images/DetectColors/3/red kitchen chair.png",null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 34),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#0000FF", false, 34),new ent::Color(1, "#A52A2A", false, 34),new ent::Color(1, "#FFFF00", false, 34)}),
+                                                    new ent::Picture.ColorPicture(41, @"ms-appx:///Resources/Images/DetectColors/3/greenCup.png",         null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#FF0000", false, 35),new ent::Color(1, "#0000FF", false, 28),new ent::Color(1, "#FFA500", false, 35),new ent::Color(1, "#FFFF00", false, 35),new ent::Color(1, "#A52A2A", false, 35)})
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detect_colors.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detect_colors.mp3", "title")
                                    )}),
-                        new Test
+                        new ent::Test
                         (
                         id:          4,
                         name:        "Detect different items",
                         description: "The objective of this test is to recognize through three tasks which items do not belong in a sequence of same items.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          10,
                                    name:        "Detect different item, Difficulty 1",
@@ -1416,18 +1416,18 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-different-items-256x256.png",
                                    type:        "#002",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(28, @"ms-appx:///Resources/Images/DetectDifferentItems/1/bowl.png",           null, true ),
-                                                    new Picture.AnswerPicture(29, @"ms-appx:///Resources/Images/DetectDifferentItems/1/casserole.png",      null, false),
-                                                    new Picture.AnswerPicture(30, @"ms-appx:///Resources/Images/DetectDifferentItems/1/frying pan.png",     null, false),
-                                                    new Picture.AnswerPicture(31, @"ms-appx:///Resources/Images/DetectDifferentItems/1/glass.png",          null, false),
-                                                    new Picture.AnswerPicture(32, @"ms-appx:///Resources/Images/DetectDifferentItems/1/kitchen tool_2.png", null, false),
-                                                    new Picture.AnswerPicture(33, @"ms-appx:///Resources/Images/DetectDifferentItems/1/plate_1.png",        null, false)
+                                                    new ent::Picture.AnswerPicture(28, @"ms-appx:///Resources/Images/DetectDifferentItems/1/bowl.png",           null, true ),
+                                                    new ent::Picture.AnswerPicture(29, @"ms-appx:///Resources/Images/DetectDifferentItems/1/casserole.png",      null, false),
+                                                    new ent::Picture.AnswerPicture(30, @"ms-appx:///Resources/Images/DetectDifferentItems/1/frying pan.png",     null, false),
+                                                    new ent::Picture.AnswerPicture(31, @"ms-appx:///Resources/Images/DetectDifferentItems/1/glass.png",          null, false),
+                                                    new ent::Picture.AnswerPicture(32, @"ms-appx:///Resources/Images/DetectDifferentItems/1/kitchen tool_2.png", null, false),
+                                                    new ent::Picture.AnswerPicture(33, @"ms-appx:///Resources/Images/DetectDifferentItems/1/plate_1.png",        null, false)
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detecet_different.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detecet_different.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          11,
                                    name:        "Detect different item, Difficulty  2",
@@ -1435,15 +1435,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-different-items-256x256.png",
                                    type:        "#002",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(34, @"ms-appx:///Resources/Images/DetectDifferentItems/2/lonac.png",             null, true ),
-                                                    new Picture.AnswerPicture(35, @"ms-appx:///Resources/Images/DetectDifferentItems/2/Red_cambridge_mug.png", null, false),
+                                                    new ent::Picture.AnswerPicture(34, @"ms-appx:///Resources/Images/DetectDifferentItems/2/lonac.png",             null, true ),
+                                                    new ent::Picture.AnswerPicture(35, @"ms-appx:///Resources/Images/DetectDifferentItems/2/Red_cambridge_mug.png", null, false),
                                                     
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detecet_different.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detecet_different.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          12,
                                    name:        "Detect different item, Difficulty  3",
@@ -1451,22 +1451,22 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-detect-different-items-256x256.png",
                                    type:        "#002",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(36, @"ms-appx:///Resources/Images/DetectDifferentItems/3/individual-red-mug.png", null, true ),
-                                                    new Picture.AnswerPicture(37, @"ms-appx:///Resources/Images/DetectDifferentItems/3/Red_cambridge_mug.png",  null, false),  
+                                                    new ent::Picture.AnswerPicture(36, @"ms-appx:///Resources/Images/DetectDifferentItems/3/individual-red-mug.png", null, true ),
+                                                    new ent::Picture.AnswerPicture(37, @"ms-appx:///Resources/Images/DetectDifferentItems/3/Red_cambridge_mug.png",  null, false),  
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detecet_different.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/detecet_different.mp3", "title")
                                    )}),
 
-                        new Test
+                        new ent::Test
                         (
                         id:          6,
                         name:        "Pair halves",
                         description: "The objective of this test is to recognize and pair the halves of each given item through three tasks.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          16,
                                    name:        "Pair halves, Difficulty 1",
@@ -1474,15 +1474,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-halves-256x256.png",
                                    type:        "#005",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.BasicDetails>
                                                 {
-                                                   new Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/1/bowl.png"),
-                                                   new Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/1/casserole.png"),
-                                                   new Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/1/plate_1.png"),
+                                                   new ent::Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/1/bowl.png"),
+                                                   new ent::Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/1/casserole.png"),
+                                                   new ent::Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/1/plate_1.png"),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_halves.mp3", "title")                                                                                                  
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_halves.mp3", "title")                                                                                                  
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          17,
                                    name:        "Pair halves, Difficulty 2",
@@ -1490,17 +1490,17 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-halves-256x256.png",
                                    type:        "#005",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.BasicDetails>
                                                 {
-                                                   new Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/2/bowl.png"),
-                                                   new Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/2/casserole.png"),
-                                                   new Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/2/coffee cup.png"),
-                                                   new Picture.BasicDetails(70, @"ms-appx:///Resources/Images/PairHalfs/2/full.png"),
-                                                   new Picture.BasicDetails(71, @"ms-appx:///Resources/Images/PairHalfs/2/jug.png"),
+                                                   new ent::Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/2/bowl.png"),
+                                                   new ent::Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/2/casserole.png"),
+                                                   new ent::Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/2/coffee cup.png"),
+                                                   new ent::Picture.BasicDetails(70, @"ms-appx:///Resources/Images/PairHalfs/2/full.png"),
+                                                   new ent::Picture.BasicDetails(71, @"ms-appx:///Resources/Images/PairHalfs/2/jug.png"),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_halves.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_halves.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          18,
                                    name:        "Pair halves, Difficulty 3",
@@ -1508,26 +1508,26 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-halves-256x256.png",
                                    type:        "#005",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.BasicDetails>
                                                 {
-                                                   new Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/3/bowl.png"),
-                                                   new Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/3/casserole.png"),
-                                                   new Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/3/coffee cup.png"),
-                                                   new Picture.BasicDetails(70, @"ms-appx:///Resources/Images/PairHalfs/3/full.png"),
-                                                   new Picture.BasicDetails(71, @"ms-appx:///Resources/Images/PairHalfs/3/jug.png"),
-                                                   new Picture.BasicDetails(72, @"ms-appx:///Resources/Images/PairHalfs/3/kitchen tool_2.png"),
-                                                   new Picture.BasicDetails(73, @"ms-appx:///Resources/Images/PairHalfs/3/plate_1.png"),
+                                                   new ent::Picture.BasicDetails(67, @"ms-appx:///Resources/Images/PairHalfs/3/bowl.png"),
+                                                   new ent::Picture.BasicDetails(68, @"ms-appx:///Resources/Images/PairHalfs/3/casserole.png"),
+                                                   new ent::Picture.BasicDetails(69, @"ms-appx:///Resources/Images/PairHalfs/3/coffee cup.png"),
+                                                   new ent::Picture.BasicDetails(70, @"ms-appx:///Resources/Images/PairHalfs/3/full.png"),
+                                                   new ent::Picture.BasicDetails(71, @"ms-appx:///Resources/Images/PairHalfs/3/jug.png"),
+                                                   new ent::Picture.BasicDetails(72, @"ms-appx:///Resources/Images/PairHalfs/3/kitchen tool_2.png"),
+                                                   new ent::Picture.BasicDetails(73, @"ms-appx:///Resources/Images/PairHalfs/3/plate_1.png"),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_halves.mp3", "title")                                                                                                   
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_halves.mp3", "title")                                                                                                   
                                    )}),
-                        new Test
+                        new ent::Test
                         (
                         id:          7,
                         name:        "Pair items",
                         description: "In this test, through three tasks, the objective is to recognize and pair given items.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          19,
                                    name:        "Pair items, Difficulty 1",
@@ -1535,15 +1535,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-same-items-256x256.png",
                                    type:        "#001",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(75, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_2.png", null, true),
-                                                    new Picture.AnswerPicture(76, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_3.png", null, true),
-                                                    new Picture.AnswerPicture(77, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_6.png", null, true),
+                                                    new ent::Picture.AnswerPicture(75, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_2.png", null, true),
+                                                    new ent::Picture.AnswerPicture(76, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_3.png", null, true),
+                                                    new ent::Picture.AnswerPicture(77, @"ms-appx:///Resources/Images/PairSameItems/1/kitchen tool_6.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_items.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_items.mp3", "title")
                                    ),
-                                    new Task
+                                    new ent::Task
                                    (
                                    id:          20,
                                    name:        "Pair items, Difficulty 2",
@@ -1551,17 +1551,17 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-same-items-256x256.png",
                                    type:        "#001",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(78, @"ms-appx:///Resources/Images/PairSameItems/2/bowl.png",          null, true),
-                                                    new Picture.AnswerPicture(79, @"ms-appx:///Resources/Images/PairSameItems/2/casserole.png",     null, true),
-                                                    new Picture.AnswerPicture(80, @"ms-appx:///Resources/Images/PairSameItems/2/cup.png",           null, true),
-                                                    new Picture.AnswerPicture(81, @"ms-appx:///Resources/Images/PairSameItems/2/kitchen chair.png", null, true),
-                                                    new Picture.AnswerPicture(101, @"ms-appx:///Resources/Images/PairSameItems/2/frying pan.png",   null, true)
+                                                    new ent::Picture.AnswerPicture(78, @"ms-appx:///Resources/Images/PairSameItems/2/bowl.png",          null, true),
+                                                    new ent::Picture.AnswerPicture(79, @"ms-appx:///Resources/Images/PairSameItems/2/casserole.png",     null, true),
+                                                    new ent::Picture.AnswerPicture(80, @"ms-appx:///Resources/Images/PairSameItems/2/cup.png",           null, true),
+                                                    new ent::Picture.AnswerPicture(81, @"ms-appx:///Resources/Images/PairSameItems/2/kitchen chair.png", null, true),
+                                                    new ent::Picture.AnswerPicture(101, @"ms-appx:///Resources/Images/PairSameItems/2/frying pan.png",   null, true)
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_items.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_items.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          21,
                                    name:        "Pair items, Difficulty 3",
@@ -1569,26 +1569,26 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-pair-same-items-256x256.png",
                                    type:        "#001",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(81, @"ms-appx:///Resources/Images/PairSameItems/3/17622157-orange-juice-in-a-jug.png", null, true),
-                                                    new Picture.AnswerPicture(82, @"ms-appx:///Resources/Images/PairSameItems/3/693024_1.png",                       null, true),
-                                                    new Picture.AnswerPicture(83, @"ms-appx:///Resources/Images/PairSameItems/3/9620-08240.png",                     null, true),
-                                                    new Picture.AnswerPicture(84, @"ms-appx:///Resources/Images/PairSameItems/3/casa1.png",                          null, true),
-                                                    new Picture.AnswerPicture(85, @"ms-appx:///Resources/Images/PairSameItems/3/kitchen-tool_2.png",                 null, true),
-                                                    new Picture.AnswerPicture(86, @"ms-appx:///Resources/Images/PairSameItems/3/plate_1.png",                        null, true)
+                                                    new ent::Picture.AnswerPicture(81, @"ms-appx:///Resources/Images/PairSameItems/3/17622157-orange-juice-in-a-jug.png", null, true),
+                                                    new ent::Picture.AnswerPicture(82, @"ms-appx:///Resources/Images/PairSameItems/3/693024_1.png",                       null, true),
+                                                    new ent::Picture.AnswerPicture(83, @"ms-appx:///Resources/Images/PairSameItems/3/9620-08240.png",                     null, true),
+                                                    new ent::Picture.AnswerPicture(84, @"ms-appx:///Resources/Images/PairSameItems/3/casa1.png",                          null, true),
+                                                    new ent::Picture.AnswerPicture(85, @"ms-appx:///Resources/Images/PairSameItems/3/kitchen-tool_2.png",                 null, true),
+                                                    new ent::Picture.AnswerPicture(86, @"ms-appx:///Resources/Images/PairSameItems/3/plate_1.png",                        null, true)
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_items.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/pair_items.mp3", "title")
                                    )
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          8,
                         name:        "Sort items by size",
                         description: "In this test, through three tasks, the objective is to sort items by their size.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          22,
                                    name:        "Sort items by size, Difficulty 1",
@@ -1596,15 +1596,15 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-order-by-size-256x256.png",
                                    type:        "#008",
                                    difficulty:   3,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(87, @"ms-appx:///Resources/Images/SortBySize/1/jug-1.png", null, true),
-                                                    new Picture.AnswerPicture(88, @"ms-appx:///Resources/Images/SortBySize/1/jug-2.png", null, true),
-                                                    new Picture.AnswerPicture(89, @"ms-appx:///Resources/Images/SortBySize/1/jug-3.png", null, true),
+                                                    new ent::Picture.AnswerPicture(87, @"ms-appx:///Resources/Images/SortBySize/1/jug-1.png", null, true),
+                                                    new ent::Picture.AnswerPicture(88, @"ms-appx:///Resources/Images/SortBySize/1/jug-2.png", null, true),
+                                                    new ent::Picture.AnswerPicture(89, @"ms-appx:///Resources/Images/SortBySize/1/jug-3.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/sort_size.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/sort_size.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          23,
                                    name:        "Sort items by size, Difficulty 2",
@@ -1612,16 +1612,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-order-by-size-256x256.png",
                                    type:        "#008",
                                    difficulty:   4,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(90, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-1.png", null, true),
-                                                    new Picture.AnswerPicture(91, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-2.png", null, true),
-                                                    new Picture.AnswerPicture(92, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-3.png", null, true),
-                                                    new Picture.AnswerPicture(93, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-4.png", null, true),
+                                                    new ent::Picture.AnswerPicture(90, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-1.png", null, true),
+                                                    new ent::Picture.AnswerPicture(91, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-2.png", null, true),
+                                                    new ent::Picture.AnswerPicture(92, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-3.png", null, true),
+                                                    new ent::Picture.AnswerPicture(93, @"ms-appx:///Resources/Images/SortBySize/2/kitchen-tool_2-4.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/sort_size.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/sort_size.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          24,
                                    name:        "Sort items by size, Difficulty 3",
@@ -1629,25 +1629,25 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-order-by-size-256x256.png",
                                    type:        "#008",
                                    difficulty:   5,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(93, @"ms-appx:///Resources/Images/SortBySize/3/cup-1.png", null, true),
-                                                    new Picture.AnswerPicture(94, @"ms-appx:///Resources/Images/SortBySize/3/cup-2.png", null, true),
-                                                    new Picture.AnswerPicture(95, @"ms-appx:///Resources/Images/SortBySize/3/cup-3.png", null, true),
-                                                    new Picture.AnswerPicture(96, @"ms-appx:///Resources/Images/SortBySize/3/cup-4.png", null, true),
-                                                    new Picture.AnswerPicture(97, @"ms-appx:///Resources/Images/SortBySize/3/cup-5.png", null, true),
+                                                    new ent::Picture.AnswerPicture(93, @"ms-appx:///Resources/Images/SortBySize/3/cup-1.png", null, true),
+                                                    new ent::Picture.AnswerPicture(94, @"ms-appx:///Resources/Images/SortBySize/3/cup-2.png", null, true),
+                                                    new ent::Picture.AnswerPicture(95, @"ms-appx:///Resources/Images/SortBySize/3/cup-3.png", null, true),
+                                                    new ent::Picture.AnswerPicture(96, @"ms-appx:///Resources/Images/SortBySize/3/cup-4.png", null, true),
+                                                    new ent::Picture.AnswerPicture(97, @"ms-appx:///Resources/Images/SortBySize/3/cup-5.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/sort_size.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/sort_size.mp3", "title")
                                    )
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          9,
                         name:        "Show an item",
                         description: "In this test, the objective is to show a correct item from a set of items, given by a voice command.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          25,
                                    name:        "Show a drinking glass",
@@ -1655,16 +1655,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/casa.jpg",   null, true),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/ubrus.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/casa.jpg",   null, true),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/1/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_drinking_glass.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_drinking_glass.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          26,
                                    name:        "Show a meat hammer",
@@ -1672,16 +1672,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/casa.jpg",  null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/bat.jpg",   null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/tava.jpg",  null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/ubrus.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/casa.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/bat.jpg",   null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/tava.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/2/ubrus.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_meat_hamm.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_meat_hamm.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          27,
                                    name:        "Show a kitchen board",
@@ -1689,16 +1689,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/bat.jpg",   null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/casa.jpg",  null, false),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/tava.jpg",  null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/daska.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/bat.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/casa.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/tava.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/3/daska.jpg", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_kitchen_b.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_kitchen_b.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          28,
                                    name:        "Show a kitchen",
@@ -1706,16 +1706,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/bat.jpg",       null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/casa.jpg",      null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/kitchen41.jpg", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/daska.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/bat.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/casa.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/kitchen41.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/4/daska.jpg",     null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_kitchen.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_kitchen.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          29,
                                    name:        "Show a casserole",
@@ -1723,16 +1723,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(134, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(135, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/lonac.png",  null, true),
-                                                    new Picture.AnswerPicture(136, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(137, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/ubrus.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(134, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(135, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/lonac.png",  null, true),
+                                                    new ent::Picture.AnswerPicture(136, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(137, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/5/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_casserole.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_casserole.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          30,
                                    name:        "Show a knife",
@@ -1740,16 +1740,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(138, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(139, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/noz.jpg",    null, true),
-                                                    new Picture.AnswerPicture(140, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(141, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/ubrus.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(138, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(139, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/noz.jpg",    null, true),
+                                                    new ent::Picture.AnswerPicture(140, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(141, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/6/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_knife.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_knife.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          31,
                                    name:        "Show a cup",
@@ -1757,16 +1757,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(142, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(143, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/salica.jpg", null, true),
-                                                    new Picture.AnswerPicture(144, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(145, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/ubrus.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(142, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(143, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/salica.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(144, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(145, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/7/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_cup.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_cup.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          32,
                                    name:        "Show a faucet",
@@ -1774,16 +1774,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(146, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/tanjur.jpg",  null, false),
-                                                    new Picture.AnswerPicture(147, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/slavina.jpg", null, true),
-                                                    new Picture.AnswerPicture(148, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/casa.jpg",    null, false),
-                                                    new Picture.AnswerPicture(149, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/daska.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(146, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/tanjur.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(147, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/slavina.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(148, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/casa.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(149, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/8/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_faucet.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_faucet.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          33,
                                    name:        "Show a sink",
@@ -1791,16 +1791,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(150, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/tanjur.jpg",  null, false),
-                                                    new Picture.AnswerPicture(151, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/sudoper.jpg", null, true),
-                                                    new Picture.AnswerPicture(152, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/casa.jpg",    null, false),
-                                                    new Picture.AnswerPicture(153, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/daska.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(150, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/tanjur.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(151, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/sudoper.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(152, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/casa.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(153, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/9/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_sink.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_sink.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          34,
                                    name:        "Show a plate",
@@ -1808,16 +1808,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(154, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/slavina.jpg", null, false),
-                                                    new Picture.AnswerPicture(155, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/tanjur.jpg",  null, true),
-                                                    new Picture.AnswerPicture(156, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/casa.jpg",    null, false),
-                                                    new Picture.AnswerPicture(157, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/daska.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(154, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/slavina.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(155, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/tanjur.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(156, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/casa.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(157, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/10/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_plate.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          35,
                                    name:        "Show a pan",
@@ -1825,16 +1825,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(158, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/bat.jpg",   null, false),
-                                                    new Picture.AnswerPicture(159, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/tava.jpg",  null, true),
-                                                    new Picture.AnswerPicture(160, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/casa.jpg",  null, false),
-                                                    new Picture.AnswerPicture(161, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/ubrus.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(158, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/bat.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(159, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/tava.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(160, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/casa.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(161, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/11/ubrus.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_pan.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_pan.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          36,
                                    name:        "Show a napkin",
@@ -1842,16 +1842,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(162, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/tava.jpg",   null, false),
-                                                    new Picture.AnswerPicture(163, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(164, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/casa.jpg",   null, false),
-                                                    new Picture.AnswerPicture(165, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/ubrus.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(162, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/tava.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(163, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(164, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/casa.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(165, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/12/ubrus.jpg",  null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_napkin.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_napkin.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          37,
                                    name:        "Show a fork",
@@ -1859,16 +1859,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(166, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/tanjur.jpg",       null, false),
-                                                    new Picture.AnswerPicture(167, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/zuti_tanjur.jpeg", null, false),
-                                                    new Picture.AnswerPicture(168, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/ubrus2.jpg",       null, false),
-                                                    new Picture.AnswerPicture(169, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/fork.png",         null, true),
+                                                    new ent::Picture.AnswerPicture(166, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/tanjur.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(167, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/zuti_tanjur.jpeg", null, false),
+                                                    new ent::Picture.AnswerPicture(168, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/ubrus2.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(169, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/13/fork.png",         null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_fork.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_fork.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          38,
                                    name:        "Show a jug",
@@ -1876,16 +1876,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(170, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/noz.jpg",           null, false),
-                                                    new Picture.AnswerPicture(171, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/duboki_tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(172, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/vrč.jpg",           null, true),
-                                                    new Picture.AnswerPicture(173, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/zlica.jpg",         null, false),
+                                                    new ent::Picture.AnswerPicture(170, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/noz.jpg",           null, false),
+                                                    new ent::Picture.AnswerPicture(171, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/duboki_tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(172, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/vrč.jpg",           null, true),
+                                                    new ent::Picture.AnswerPicture(173, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/14/zlica.jpg",         null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_jug.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_jug.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          39,
                                    name:        "Show a spoon",
@@ -1893,16 +1893,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(174, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/slavina.jpg",         null, false),
-                                                    new Picture.AnswerPicture(175, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/tanjur.jpg",          null, false),
-                                                    new Picture.AnswerPicture(176, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/zlica.jpg",           null, true),
-                                                    new Picture.AnswerPicture(177, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/mali_zeleni_vrc.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(174, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/slavina.jpg",         null, false),
+                                                    new ent::Picture.AnswerPicture(175, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/tanjur.jpg",          null, false),
+                                                    new ent::Picture.AnswerPicture(176, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/zlica.jpg",           null, true),
+                                                    new ent::Picture.AnswerPicture(177, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/15/mali_zeleni_vrc.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_spoon.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          40,
                                    name:        "Show a cooking spoon",
@@ -1910,24 +1910,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(178, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/duboki2.jpg", null, false),
-                                                    new Picture.AnswerPicture(179, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/tanjur.jpg",  null, false),
-                                                    new Picture.AnswerPicture(180, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/slavina.jpg", null, false),
-                                                    new Picture.AnswerPicture(181, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/kuhaca.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(178, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/duboki2.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(179, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/tanjur.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(180, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/slavina.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(181, @"ms-appx:///Resources/Images/VoiceCommands/Show_object/16/kuhaca.jpg",  null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_cooking_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_item/s_cooking_spoon.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          10,
                         name:        "Show an item with correct color",
                         description: "In this test, the objective is to show a correct item by color, given by a voice command.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          41,
                                    name:        "Show a red plate",
@@ -1935,16 +1935,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_lonac_picto.png", null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_tanjur.jpg",      null, true),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_vrc.png",         null, false),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/salica.jpg",             null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_lonac_picto.png", null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_tanjur.jpg",      null, true),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/crveni_vrc.png",         null, false),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/1/salica.jpg",             null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color/s_red_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color/s_red_plate.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          42,
                                    name:        "Show a blue casserole",
@@ -1952,16 +1952,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/ljubicasti_lonac_picto.jpg", null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/plavi_lonac.jpeg",           null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/zeleni_lonac_picto.jpg",     null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/zuti_lonac_picto.png",       null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/ljubicasti_lonac_picto.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/plavi_lonac.jpeg",           null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/zeleni_lonac_picto.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/2/zuti_lonac_picto.png",       null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color/s_blue_cass.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color/s_blue_cass.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          43,
                                    name:        "Show a green fork",
@@ -1969,16 +1969,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/bowl.png",              null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/red kitchen chair.png", null, false),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/greenCup.png",          null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/greenFork.png",         null, true),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/bowl.png",              null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/red kitchen chair.png", null, false),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/greenCup.png",          null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/3/greenFork.png",         null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color/s_green_fork.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color/s_green_fork.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          44,
                                    name:        "Show a yellow spoon",
@@ -1986,24 +1986,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/red glass.png",           null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/red-casserole.png",       null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/yellowspoon.png",         null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/green kitchen chair.png", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/red glass.png",           null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/red-casserole.png",       null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/yellowspoon.png",         null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_object/4/green kitchen chair.png", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color/s_yellow_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color/s_yellow_spoon.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          11,
                         name:        "Show an item with correct color and size",
                         description: "In this test, the objective is to show a correct item by color and size from a set of items given by a voice command.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          45,
                                    name:        "Show a small blue casserole",
@@ -2011,16 +2011,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/crveni_lonac.jpg",       null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/mali_plavi_lonac.png",   null, true),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/plavi_vrc.jpeg",         null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/veliki_plavi_lonac.png", null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/crveni_lonac.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/mali_plavi_lonac.png",   null, true),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/plavi_vrc.jpeg",         null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/1/veliki_plavi_lonac.png", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color_size/s_small_b_cass.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color_size/s_small_b_cass.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          46,
                                    name:        "Show a small green jug",
@@ -2028,16 +2028,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/plavi_vrc.jpeg",     null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/mali_zeleni_vrc.png",null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/zeleni_vrc.jpg",     null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/zuti_vrc.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/plavi_vrc.jpeg",     null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/mali_zeleni_vrc.png",null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/zeleni_vrc.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/2/zuti_vrc.jpg",       null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color_size/s_small_green_jug.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color_size/s_small_green_jug.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          47,
                                    name:        "Show a big red cup",
@@ -2045,16 +2045,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/roza salica.jpeg", null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/salica.jpg",       null, true),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/salica.png",       null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/zuti_vrc.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/roza salica.jpeg", null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/salica.jpg",       null, true),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/salica.png",       null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/3/zuti_vrc.jpg",     null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color_size/s_big_red_cup.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color_size/s_big_red_cup.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          48,
                                    name:        "Show a big yellow plate",
@@ -2062,24 +2062,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.png",   null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/tanjur.jpg",        null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.jpeg",  null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zeleni_tanjur.jpeg",null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.png",   null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/tanjur.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.jpeg",  null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_colored_size/4/zeleni_tanjur.jpeg",null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color_size/s_big_yellow_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_color_size/s_big_yellow_plate.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          12,
                         name:        "Show an item by its purpose",
                         description: "In this test, the objective is to show a correct item by its purpose from a set of items, by a given voice command.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          49,
                                    name:        "With what do you wipe?",
@@ -2087,16 +2087,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/casa.jpg",   null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/ubrus2.jpg", null, true),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/zlica.jpg",  null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/casa.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/ubrus2.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/zlica.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/1/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_wipe.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_wipe.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          50,
                                    name:        "With what do you eat?",
@@ -2104,16 +2104,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/casa.jpg",   null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/fork.png",   null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/slavina.jpg",null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/casa.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/fork.png",   null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/slavina.jpg",null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/2/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_eat.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_eat.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          51,
                                    name:        "With what do you eat soup?",
@@ -2121,16 +2121,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/casa.jpg",   null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/ubrus2.jpg", null, false),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/zlica.jpg",  null, true),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/casa.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/ubrus2.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/zlica.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/3/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_eat_soup.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_eat_soup.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          52,
                                    name:        "With what do you cut?",
@@ -2138,16 +2138,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/casa.jpg",  null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/noz.jpg",   null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/zlica.jpg", null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/tanjur.jpg",null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/casa.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/noz.jpg",   null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/zlica.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/4/tanjur.jpg",null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_cut.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_cut.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          53,
                                    name:        "With what do you drink?",
@@ -2155,16 +2155,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/casa.jpg",   null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/noz.jpg",    null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/zlica.jpg",  null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/casa.jpg",   null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/noz.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/zlica.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/5/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_drink.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_drink.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          54,
                                    name:        "With what can you cook?",
@@ -2172,24 +2172,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/kuhaca.jpg",       null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/noz.jpg",          null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/plavi_lonac.jpeg", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/zlica.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/kuhaca.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/noz.jpg",          null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/plavi_lonac.jpeg", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_object_purpose/6/zlica.jpg",        null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_cook.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Item_by_purpose/w_cook.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          13,
                         name:        "Show who is doing an activity",
                         description: "In this test, the objective is to show a correct activity from a set of activities, given by a voice command.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          55,
                                    name:        "Who is wiping?",
@@ -2197,16 +2197,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/brise.jpg",       null, true),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/eating-soup.jpg", null, false),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/guli.jpg",        null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/kuha.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/brise.jpg",       null, true),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/eating-soup.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/guli.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/1/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_wiping.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_wiping.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          56,
                                    name:        "Who is peeling?",
@@ -2214,16 +2214,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/brise.jpg",       null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/eating-soup.jpg", null, false),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/guli.jpg",        null, true),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/kuha.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/brise.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/eating-soup.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/guli.jpg",        null, true),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/2/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_peeling.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_peeling.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          57,
                                    name:        "Who is eating?",
@@ -2231,16 +2231,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/brise.jpg",       null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/eating-soup.jpg", null, true),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/guli.jpg",        null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/kuha.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/brise.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/eating-soup.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/guli.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/3/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_eating.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_eating.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          58,
                                    name:        "Who is cooking?",
@@ -2248,16 +2248,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/brise.jpg",       null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/eating-soup.jpg", null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/guli.jpg",        null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/kuha.jpg",        null, true),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/brise.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/eating-soup.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/guli.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/4/kuha.jpg",        null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_cooking.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_cooking.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          59,
                                    name:        "Who is washing?",
@@ -2265,16 +2265,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/brise.jpg", null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/pere.jpg",  null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/guli.jpg",  null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/kuha.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/brise.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/pere.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/guli.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/5/kuha.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_washing.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_washing.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          60,
                                    name:        "Who is drinking?",
@@ -2282,16 +2282,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/brise.jpg", null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/pije.jpg",  null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/pere.jpg",  null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/kuha.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/brise.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/pije.jpg",  null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/pere.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/6/kuha.jpg",  null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_drinking.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_drinking.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          61,
                                    name:        "Who is cutting?",
@@ -2299,16 +2299,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/reze.jpg", null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/pere.jpg", null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/guli.jpg", null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/kuha.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/reze.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/pere.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/guli.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/7/kuha.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_cutting.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_cutting.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          62,
                                    name:        "Who is scrubbing?",
@@ -2316,24 +2316,24 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/reze.jpg", null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/pere.jpg", null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/ribanje.jpg", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/kuha.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/reze.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/pere.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/ribanje.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_activity/8/kuha.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_scrubbing.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_activity/w_scrubbing.mp3", "title")
                                    ),
                                }),
-                        new Test
+                        new ent::Test
                         (
                         id:          14,
                         name:        "Show an item by its size",
                         description: "In this test, the objective is to show a correct item by its size, given by a voice command.",
-                        tasks: new List<Task>
+                        tasks: new List<ent::Task>
                                {
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          63,
                                    name:        "Show a deep plate!",
@@ -2341,16 +2341,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/tanjur.jpg",        null, false),
-                                                    new Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/crveni_tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/zuti_tanjur.jpeg",  null, false),
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/duboki_tanjur.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(119, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/tanjur.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(120, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/crveni_tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(121, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/zuti_tanjur.jpeg",  null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/1/duboki_tanjur.jpg", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_deep_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_deep_plate.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          64,
                                    name:        "Show a small knife!",
@@ -2358,16 +2358,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/tava.jpg",       null, false),
-                                                    new Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/noz.png",        null, true),
-                                                    new Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/veliki_noz.jpg", null, false),
-                                                    new Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/zlica.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(122, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/tava.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(123, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/noz.png",        null, true),
+                                                    new ent::Picture.AnswerPicture(124, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/veliki_noz.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(125, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/2/zlica.jpg",      null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_small_knife.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_small_knife.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          65,
                                    name:        "Show a small jug!",
@@ -2375,16 +2375,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/zuti_vrc.jpg",    null, false),
-                                                    new Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/zeleni_vrc.jpg",  null, false),
-                                                    new Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/plavi_vrc.jpeg",  null, false),
-                                                    new Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/crveni_vrc.png", null, true),
+                                                    new ent::Picture.AnswerPicture(126, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/zuti_vrc.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(127, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/zeleni_vrc.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(128, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/plavi_vrc.jpeg",  null, false),
+                                                    new ent::Picture.AnswerPicture(129, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/3/crveni_vrc.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_small_jug.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_small_jug.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          66,
                                    name:        "Show a small cooking spoon!",
@@ -2392,16 +2392,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/bat.jpg",         null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/kuhaca.jpg",      null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/mala_kuhaca.png", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/zlica.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/bat.jpg",         null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/kuhaca.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/mala_kuhaca.png", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/4/zlica.jpg",       null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_small_c_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_small_c_spoon.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          67,
                                    name:        "Show a small spoon!",
@@ -2409,16 +2409,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/bat.jpg",        null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/kuhaca.jpg",     null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/mala_zlica.jpg", null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/zlica.png",      null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/bat.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/kuhaca.jpg",     null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/mala_zlica.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/5/zlica.png",      null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_small_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_small_spoon.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          68,
                                    name:        "Show the smallest kitchen board!",
@@ -2426,16 +2426,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/m_daska.png", null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/kuhaca.jpg",  null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/daska.jpg",   null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/v_daska.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/m_daska.png", null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/kuhaca.jpg",  null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/daska.jpg",   null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/6/v_daska.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_smallest_kb.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_smallest_kb.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          69,
                                    name:        "Show the biggest pan!",
@@ -2443,16 +2443,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/pan.jpg",    null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/tanjur.jpg", null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/v_tava.png", null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/tava.png",   null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/pan.jpg",    null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/v_tava.png", null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/7/tava.png",   null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_biggest_pan.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_biggest_pan.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          70,
                                    name:        "Show a shallow plate!",
@@ -2460,16 +2460,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/tanjur.jpg",        null, true),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/d_plate.jpg",       null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/d_plate2.jpg",      null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/duboki_tanjur.jpg", null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/tanjur.jpg",        null, true),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/d_plate.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/d_plate2.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/8/duboki_tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_shallow_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_shallow_plate.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          71,
                                    name:        "Show a big cooking spoon!",
@@ -2477,16 +2477,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/bat.jpg",         null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/kuhaca.jpg",      null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/mala_kuhaca.png", null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/zlica.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/bat.jpg",         null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/kuhaca.jpg",      null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/mala_kuhaca.png", null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/9/zlica.jpg",       null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_big_c_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_big_c_spoon.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          72,
                                    name:        "Show a big casserole!",
@@ -2494,16 +2494,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/crveni_lonac.jpg",       null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/mali_plavi_lonac.png",   null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/pan.jpg",                null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/veliki_plavi_lonac.png", null, true),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/crveni_lonac.jpg",       null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/mali_plavi_lonac.png",   null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/pan.jpg",                null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/10/veliki_plavi_lonac.png", null, true),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/show_big_casserole.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/show_big_casserole.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          73,
                                    name:        "Show a big plate!",
@@ -2511,16 +2511,16 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/tanjur.png",   null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/m_tanjur.jpg", null, true),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/pan.jpg",      null, false),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/daska.jpg",    null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/tanjur.png",   null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/m_tanjur.jpg", null, true),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/pan.jpg",      null, false),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/11/daska.jpg",    null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_big_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_big_plate.mp3", "title")
                                    ),
-                                   new Task
+                                   new ent::Task
                                    (
                                    id:          74,
                                    name:        "Show a big drinking glass!",
@@ -2528,14 +2528,14 @@ namespace AuThink.Desktop.Model.Data.Local
                                    thumbUrl:    "ms-appx:///Resources/TaskIcons/task-voice-commands-256x256.png",
                                    type:        "#009",
                                    difficulty:   1,
-                                   pictures:new List<Picture>
+                                   pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/vrč.jpg",        null, false),
-                                                    new Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/casa.png",       null, false),
-                                                    new Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/v_casa.jpg",     null, true),
-                                                    new Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/zuta_salica.png",null, false),
+                                                    new ent::Picture.AnswerPicture(130, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/vrč.jpg",        null, false),
+                                                    new ent::Picture.AnswerPicture(131, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/casa.png",       null, false),
+                                                    new ent::Picture.AnswerPicture(132, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/v_casa.jpg",     null, true),
+                                                    new ent::Picture.AnswerPicture(133, @"ms-appx:///Resources/Images/VoiceCommands/Show_size/12/zuta_salica.png",null, false),
                                                 },
-                                   voiceCommand:new Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_big_drinking_glass.mp3", "title")
+                                   voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Task_sound/Show_size/s_big_drinking_glass.mp3", "title")
                                    ),
                                }),
 
