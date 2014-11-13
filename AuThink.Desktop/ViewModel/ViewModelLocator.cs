@@ -33,16 +33,33 @@ namespace AuThink.Desktop.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
         }
 
+        private static string _currentKey = System.Guid.NewGuid().ToString();
+        public static string CurrentKey
+        {
+            get
+            {
+                return _currentKey;
+            }
+            private set
+            {
+                _currentKey = value;
+            }
+        }
+
         public MainViewModel Main
         {
             get
             {
+                Cleanup();
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
+            
         }
 
         public static void Cleanup()
         {
+            SimpleIoc.Default.Unregister<MainViewModel>(CurrentKey);
+            CurrentKey = System.Guid.NewGuid().ToString();
         }
     }
 }

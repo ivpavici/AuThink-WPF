@@ -71,12 +71,19 @@
     <Compile Include="Converters\EnableButtonConverter.cs" />
     <Compile Include="Converters\MultiplyByScreenRatio.cs" />
     <Compile Include="Converters\VisibilityBottunConvertor.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Services\InternetConnection.cs" />
     <Compile Include="Services\Shuffler.cs" />
     <Compile Include="Services\UIServices.cs" />
     <Compile Include="Settings\Language.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
