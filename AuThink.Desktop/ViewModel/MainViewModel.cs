@@ -2,6 +2,8 @@
 using AuThink.Desktop.Model;
 using AuThink.Desktop.Settings.Language;
 
+using GalaSoft.MvvmLight.Command;
+
 namespace AuThink.Desktop.ViewModel
 {
     public partial class MainViewModel : ViewModelBase
@@ -86,42 +88,42 @@ namespace AuThink.Desktop.ViewModel
         }
         private string _backButtonContent = Language.Mainpage.BackButtonContent();
 
-        public Ico PlayCommand { get; private set; }
+        public RelayCommand PlayCommand { get; private set; }
         private void Play()
         {
-            _navigationService.NavigateTo(typeof(TestListView));
+            //_navigationService.NavigateTo(typeof(TestListView));
         }
 
         public RelayCommand SettingsCommand { get; private set; }
         private void Settings()
         {
-            _navigationService.NavigateTo(typeof(SettingsView));
+            //_navigationService.NavigateTo(typeof(SettingsView));
         }
 
         public RelayCommand AboutCommand { get; private set; }
         private void About()
         {
-            _navigationService.NavigateTo(typeof (AboutView));
+            //_navigationService.NavigateTo(typeof (AboutView));
         }
 
         public RelayCommand BackCommand { get; set; }
         private void Back()
         {
-            ApplicationData.Current.LocalSettings.Values["SelectedChildId"] = null;
-            _navigationService.NavigateTo(typeof (ChildrenView));
+            //ApplicationData.Current.LocalSettings.Values["SelectedChildId"] = null;
+            //_navigationService.NavigateTo(typeof (ChildrenView));
         }
     }
 
     public partial class MainViewModel
     {
-        private readonly NavigationService _navigationService;
+        //private readonly NavigationService _navigationService;
         
         public MainViewModel
         (
-            NavigationService navigationService
+            //NavigationService navigationService
         )
         {
-            _navigationService = navigationService;
+            //_navigationService = navigationService;
             
             this.PlayCommand      = new RelayCommand(Play);
             this.SettingsCommand  = new RelayCommand(Settings);

@@ -3,18 +3,19 @@
                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                        xmlns:ignore="http://www.ignore.com" xmlns:converters="using:AuThink.Desktop.Converters"
-                        mc:Ignorable="d ignore"
+                        xmlns:ignore="http://www.ignore.com"
+                        xmlns:Converters="clr-namespace:Authink.Desktop.Converters"
+      mc:Ignorable="d ignore"
                         d:DesignHeight="768"
                         d:DesignWidth="1366"
                         DataContext="{Binding Main, Source={StaticResource Locator}}">
     
     <Page.Resources>
-        <converters:VisibilityBottunConvertor x:Key="VisibilityBottunConvertor"/>
+        <Converters:VisibilityBottunConvertor x:Key="VisibilityBottunConvertor"/>
     </Page.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="ms-appx:///Assets/Logo/authink-background.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="Assets/Logo/authink-background.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         
         <Rectangle Fill="#7F000000"/>
@@ -41,47 +42,39 @@
             Margin="0,50,0,0">
             <Button 
                 x:Name="playButton" 
-                Style="{StaticResource BasicTaskViewButtonStyle}" 
                 Margin="50,0,50,50" 
                 Padding="50, 10"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Stretch" 
                 Command="{Binding PlayCommand}"
-                Template="{StaticResource GlobalYellowButtonStyle}" 
                 Content="{Binding PlayButtonContent}"  
                 FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
             <Button 
                 x:Name="settingsButton" 
-                Style="{StaticResource BasicTaskViewButtonStyle}" 
                 Margin="50,0,50,50" 
                 Padding="50,10"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Stretch" 
-                Command="{Binding SettingsCommand}"
-                Template="{StaticResource GlobalYellowButtonStyle}" 
+                Command="{Binding SettingsCommand}" 
                 Content="{Binding SettingsButtonContent}" 
                 FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
             <Button 
                 x:Name="aboutButton" 
-                Style="{StaticResource BasicTaskViewButtonStyle}" 
                 Margin="50,0,50,50" 
                 Padding="50,10"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Stretch" 
                 Command="{Binding AboutCommand}"
                 Content="{Binding AboutButtonContent}" 
-                Template="{StaticResource GlobalYellowButtonStyle}"  
                 FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
               <Button 
-                x:Name="backButton" 
-                Style="{StaticResource BasicTaskViewButtonStyle}" 
+                x:Name="backButton"  
                 Margin="50,0,50,50" 
                 Padding="50,10"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Stretch" 
                 Command="{Binding BackCommand}"
                 Content="{Binding BackButtonContent}" 
-                Template="{StaticResource GlobalYellowButtonStyle}"  
                 FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
                 </StackPanel>
             </Grid>

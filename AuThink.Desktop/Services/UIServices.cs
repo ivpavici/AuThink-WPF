@@ -109,7 +109,7 @@
 //    }
 //    public class PictureService
 //    {
-//        async static public Task<Tuple<ImageSource, ImageSource>> GetHalves( ent.Picture picture)
+//        async static public Task<Tuple<ImageSource, ImageSource>> GetHalves(ent.Picture picture)
 //        {
 //            IRandomAccessStream stream;
 
@@ -196,7 +196,7 @@
 //    {
 //        private static volatile PopUpService _instance;
 //        private Storyboard _storyboard;
-//        public  bool IsInitialized { get; private set; }
+//        public bool IsInitialized { get; private set; }
 
 //        private PopUpService() { }
 
@@ -215,10 +215,10 @@
 //            _storyboard = storyboard;
 //            this.IsInitialized = true;
 //        }
-        
+
 //        public void Show()
 //        {
-//            if(!this.IsInitialized)
+//            if (!this.IsInitialized)
 //            {
 //                throw new InvalidOperationException("Storyboard first needs to be initialized!");
 //            }
@@ -236,9 +236,9 @@
 //    {
 //        private static volatile SoundServices _instance;
 //        private MediaElement _mediaElement;
-//        public  bool IsInitialized { get; private set; }
+//        public bool IsInitialized { get; private set; }
 
-//        private SoundServices() {}
+//        private SoundServices() { }
 
 //        public static SoundServices Instance
 //        {
@@ -247,7 +247,7 @@
 
 //        public void Initialize(MediaElement mediaElement)
 //        {
-//            if(mediaElement == null)
+//            if (mediaElement == null)
 //            {
 //                throw new ArgumentNullException("mediaElement");
 //            }
@@ -259,10 +259,10 @@
 
 //            this.IsInitialized = true;
 //        }
-        
+
 //        public void Play()
 //        {
-//            if(!this.IsInitialized)
+//            if (!this.IsInitialized)
 //            {
 //                throw new InvalidOperationException("Player first needs to be initialized!");
 //            }

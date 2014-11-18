@@ -96,10 +96,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Skins\MainSkin.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -133,7 +129,10 @@
       <Name>AuThink.Desktop.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Skins\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Logo\authink-background.jpg" />
     <Resource Include="Assets\Logo\authink-lite-logo-white.png" />
