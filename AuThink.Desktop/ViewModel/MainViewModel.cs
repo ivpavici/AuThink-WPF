@@ -3,6 +3,12 @@ using AuThink.Desktop.Model;
 using AuThink.Desktop.Settings.Language;
 
 using GalaSoft.MvvmLight.Command;
+using System;
+using System.Windows;
+using System.Windows.Controls;
+
+using AuThink.Desktop.Views;
+using AuThink.Desktop.Services;
 
 namespace AuThink.Desktop.ViewModel
 {
@@ -97,7 +103,23 @@ namespace AuThink.Desktop.ViewModel
         public RelayCommand SettingsCommand { get; private set; }
         private void Settings()
         {
-            //_navigationService.NavigateTo(typeof(SettingsView));
+            //string url = "SettingsView.xaml";
+            ////NavigationService nav = NavigationService.GetNavigationService(this);
+            ////nav.Navigate(new System.Uri(url, UriKind.RelativeOrAbsolute));
+
+            ////Uri uri = new Uri("Views/SettingsView.xaml", UriKind.Relative);
+            //_navigationService.NavigateTo(new System.Uri(url, UriKind.RelativeOrAbsolute));
+
+            _navigationService.NavigateTo(typeof(SettingsView));
+
+            //NavigationService navService = NavigationService.GetNavigationService(this);
+            
+            //navService.Navigate(uri);
+
+            //testni kod za settings
+            //AuThink.Desktop.Properties.Settings.Default.Language = "En";
+
+            //AuThink.Desktop.Properties.Settings.Default.Save(); 
         }
 
         public RelayCommand AboutCommand { get; private set; }
@@ -116,14 +138,14 @@ namespace AuThink.Desktop.ViewModel
 
     public partial class MainViewModel
     {
-        //private readonly NavigationService _navigationService;
+        private readonly NavigationService _navigationService;
         
         public MainViewModel
         (
-            //NavigationService navigationService
+            NavigationService navigationService
         )
         {
-            //_navigationService = navigationService;
+            _navigationService = navigationService;
             
             this.PlayCommand      = new RelayCommand(Play);
             this.SettingsCommand  = new RelayCommand(Settings);

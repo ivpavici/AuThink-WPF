@@ -9,6 +9,7 @@
   DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
 */
 
+using AuThink.Desktop.Services;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
@@ -30,7 +31,9 @@ namespace AuThink.Desktop.ViewModel
                 //SimpleIoc.Default.Register<IDataService, DataService>();
             }
 
+            SimpleIoc.Default.Register<NavigationService>();
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<SettingsViewModel>();
         }
 
         private static string _currentKey = System.Guid.NewGuid().ToString();
@@ -54,6 +57,15 @@ namespace AuThink.Desktop.ViewModel
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
             
+        }
+
+        public SettingsViewModel Settings
+        {
+            get
+            {
+                Cleanup();
+                return ServiceLocator.Current.GetInstance<SettingsViewModel>(CurrentKey);
+            }
         }
 
         public static void Cleanup()

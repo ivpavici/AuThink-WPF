@@ -1,0 +1,75 @@
+﻿<Page x:Class="AuThink.Desktop.Views.SettingsView"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                        xmlns:ignore="http://www.ignore.com"
+                        xmlns:Converters="clr-namespace:Authink.Desktop.Converters"
+      mc:Ignorable="d ignore"
+                        d:DesignHeight="768"
+                        d:DesignWidth="1366"
+                        DataContext="{Binding Settings, Source={StaticResource Locator}}">
+
+    <Page.Resources>
+        <Converters:VisibilityBottunConvertor x:Key="VisibilityBottunConvertor"/>
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/Logo/authink-background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Rectangle Fill="#7F000000"/>
+
+        <Viewbox Stretch="Uniform" >
+            <Grid Width="1366" Height="768">
+                <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Top" 
+                    Margin="0,50,0,0">
+                    <TextBlock 
+                        Text="{Binding SettingsText}" 
+                        Padding="20" 
+                        HorizontalAlignment="Center" 
+                        FontSize="40" 
+                        Foreground="White" 
+                        FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro" 
+                        VerticalAlignment="Top"/>
+                </StackPanel>
+                <StackPanel
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    Margin="0,50,0,0">
+                    <TextBlock            			
+            			Grid.Column="0" 
+            			Text="{Binding ChooseLangText, Mode=TwoWay}" 
+            			FontSize="33.333"
+            			FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                    <RadioButton 
+            			Grid.Column="1"
+            			x:Name="ChooseCroatianButton" 
+            			Content="{Binding CroatianLanguage, Mode=TwoWay}"
+            			Loaded="ChooselanguageButton_Loaded"
+            		    HorizontalAlignment="Right" >
+                        <!--<Triggers:Interactions.Triggers>
+                            <Triggers:EventTrigger EventName="Checked">
+                                <Triggers:InvokeCommandAction CommandParameter="Hr" Command="{Binding ChangeLanguage}"/>
+                            </Triggers:EventTrigger>
+                        </Triggers:Interactions.Triggers>-->
+                    </RadioButton>
+                    <RadioButton 
+            			Grid.Column="2"
+            			x:Name="ChooseEnglishButton"
+            			Content="{Binding EnglishLanguage, Mode=TwoWay}" 
+            			Loaded="ChooselanguageButton_Loaded" 
+            			HorizontalAlignment="Left"
+            			Margin="20,0,0,0">
+                        <!--<Triggers:Interactions.Triggers>
+                            <Triggers:EventTrigger EventName="Checked">
+                                <Triggers:InvokeCommandAction CommandParameter="En" Command="{Binding ChangeLanguage}"/>
+                            </Triggers:EventTrigger>
+                        </Triggers:Interactions.Triggers>-->
+                    </RadioButton>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Page>
