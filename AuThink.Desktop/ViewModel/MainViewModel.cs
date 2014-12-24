@@ -109,8 +109,8 @@ namespace AuThink.Desktop.ViewModel
 
             ////Uri uri = new Uri("Views/SettingsView.xaml", UriKind.Relative);
             //_navigationService.NavigateTo(new System.Uri(url, UriKind.RelativeOrAbsolute));
-
-            _navigationService.NavigateTo(typeof(SettingsView));
+            var pas = new SettingsView();
+            _navigationService.NavigateTo(pas);
 
             //NavigationService navService = NavigationService.GetNavigationService(this);
             
@@ -138,11 +138,11 @@ namespace AuThink.Desktop.ViewModel
 
     public partial class MainViewModel
     {
-        private readonly NavigationService _navigationService;
+        private readonly AuthinkNavigationService _navigationService;
         
         public MainViewModel
         (
-            NavigationService navigationService
+            AuthinkNavigationService navigationService
         )
         {
             _navigationService = navigationService;

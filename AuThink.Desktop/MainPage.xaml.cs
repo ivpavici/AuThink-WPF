@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace AuThink.Desktop
 {
-    public sealed partial class MainPage: Page
+    public sealed partial class MainPage: Window
     {
         public MainPage()
         {
