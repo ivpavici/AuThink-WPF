@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AuThink.Desktop.Services;
+using AuThink.Desktop.Settings;
+using AuThink.Desktop.Views;
 using GalaSoft.MvvmLight;
-using AuThink.Desktop.Settings.Language;
-
 using GalaSoft.MvvmLight.Command;
 
 namespace AuThink.Desktop.ViewModel
@@ -12,21 +13,24 @@ namespace AuThink.Desktop.ViewModel
     public partial class SettingsViewModel : ViewModelBase
     {
         public RelayCommand<string> ChangeLanguage { get; private set; }
-        private void LanguageSelectionChange(string language_abbreviation)
+        
+        private void LanguageSelectionChange(string languageAbbreviation)
         {
-            AuThink.Desktop.Properties.Settings.Default.Language = language_abbreviation;
+            AuThink.Desktop.Properties.Settings.Default.Language = languageAbbreviation;
 
             this.EnglishLanguage = Language.SettingsPage.Language.English();
             this.CroatianLanguage = Language.SettingsPage.Language.Croatian();
             this.SettingsText = Language.SettingsPage.SettingsText();
-            //this.BackButtonContent = Language.SettingsPage.BackButtonContent();
-            //this.ChooseLangText = Language.SettingsPage.ChooseLanText();
+            this.BackButtonContent = Language.SettingsPage.BackButtonContent();
+            this.ChooseLangText = Language.SettingsPage.ChooseLanText();
             //this.RewardSoundButtonContent_off = Language.SettingsPage.SoundButtonContent_off();
             //this.RewardSoundButtonContent_on = Language.SettingsPage.SoundButtonContent_on();
             //this.RewardSoundText = Language.SettingsPage.RewardSoundText();
             //this.InstructionsSoundText = Language.SettingsPage.InstructionSoundText();
             //this.InstructionsSoundButtonContent_on = Language.SettingsPage.SoundButtonContent_on();
             //this.InstructionsSoundButtonContent_off = Language.SettingsPage.SoundButtonContent_off();
+
+            AuThink.Desktop.Properties.Settings.Default.Save(); 
         }
 
         //public RelayCommand<string> ToggleRewardSoundEnableCommand { get; private set; }
@@ -70,6 +74,7 @@ namespace AuThink.Desktop.ViewModel
             }
         }
         private string _croatianLanguage = Language.SettingsPage.Language.Croatian();
+        
         public string EnglishLanguage
         {
             get { return _englishLanguage; }
@@ -85,6 +90,7 @@ namespace AuThink.Desktop.ViewModel
             }
         }
         private string _englishLanguage = Language.SettingsPage.Language.English();
+        
         public string ChooseLangText
         {
             get { return _chooseLangText; }
@@ -211,46 +217,46 @@ namespace AuThink.Desktop.ViewModel
         //}
         //private string _instructionsSoundButtonContent_off = Language.SettingsPage.SoundButtonContent_off();
 
-        //public RelayCommand BackCommand { get; private set; }
-        //private void Back()
-        //{
-        //    _navigationService.NavigateTo(typeof(MainPage));
-        //}
+        public RelayCommand BackCommand { get; private set; }
+        private void Back()
+        {
+            var view = new MainMenu();
+            _navigationService.NavigateTo(view);
+        }
 
-        //public string BackButtonContent
-        //{
-        //    get { return _backButtonContent; }
-        //    set
-        //    {
-        //        if (_backButtonContent == value)
-        //        {
-        //            return;
-        //        }
+        public string BackButtonContent
+        {
+            get { return _backButtonContent; }
+            set
+            {
+                if (_backButtonContent == value)
+                {
+                    return;
+                }
 
-        //        _backButtonContent = value;
-        //        this.RaisePropertyChanged("BackButtonContent");
-        //    }
-        //}
-        //private string _backButtonContent = Language.SettingsPage.BackButtonContent();
+                _backButtonContent = value;
+                this.RaisePropertyChanged("BackButtonContent");
+            }
+        }
+        private string _backButtonContent = Language.SettingsPage.BackButtonContent();
 
     }
 
     public partial class SettingsViewModel
     {
-        //private readonly NavigationService _navigationService;
+        private readonly AuthinkNavigationService _navigationService;
 
         public SettingsViewModel
         (
-            //NavigationService navigationService
+            AuthinkNavigationService navigationService
         )
         {
-            //_navigationService = navigationService;
+            _navigationService = navigationService;
 
             this.ChangeLanguage = new RelayCommand<string>(LanguageSelectionChange);
             //this.ToggleRewardSoundEnableCommand = new RelayCommand<string>(ToggleRewardSoundEnable);
             //this.ToggleInstructionSoundEnableCommand = new RelayCommand<string>(ToggleInstructionSoundEnable);
-            //this.BackCommand = new RelayCommand(Back);
-
+            this.BackCommand = new RelayCommand(Back);
         }
     }
 }

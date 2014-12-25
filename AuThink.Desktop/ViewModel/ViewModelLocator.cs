@@ -54,7 +54,7 @@ namespace AuThink.Desktop.ViewModel
             get
             {
                 Cleanup();
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
+                return ServiceLocator.Current.GetInstance<MainViewModel>(CurrentKey);
             }
             
         }

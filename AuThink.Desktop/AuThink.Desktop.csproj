@@ -73,11 +73,14 @@
     <Compile Include="Converters\EnableButtonConverter.cs" />
     <Compile Include="Converters\MultiplyByScreenRatio.cs" />
     <Compile Include="Converters\VisibilityBottunConvertor.cs" />
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="Views\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\InternetConnection.cs" />
-    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\AuThinkNavigationService.cs" />
     <Compile Include="Services\Shuffler.cs" />
     <Compile Include="Services\UIServices.cs" />
     <Compile Include="Settings\Language.cs" />
@@ -87,7 +90,7 @@
     <Compile Include="Views\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\MainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -95,6 +98,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

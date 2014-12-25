@@ -1,21 +1,21 @@
-﻿<Window x:Class="AuThink.Desktop.MainPage"
+﻿<UserControl x:Class="AuThink.Desktop.Views.MainMenu"
                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                         xmlns:ignore="http://www.ignore.com"
-                        xmlns:Converters="clr-namespace:Authink.Desktop.Converters"
-      mc:Ignorable="d ignore"
+                        xmlns:converters="clr-namespace:Authink.Desktop.Converters"
+                        mc:Ignorable="d ignore"
                         d:DesignHeight="768"
                         d:DesignWidth="1366"
                         DataContext="{Binding Main, Source={StaticResource Locator}}">
 
-    <Window.Resources>
-        <Converters:VisibilityBottunConvertor x:Key="VisibilityBottunConvertor"/>
-    </Window.Resources>
+    <UserControl.Resources>
+        <converters:VisibilityBottunConvertor x:Key="VisibilityBottunConvertor"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/Logo/authink-background.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Assets/Logo/authink-background.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         
         <Rectangle Fill="#7F000000"/>
@@ -33,7 +33,7 @@
                         HorizontalAlignment="Center" 
                         FontSize="40" 
                         Foreground="White" 
-                        FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro" 
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" 
                         VerticalAlignment="Top"/>
                 </StackPanel>
                 <StackPanel
@@ -48,7 +48,7 @@
                         HorizontalAlignment="Stretch" 
                         Command="{Binding PlayCommand}"
                         Content="{Binding PlayButtonContent}"  
-                        FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
                     <Button 
                         x:Name="settingsButton" 
                         Margin="50,0,50,50" 
@@ -57,7 +57,7 @@
                         HorizontalAlignment="Stretch" 
                         Command="{Binding SettingsCommand}" 
                         Content="{Binding SettingsButtonContent}" 
-                        FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
                     <Button 
                         x:Name="aboutButton" 
                         Margin="50,0,50,50" 
@@ -66,7 +66,7 @@
                         HorizontalAlignment="Stretch" 
                         Command="{Binding AboutCommand}"
                         Content="{Binding AboutButtonContent}" 
-                        FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
                     <Button 
                         x:Name="backButton"  
                         Margin="50,0,50,50" 
@@ -75,9 +75,9 @@
                         HorizontalAlignment="Stretch" 
                         Command="{Binding BackCommand}"
                         Content="{Binding BackButtonContent}" 
-                        FontFamily="Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"/>
                  </StackPanel>
             </Grid>
         </Viewbox>
     </Grid>
-</Window>
+</UserControl>

@@ -1,6 +1,6 @@
 ﻿//using Windows.Storage;
 
-namespace AuThink.Desktop.Settings.Language
+namespace AuThink.Desktop.Settings
 {
     public static class Language
     { 
@@ -146,11 +146,11 @@ namespace AuThink.Desktop.Settings.Language
         //            return
         //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Iskljuci" : "Off";
         //        }
-        //        public static string BackButtonContent()
-        //        {
-        //            return
-        //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Natrag" : "Back";
-        //        }
+            public static string BackButtonContent()
+            {
+                return 
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Natrag" : "Back";
+            }
             
         }
 

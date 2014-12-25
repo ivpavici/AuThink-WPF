@@ -1,0 +1,9 @@
+﻿<Window x:Class="AuThink.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:AuThink.Desktop.Views"
+        Title="MainWindow" Height="768" Width="1366">
+    <Grid>
+        <controls:MainMenu></controls:MainMenu>
+    </Grid>
+</Window>
