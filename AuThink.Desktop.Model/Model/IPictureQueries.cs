@@ -6,6 +6,6 @@ namespace AuThink.Desktop.Model.Model
 {
     public interface IPictureQueries
     {
-        List<Picture> GetAllPicturesForTask(int taskId);
+        IEnumerable<Picture> GetAllPicturesForTask(int taskId);
     }
 }

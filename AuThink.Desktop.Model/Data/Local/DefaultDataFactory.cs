@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
 using ent = AuThink.Desktop.Model.Entities;
 
 namespace AuThink.Desktop.Model.Data.Local
@@ -11,8 +10,8 @@ namespace AuThink.Desktop.Model.Data.Local
         {
             return PrivateDataModel_Hr();
 
-            //AuThink.Desktop.Properties.Settings.Default.Language == "Hr"
-            //  ?  PrivateDataModel_Hr()
+            //return AuThink.Desktop.Properties.Settings.Default.Language == "Hr"
+            //  ? PrivateDataModel_Hr()
             //  : PrivateDataModel_En();
 
             //(string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr"
@@ -47,7 +46,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                    difficulty:   1,
                                    pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new ent::Picture.AnswerPicture(21, @"ms-appx:///Resources/Images/ContinueSequence/1/bowl.png",     null, false ),
+                                                     new ent::Picture.AnswerPicture(21, @"ms-appx:///Resources/Images/ContinueSequence/1/bowl.png",     null, false),
                                                      new ent::Picture.AnswerPicture(22, @"ms-appx:///Resources/Images/ContinueSequence/1/casserole.png",null, false),
                                                 },
                                    voiceCommand:new ent::Sound(1,"ms-appx:///Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
@@ -62,7 +61,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                    difficulty:   2,
                                    pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new ent::Picture.AnswerPicture(23, @"ms-appx:///Resources/Images/ContinueSequence/2/coffee cup.png", null, false ),
+                                                     new ent::Picture.AnswerPicture(23, @"ms-appx:///Resources/Images/ContinueSequence/2/coffee cup.png", null, false),
                                                      new ent::Picture.AnswerPicture(24, @"ms-appx:///Resources/Images/ContinueSequence/2/cup.png",        null, false),
                                                      new ent::Picture.AnswerPicture(25, @"ms-appx:///Resources/Images/ContinueSequence/2/frying pan.png", null, false),
                                                 },
@@ -78,7 +77,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                    difficulty:   3,
                                    pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                     new ent::Picture.AnswerPicture(26, @"ms-appx:///Resources/Images/ContinueSequence/3/full.png",          null, false ),
+                                                     new ent::Picture.AnswerPicture(26, @"ms-appx:///Resources/Images/ContinueSequence/3/full.png",          null, false),
                                                      new ent::Picture.AnswerPicture(27, @"ms-appx:///Resources/Images/ContinueSequence/3/jug.png",           null, false),
                                                      new ent::Picture.AnswerPicture(28, @"ms-appx:///Resources/Images/ContinueSequence/3/kitchen chair.png", null, false),
                                                      new ent::Picture.AnswerPicture(29, @"ms-appx:///Resources/Images/ContinueSequence/3/glass.png",         null, false),
@@ -161,7 +160,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                    difficulty:   1,
                                    pictures:new List<ent::Picture.AnswerPicture>
                                                 {
-                                                    new ent::Picture.AnswerPicture(42, "ms-appx:///Resources/Images/DetectDifferentItems/1/bowl.png",           null, true ),
+                                                    new ent::Picture.AnswerPicture(42, "ms-appx:///Resources/Images/DetectDifferentItems/1/bowl.png",           null, true),
                                                     new ent::Picture.AnswerPicture(43, "ms-appx:///Resources/Images/DetectDifferentItems/1/casserole.png",      null, false),
                                                     new ent::Picture.AnswerPicture(44, "ms-appx:///Resources/Images/DetectDifferentItems/1/frying pan.png",     null, false),
                                                     new ent::Picture.AnswerPicture(45, "ms-appx:///Resources/Images/DetectDifferentItems/1/glass.png",          null, false),

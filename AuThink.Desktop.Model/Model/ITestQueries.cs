@@ -6,6 +6,6 @@ namespace AuThink.Desktop.Model.Model
 {
     public interface ITestQueries
     {
-        List<Test> GetAll();
+        IEnumerable<Test> GetAll();
     }
 }

@@ -17,7 +17,7 @@ namespace AuThink.Desktop.Model.Model.Implementation
 
         private readonly ITaskQueries taskprovider;
 
-        public List<Picture> GetAllPicturesForTask(int taskId)
+        public IEnumerable<Picture> GetAllPicturesForTask(int taskId)
         {
             return
                 taskprovider.GetSingleById(taskId)

@@ -6,7 +6,7 @@ using AuThink.Desktop.Model.Entities;
 
 namespace AuThink.Desktop.Model.Model.Implementation
 {
-    public class TaskQueries
+    public class TaskQueries: ITaskQueries
     {
         public TaskQueries
         (
@@ -18,7 +18,7 @@ namespace AuThink.Desktop.Model.Model.Implementation
 
         private readonly IDataProvider dataProvider;
 
-        public List<Task> GetAllTasksForTest(int testId)
+        public IEnumerable<Task> GetAllTasksForTest(int testId)
         {
             return
                 dataProvider.GetAll()

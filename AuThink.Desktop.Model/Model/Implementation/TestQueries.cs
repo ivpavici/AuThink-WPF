@@ -6,7 +6,7 @@ using AuThink.Desktop.Model.Entities;
 
 namespace AuThink.Desktop.Model.Model.Implementation
 {
-    public class TestQueries
+    public class TestQueries: ITestQueries
     {
         public TestQueries
         (
@@ -18,7 +18,7 @@ namespace AuThink.Desktop.Model.Model.Implementation
 
         private readonly IDataProvider dataProvider;
 
-        public List<Test> GetAll()
+        public IEnumerable<Test> GetAll()
         {
             return
                 dataProvider.GetAll().ToList();

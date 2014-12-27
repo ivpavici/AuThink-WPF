@@ -91,7 +91,9 @@ namespace AuThink.Desktop.ViewModel
         public RelayCommand PlayCommand { get; private set; }
         private void Play()
         {
-            //_navigationService.NavigateTo(typeof(TestListView));
+            var view = new TestListView();
+
+            _navigationService.NavigateTo(view);
         }
 
         public RelayCommand SettingsCommand { get; private set; }
@@ -99,19 +101,15 @@ namespace AuThink.Desktop.ViewModel
         {
             var view = new SettingsView();
 
-            _navigationService.NavigateTo(view);
-
-
-            //testni kod za settings
-            //AuThink.Desktop.Properties.Settings.Default.Language = "En";
-
-            //AuThink.Desktop.Properties.Settings.Default.Save(); 
+            _navigationService.NavigateTo(view); 
         }
 
         public RelayCommand AboutCommand { get; private set; }
         private void About()
         {
-            //_navigationService.NavigateTo(typeof (AboutView));
+            var view = new AboutView();
+
+            _navigationService.NavigateTo(view);
         }
 
         public RelayCommand BackCommand { get; set; }

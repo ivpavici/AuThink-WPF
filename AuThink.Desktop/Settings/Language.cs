@@ -1,6 +1,4 @@
-﻿//using Windows.Storage;
-
-namespace AuThink.Desktop.Settings
+﻿namespace AuThink.Desktop.Settings
 {
     public static class Language
     { 
@@ -52,20 +50,20 @@ namespace AuThink.Desktop.Settings
         //    }
         //}
 
-        //public static class TestListPage 
-        //{
-        //    public static string SelectTestButtonContent()
-        //    {
-        //        return
-        //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Izaberi test" : "Select test";
-        //    }
+        public static class TestListPage
+        {
+            public static string SelectTestButtonContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Izaberi test" : "Select test";
+            }
 
-        //    public static string GoBackButtonContent()
-        //    {
-        //        return
-        //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Natrag" : "Back";
-        //    }
-        //}
+            public static string GoBackButtonContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Natrag" : "Back";
+            }
+        }
 
         //public static class EndTestPage
         //{
@@ -203,33 +201,33 @@ namespace AuThink.Desktop.Settings
         //    }
         //}
 
-        //public static class AboutPage
-        //{
-        //    public static string AboutTextContent()
-        //    {
-        //        return
-        //          (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "AuThink lite je demo verzija aplikacije kojoj je cilj pokazati osnovne funkcionalnosti sustava. Kasnije biti dostupna sa punom funkcionalnosti modificiranja danih zadataka." +
-        //                                                                                     " \n\nMi smo tim studenata iz Splita, " +
-        //                                                                                     "koji su započeli sa radom na projektu za Imagine Cup natjecanje. Odlučni za nastavak rada i unaprijeđivanje aplikacije koliko god to bude moguće!" +
-        //                                                                                     " Svi trenutni zadaci i testovi su izrađeni u suradnji sa Centrom za autizam u Splitu. " +
-        //                                                                                     "\n\nZa više detalja" +
-        //                                                                                     " vezanih uz AuThink, našu viziju te dodatne informacije možete posjetiti našu web stranicu: www.authink.org ! \n\nKontaktirajte nas slobodno ukoliko imate bilo kakvih prijedloga!" +
-        //                                                                                     " \n\nBilo bi nam drago čuti vaše mišljenje: info@authink.org :)" 
-        //                                                                                     : 
-        //                                                                                     "AuThink lite is a demo version of an app that will later be available with full funcionality. " +
-        //                                                                                     "\n\nWe are a team of students from Croatia, who started working on this as an Imagine Cup project, but are determined to work further and improve it as much as possible! " +
-        //                                                                                     "The idea is to demonstrate the basic funcionality of the AuThink system. We will enable task customization and individualization later on. " +
-        //                                                                                     "All current tasks and tests were created in cooperation with the Centre for autism in Split, Croatia." +
-        //                                                                                     "\n\nYou can visit our website: www.authink.org for more information and details about our project and vision! Please contact us if you have any suggestions concerning the app! " +
-        //                                                                                     "\n\nWe would like to hear from you: info@authink.com :)"
-        //                                                                                     ;
-        //    }
+        public static class AboutPage
+        {
+            public static string AboutTextContent()
+            {
+                return
+                  AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "AuThink lite je demo verzija aplikacije kojoj je cilj pokazati osnovne funkcionalnosti sustava. Kasnije biti dostupna sa punom funkcionalnosti modificiranja danih zadataka." +
+                                                                                             " \n\nMi smo tim studenata iz Splita, " +
+                                                                                             "koji su započeli sa radom na projektu za Imagine Cup natjecanje. Odlučni za nastavak rada i unaprijeđivanje aplikacije koliko god to bude moguće!" +
+                                                                                             " Svi trenutni zadaci i testovi su izrađeni u suradnji sa Centrom za autizam u Splitu. " +
+                                                                                             "\n\nZa više detalja" +
+                                                                                             " vezanih uz AuThink, našu viziju te dodatne informacije možete posjetiti našu web stranicu: www.authink.org ! \n\nKontaktirajte nas slobodno ukoliko imate bilo kakvih prijedloga!" +
+                                                                                             " \n\nBilo bi nam drago čuti vaše mišljenje: info@authink.org :)"
+                                                                                             :
+                                                                                             "AuThink lite is a demo version of an app that will later be available with full funcionality. " +
+                                                                                             "\n\nWe are a team of students from Croatia, who started working on this as an Imagine Cup project, but are determined to work further and improve it as much as possible! " +
+                                                                                             "The idea is to demonstrate the basic funcionality of the AuThink system. We will enable task customization and individualization later on. " +
+                                                                                             "All current tasks and tests were created in cooperation with the Centre for autism in Split, Croatia." +
+                                                                                             "\n\nYou can visit our website: www.authink.org for more information and details about our project and vision! Please contact us if you have any suggestions concerning the app! " +
+                                                                                             "\n\nWe would like to hear from you: info@authink.com :)"
+                                                                                             ;
+            }
 
-        //    public static string BackButtonContent()
-        //    {
-        //        return
-        //          (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Natrag" : "Back";
-        //    }
-        //}
+            public static string BackButtonContent()
+            {
+                return
+                  AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Natrag" : "Back";
+            }
+        }
     }
 }

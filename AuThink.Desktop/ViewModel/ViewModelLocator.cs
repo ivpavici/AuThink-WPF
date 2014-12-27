@@ -9,6 +9,10 @@
   DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
 */
 
+using AuThink.Desktop.Model.Data;
+using AuThink.Desktop.Model.Data.Local;
+using AuThink.Desktop.Model.Model;
+using AuThink.Desktop.Model.Model.Implementation;
 using AuThink.Desktop.Services;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
@@ -34,6 +38,14 @@ namespace AuThink.Desktop.ViewModel
             SimpleIoc.Default.Register<AuthinkNavigationService>();
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<SettingsViewModel>();
+            SimpleIoc.Default.Register<AboutViewModel>();
+            SimpleIoc.Default.Register<TestListViewModel>();
+
+            SimpleIoc.Default.Register<ITestQueries, TestQueries>();
+            SimpleIoc.Default.Register<ITaskQueries, TaskQueries>();
+            SimpleIoc.Default.Register<IPictureQueries, PictureQueries>();
+
+            SimpleIoc.Default.Register<IDataProvider, DefaultDataFactory>();
         }
 
         private static string _currentKey = System.Guid.NewGuid().ToString();
@@ -68,9 +80,30 @@ namespace AuThink.Desktop.ViewModel
             }
         }
 
+        public AboutViewModel About
+        {
+            get
+            {
+                Cleanup();
+                return ServiceLocator.Current.GetInstance<AboutViewModel>(CurrentKey);
+            }
+        }
+
+        public TestListViewModel List
+        {
+            get
+            {
+                Cleanup();
+                return ServiceLocator.Current.GetInstance<TestListViewModel>(CurrentKey);
+            }
+        }
+
         public static void Cleanup()
         {
             SimpleIoc.Default.Unregister<MainViewModel>(CurrentKey);
+
+            //jel triba i ostale unregister?
+
             CurrentKey = System.Guid.NewGuid().ToString();
         }
     }

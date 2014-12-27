@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="AuThink.Desktop.Views.TestListView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1366"
+      DataContext="{Binding List, Source={StaticResource Locator}}">
+
+    <Viewbox Stretch="Uniform">
+        <Grid 
+       x:Name="TestListContainer" 
+                  Height="768" 
+                  Width="1366">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*" />
+                <ColumnDefinition Width="0.7*" />
+            </Grid.ColumnDefinitions>
+            <Grid Background="#FF116C98" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.15*" />
+                    <RowDefinition Height="0.85*"/>
+                </Grid.RowDefinitions>
+                <Border BorderThickness="1,0,0,0" 
+                    Grid.RowSpan="3" 
+                    Margin="5,0,0,0" 
+                    Visibility="Collapsed">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush 
+                        StartPoint="0,0" 
+                        EndPoint="0,11"
+                        SpreadMethod="Repeat" 
+                        MappingMode="Absolute">
+                            <GradientStop 
+                            Color="Transparent" 
+                            Offset="0"/>
+                            <GradientStop 
+                            Color="Transparent" 
+                            Offset="0.499"/>
+                            <GradientStop 
+                            Color="White" 
+                            Offset="0.7"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                </Border>
+                <Border BorderThickness="0,0,0,1" >
+                    <Border.BorderBrush>
+                        <LinearGradientBrush 
+                        StartPoint="-5.5,5.5" 
+                        EndPoint="5.5,5.5"
+                        SpreadMethod="Repeat" 
+                        MappingMode="Absolute">
+                            <GradientStop 
+                            Color="Transparent" 
+                            Offset="0"/>
+                            <GradientStop 
+                            Color="Transparent" 
+                            Offset="0.499"/>
+                            <GradientStop 
+                            Color="White" 
+                            Offset="0.7"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Image 
+            		Source="/Assets/Logo/authink-lite-logo-white.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="80,-10,80,0" />
+                </Border>
+                <ListView Grid.Row="1" 
+        		x:Name="listOfTests" 
+        		SelectedItem="{Binding SelectedTest, Mode=TwoWay}" 
+        		ItemsSource="{Binding Tests}" 
+        		VerticalAlignment="Stretch" 
+        		Margin="0,5,0,0" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto"        
+                />
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.7*" />
+                    <RowDefinition Height="0.1*" />
+                </Grid.RowDefinitions>
+                <StackPanel Margin="20,60,20,20">
+                    <TextBlock 
+                    x:Name="testTitle" 
+					Text="{Binding SelectedTest.Name}" 
+					FontSize="45" 
+					HorizontalAlignment="Left" 
+                    Foreground="Black" TextWrapping="Wrap" />
+                    <TextBlock 
+                    x:Name="testDescription" 
+					Text="{Binding SelectedTest.Description}"				
+					TextWrapping="Wrap" 
+					FontSize="30" 
+					HorizontalAlignment="Left" 
+					Foreground="Black" />
+                </StackPanel>
+                <ListView 
+				Grid.Row="1"
+				ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                x:Name="listOfTasksInChosenTest"
+                SelectedItem="{Binding SelectedTask, Mode=TwoWay}"
+                ItemsSource="{Binding SelectedTest.Tasks}" 
+            	Margin="0,0,5,0">
+                </ListView>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button 
+					x:Name="GoBackButton" 
+					Content="{Binding GoBackButtonContent}"
+					Command="{Binding GoBackCommand}"
+					HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" Margin="0,10,60,20" />
+                    <Button 
+					x:Name="selectTestButton" 
+					Content="{Binding SelectTestButtonContent}"
+					Command="{Binding RunTestCommand}"
+					HorizontalAlignment="Right" VerticalAlignment="Center" Margin="60,10,0,20" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</UserControl>
