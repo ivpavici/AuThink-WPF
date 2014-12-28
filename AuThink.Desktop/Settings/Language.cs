@@ -35,20 +35,20 @@
             }
         }
 
-        //public static class ChildrenPage
-        //{
-        //    public static string FirstNameContent()
-        //    {
-        //        return
-        //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Ime:" : "First Name:";
-        //    }
+        public static class ChildrenPage
+        {
+            public static string FirstNameContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Ime:" : "First Name:";
+            }
 
-        //    public static string LastNameContent()
-        //    {
-        //        return
-        //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Prezime:" : "Last Name:";
-        //    }
-        //}
+            public static string LastNameContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Prezime:" : "Last Name:";
+            }
+        }
 
         public static class TestListPage
         {
@@ -65,32 +65,32 @@
             }
         }
 
-        //public static class EndTestPage
-        //{
-        //    public static string SuccessfullTextContent()
-        //    {
-        //        return
-        //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Završen test!" : "Test completed!";
-        //    }
+        public static class EndTestPage
+        {
+            public static string SuccessfullTextContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Završen test!" : "Test completed!";
+            }
 
-        //     public static string ResetTestButtonContent()
-        //     {
-        //         return
-        //             (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Ponovi test" : "Restart test";
-        //     }
+            public static string ResetTestButtonContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Ponovi test" : "Restart test";
+            }
 
-        //     public static string TestMenuButtonContent()
-        //     {
-        //         return
-        //             (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Meni testova" : "Test menu";
-        //     }
+            public static string TestMenuButtonContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Meni testova" : "Test menu";
+            }
 
-        //     public static string ExitButtonContent()
-        //     {
-        //         return
-        //             (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Izlaz" : "Exit";
-        //     }
-        //}
+            public static string ExitButtonContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Izlaz" : "Exit";
+            }
+        }
 
         public static class SettingsPage
         {
@@ -124,26 +124,26 @@
                 return
                     AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Postavke" : "Settings";
             }
-        //        public static string RewardSoundText()
-        //        {
-        //            return
-        //             (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Nagradni zvuk:" : "Reward sound:";
-        //        }
-        //        public static string InstructionSoundText()
-        //        {
-        //            return
-        //             (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Glasovne upute:" : "Voice instructions:";
-        //        }
-        //        public static string SoundButtonContent_on()
-        //        {
-        //            return
-        //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Ukljuci" : "On";
-        //        }
-        //        public static string SoundButtonContent_off()
-        //        {
-        //            return
-        //            (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Iskljuci" : "Off";
-        //        }
+            public static string RewardSoundText()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Nagradni zvuk:" : "Reward sound:";
+            }
+            public static string InstructionSoundText()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Glasovne upute:" : "Voice instructions:";
+            }
+            public static string SoundButtonContent_on()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Ukljuci" : "On";
+            }
+            public static string SoundButtonContent_off()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Iskljuci" : "Off";
+            }
             public static string BackButtonContent()
             {
                 return 
@@ -152,54 +152,53 @@
             
         }
 
-        //public static class RewardPage
-        //{
-        //    public static string ContinueButtonContent()
-        //    {
-        //        return "Nastavi";
+        public static class RewardPage
+        {
+            public static string ContinueButtonContent()
+            {
+                return
+                    AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Nastavi" : "Continue";
+            }
 
-        //          //(string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Nastavi" : "Continue";
-        //    }
+            public static string RewardTextContent()
+            {
+                return
+                   AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Bravo!" : "Good job!";
+            }
+        }
 
-        //    public static string RewardTextContent()
-        //    {
-        //        return
-        //           (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Bravo!" : "Good job!";
-        //    }
-        //}
+        public static class PausePopup
+        {
+            public static string MainMenuButtonContent()
+            {
+                return
+                  AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Glavni izbornik" : "Main menu";
+            }
 
-        //public static class PausePopup
-        //{
-        //    public static string MainMenuButtonContent()
-        //    {
-        //        return
-        //          (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Glavni izbornik" : "Main menu";
-        //    }
+            public static string TestListButtonContent()
+            {
+                return
+                  AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Testovi" : "Tests";
+            }
 
-        //    public static string TestListButtonContent()
-        //    {
-        //        return
-        //          (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Testovi" : "Tests";
-        //    }
+            public static string SettingsButtonContent()
+            {
+                return
+                  AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Postavke" : "Settings";
+            }
 
-        //    public static string SettingsButtonContent()
-        //    {
-        //        return
-        //          (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Postavke" : "Settings";
-        //    }
+            public static string ExitButtonContent()
+            {
+                return
+                  AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Izlaz" : "Exit";
+            }
 
-        //    public static string ExitButtonContent()
-        //    {
-        //        return
-        //          (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Izlaz" : "Exit";
-        //    }
-
-        //    public static string ClosePopupButtonContent()
-        //    {
-        //        return
-        //          (string)ApplicationData.Current.LocalSettings.Values["Language"] == "Hr" ? "Nastavi" : "Continue";
-        //    }
-        //}
+            public static string ClosePopupButtonContent()
+            {
+                return
+                  AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Nastavi" : "Continue";
+            }
+        }
 
         public static class AboutPage
         {

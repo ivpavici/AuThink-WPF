@@ -1,6 +1,6 @@
 ﻿namespace AuThink.Desktop.Model
 {
-    public class Rules
+    public static class Rules
     {
         public static class Keys
         {

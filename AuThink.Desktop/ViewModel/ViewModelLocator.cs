@@ -40,6 +40,7 @@ namespace AuThink.Desktop.ViewModel
             SimpleIoc.Default.Register<SettingsViewModel>();
             SimpleIoc.Default.Register<AboutViewModel>();
             SimpleIoc.Default.Register<TestListViewModel>();
+            SimpleIoc.Default.Register<GameViewModel>();
 
             SimpleIoc.Default.Register<ITestQueries, TestQueries>();
             SimpleIoc.Default.Register<ITaskQueries, TaskQueries>();
@@ -95,6 +96,15 @@ namespace AuThink.Desktop.ViewModel
             {
                 Cleanup();
                 return ServiceLocator.Current.GetInstance<TestListViewModel>(CurrentKey);
+            }
+        }
+
+        public GameViewModel Game
+        {
+            get
+            {
+                Cleanup();
+                return ServiceLocator.Current.GetInstance<GameViewModel>(CurrentKey);
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using AuThink.Desktop.Model.Entities;
 using AuThink.Desktop.Model.Model;
 using AuThink.Desktop.Services;
@@ -79,10 +80,12 @@ namespace AuThink.Desktop.ViewModel
         public RelayCommand RunTestCommand { get; private set; }
         private void RunTest()
         {
-            //var tasks_ids = taskQueries.GetAllTasksForTest(SelectedTest.Id).Select(task => task.Id).SkipWhile(x => SelectedTask != null && x != SelectedTask.Id).ToList();
+            var tasks_ids = taskQueries.GetAllTasksForTest(SelectedTest.Id).Select(task => task.Id).SkipWhile(x => SelectedTask != null && x != SelectedTask.Id).ToList();
 
-            //GameState.Start(SelectedTest.Id, tasks_ids);
-            //_navigationService.NavigateTo(typeof(GameView));
+            GameState.Start(SelectedTest.Id, tasks_ids);
+
+            var view = new GameView(); 
+            _navigationService.NavigateTo(view);
         }
 
         public RelayCommand GoBackCommand { get; private set; }
