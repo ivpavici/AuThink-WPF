@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AuThink.Desktop.Model.Entities
+namespace AuThink.Desktop.Core.Entities
 {
     public class Child
     {

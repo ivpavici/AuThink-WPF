@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Authink.Desktop.Controls;
-using AuThink.Desktop.Model.Model;
+using AuThink.Desktop.Core;
 using AuThink.Desktop.Services;
 using GalaSoft.MvvmLight.Ioc;
 

@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuThink.Desktop", "AuThink.Desktop\AuThink.Desktop.csproj", "{85181379-CB57-492D-A978-AF04F46E746E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuThink.Desktop.Model", "AuThink.Desktop.Model\AuThink.Desktop.Model.csproj", "{48739E27-F02B-44DE-9AAE-6D296C0B189D}"
@@ -11,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E4ACEB
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuThink.Desktop.Core", "AuThink.Desktop.Core\AuThink.Desktop.Core.csproj", "{384D28D5-3CFC-426D-B4D0-D1C4D6B80093}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +30,10 @@ Global
 		{48739E27-F02B-44DE-9AAE-6D296C0B189D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48739E27-F02B-44DE-9AAE-6D296C0B189D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48739E27-F02B-44DE-9AAE-6D296C0B189D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{384D28D5-3CFC-426D-B4D0-D1C4D6B80093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384D28D5-3CFC-426D-B4D0-D1C4D6B80093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384D28D5-3CFC-426D-B4D0-D1C4D6B80093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384D28D5-3CFC-426D-B4D0-D1C4D6B80093}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

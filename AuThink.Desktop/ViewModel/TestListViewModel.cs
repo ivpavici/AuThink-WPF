@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AuThink.Desktop.Model.Entities;
-using AuThink.Desktop.Model.Model;
+using AuThink.Desktop.Core;
+using AuThink.Desktop.Core.Entities;
 using AuThink.Desktop.Services;
 using AuThink.Desktop.Settings;
 using AuThink.Desktop.Views;

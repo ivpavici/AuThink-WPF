@@ -40,24 +40,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\External\ApiAdapter.cs" />
-    <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Data\Local\DefaultDataFactory.cs" />
-    <Compile Include="Entities\Child.cs" />
-    <Compile Include="Entities\Color.cs" />
-    <Compile Include="Entities\Picture.cs" />
-    <Compile Include="Entities\Sound.cs" />
-    <Compile Include="Entities\Task.cs" />
-    <Compile Include="Entities\Test.cs" />
-    <Compile Include="Model\Implementation\PictureQueries.cs" />
-    <Compile Include="Model\Implementation\TaskQueries.cs" />
-    <Compile Include="Model\Implementation\TestQueries.cs" />
-    <Compile Include="Model\IPictureQueries.cs" />
-    <Compile Include="Model\ITaskQueries.cs" />
-    <Compile Include="Model\ITestQueries.cs" />
+    <Compile Include="PictureQueries.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TaskQueries.cs" />
+    <Compile Include="TestQueries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AuThink.Desktop.Core\AuThink.Desktop.Core.csproj">
+      <Project>{384d28d5-3cfc-426d-b4d0-d1c4d6b80093}</Project>
+      <Name>AuThink.Desktop.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Gear.png" />
     <Content Include="Resources\Images\Affiliation\1\kitchen tool_2.png" />
@@ -504,15 +504,40 @@
     <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\tocno.mp3" />
     <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\upari_boje.mp3" />
     <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\upari_oblik1.mp3" />
-    <Content Include="Resources\TaskIcons\task-affiliation-256x256.png" />
-    <Content Include="Resources\TaskIcons\task-continue-sequence-256x256.png" />
-    <Content Include="Resources\TaskIcons\task-detect-colors-256x256.png" />
-    <Content Include="Resources\TaskIcons\task-detect-different-items-256x256.png" />
-    <Content Include="Resources\TaskIcons\task-detect-same-items-256x256.png" />
-    <Content Include="Resources\TaskIcons\task-order-by-size-256x256.png" />
-    <Content Include="Resources\TaskIcons\task-pair-halves-256x256.png" />
-    <Content Include="Resources\TaskIcons\task-pair-same-items-256x256.png" />
-    <Content Include="Resources\TaskIcons\task-voice-commands-256x256.png" />
+    <Content Include="Resources\TaskIcons\task-affiliation-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskIcons\task-continue-sequence-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskIcons\task-detect-colors-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskIcons\task-detect-different-items-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskIcons\task-detect-same-items-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskIcons\task-order-by-size-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskIcons\task-pair-halves-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskIcons\task-pair-same-items-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TaskIcons\task-voice-commands-256x256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

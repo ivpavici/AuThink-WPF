@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using AuThink.Desktop.Core;
+using AuThink.Desktop.Core.Entities;
 
-using AuThink.Desktop.Model.Data;
-using AuThink.Desktop.Model.Entities;
-
-namespace AuThink.Desktop.Model.Model.Implementation
+namespace AuThink.Desktop.Model
 {
     public class TaskQueries: ITaskQueries
     {
@@ -20,11 +19,13 @@ namespace AuThink.Desktop.Model.Model.Implementation
 
         public IEnumerable<Task> GetAllTasksForTest(int testId)
         {
-            return
+            var a =
                 dataProvider.GetAll()
                             .Single(test => test.Id == testId)
                             .Tasks
                             .ToList();
+
+            return a;
         }
         
         public Task GetSingleById(int taskId)

@@ -1,4 +1,4 @@
-﻿namespace AuThink.Desktop.Model.Entities
+﻿namespace AuThink.Desktop.Core.Entities
 {
     public class Sound
     {

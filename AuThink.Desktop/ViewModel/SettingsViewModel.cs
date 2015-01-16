@@ -30,6 +30,7 @@ namespace AuThink.Desktop.ViewModel
             //this.InstructionsSoundButtonContent_on = Language.SettingsPage.SoundButtonContent_on();
             //this.InstructionsSoundButtonContent_off = Language.SettingsPage.SoundButtonContent_off();
 
+            SetLanguageModel();
             AuThink.Desktop.Properties.Settings.Default.Save(); 
         }
 
@@ -240,6 +241,19 @@ namespace AuThink.Desktop.ViewModel
         }
         private string _backButtonContent = Language.SettingsPage.BackButtonContent();
 
+        private static void SetLanguageModel()
+        {
+            if (AuThink.Desktop.Properties.Settings.Default.Language == "Hr")
+            {
+                AuThink.Desktop.Model.Properties.Settings.Default.Setting = "Hr";
+                AuThink.Desktop.Model.Properties.Settings.Default.Save();
+            }
+            else
+            {
+                AuThink.Desktop.Model.Properties.Settings.Default.Setting = "En";
+                AuThink.Desktop.Model.Properties.Settings.Default.Save();
+            }
+        }
     }
 
     public partial class SettingsViewModel

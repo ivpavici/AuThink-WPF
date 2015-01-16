@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using AuThink.Desktop.Core;
+using AuThink.Desktop.Core.Entities;
 
-using AuThink.Desktop.Model.Entities;
-
-namespace AuThink.Desktop.Model.Model.Implementation
+namespace AuThink.Desktop.Model
 {
     public class PictureQueries: IPictureQueries
     {

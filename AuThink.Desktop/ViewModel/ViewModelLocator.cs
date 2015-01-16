@@ -9,10 +9,9 @@
   DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
 */
 
-using AuThink.Desktop.Model.Data;
+using AuThink.Desktop.Core;
+using AuThink.Desktop.Model;
 using AuThink.Desktop.Model.Data.Local;
-using AuThink.Desktop.Model.Model;
-using AuThink.Desktop.Model.Model.Implementation;
 using AuThink.Desktop.Services;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
