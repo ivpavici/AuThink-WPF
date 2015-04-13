@@ -18,33 +18,8 @@ using GalaSoft.MvvmLight.Ioc;
 
 namespace AuThink.Desktop.Views
 {
-    /// <summary>
-    /// Interaction logic for GameView.xaml
-    /// </summary>
-    public partial class GameView : UserControl
+    public partial class GameView
     {
-        private readonly ITaskQueries taskQueries;
-
-        private DraggableElement draggingElement;
-        private Point startPosition;
-
-        private bool isDragging;
-        private object draggingElement_content;
-        private string taskKey;
-
-        public GameView()
-        {
-            this.InitializeComponent();
-
-            this.taskQueries = (ITaskQueries)SimpleIoc.Default.GetInstance(typeof(ITaskQueries));
-
-            //this.AddHandler(UIElement.PointerPressedEvent, new PointerEventHandler(_DraggableElement_PointerPressed), true);
-            //this.AddHandler(UIElement.PointerReleasedEvent, new PointerEventHandler(_DropPlaceholder_PointerReleased), true);
-
-            //SoundServices.Instance.Initialize(this.mediaElement);
-            //PopUpService.Instance.Initialize(this.PopupStoryboard);
-        }
-
         private object FindParentOfElement<T>(DependencyObject element)
         {
             if (element == null) { return null; }
@@ -151,13 +126,13 @@ namespace AuThink.Desktop.Views
         //}
         private bool IsDropSuccessful(DropPlaceholder dropedOn)
         {
-            if (taskKey == AuThink.Desktop.Model.Rules.Keys.PairHalves)
+            if (_taskKey == AuThink.Desktop.Model.Rules.Keys.PairHalves)
             {
-                return dropedOn.ExpectedPairId == draggingElement.PairId;
+                return dropedOn.ExpectedPairId == _draggingElement.PairId;
             }
-            else if (taskKey == AuThink.Desktop.Model.Rules.Keys.PairSameItems)
+            else if (_taskKey == AuThink.Desktop.Model.Rules.Keys.PairSameItems)
             {
-                return dropedOn.ExpectedPairId.ToString() == draggingElement.PairId.ToString();
+                return dropedOn.ExpectedPairId.ToString() == _draggingElement.PairId.ToString();
             }
 
             return false;
@@ -165,31 +140,56 @@ namespace AuThink.Desktop.Views
         private void CancelDragging()
         {
             draggingContentControl.Content = null;
-            draggingElement.Content = draggingElement_content;
-            draggingElement = null;
-            isDragging = false;
+            _draggingElement.Content = _draggingElementContent;
+            _draggingElement = null;
+            _isDragging = false;
         }
         private void TransferDraggingContentToDraggingElement(DraggableElement sourceElement)
         {
-            draggingElement = sourceElement;
-            draggingElement_content = draggingElement.Content;
-            draggingElement.Content = null;
-            draggingContentControl.DataContext = draggingElement.DataContext;
-            draggingContentControl.Content = draggingElement_content;
+            _draggingElement = sourceElement;
+            _draggingElementContent = _draggingElement.Content;
+            _draggingElement.Content = null;
+            draggingContentControl.DataContext = _draggingElement.DataContext;
+            draggingContentControl.Content = _draggingElementContent;
         }
         private void TransferDraggingContentToDropElement(DropPlaceholder destinationElement)
         {
             draggingContentControl.Content = null;
 
             //destinationElement.Content = draggingElement_content;
-            destinationElement.DropElement(draggingElement_content);
-            draggingElement.Visibility = Visibility.Collapsed;
-            draggingElement = null;
+            destinationElement.DropElement(_draggingElementContent);
+            _draggingElement.Visibility = Visibility.Collapsed;
+            _draggingElement = null;
         }
 
         private void Popup_continue_OnClick(object sender, RoutedEventArgs e)
         {
             MenuPopup.Visibility = Visibility.Collapsed;
+        }
+    }
+
+    public partial class GameView
+    {
+        private readonly ITaskQueries _taskQueries;
+
+        private DraggableElement _draggingElement;
+        private Point _startPosition;
+
+        private bool _isDragging;
+        private object _draggingElementContent;
+        private string _taskKey;
+
+        public GameView()
+        {
+            this.InitializeComponent();
+
+            _taskQueries = (ITaskQueries)SimpleIoc.Default.GetInstance(typeof(ITaskQueries));
+
+            //this.AddHandler(UIElement.PointerPressedEvent, new PointerEventHandler(_DraggableElement_PointerPressed), true);
+            //this.AddHandler(UIElement.PointerReleasedEvent, new PointerEventHandler(_DropPlaceholder_PointerReleased), true);
+
+            //SoundServices.Instance.Initialize(this.mediaElement);
+            //PopUpService.Instance.Initialize(this.PopupStoryboard);
         }
     }
 }

@@ -7,30 +7,29 @@ namespace AuThink.Desktop.Model
 {
     public class TaskQueries: ITaskQueries
     {
+        private readonly IDataProvider _dataProvider;
+
         public TaskQueries
         (
             IDataProvider dataProvider
         )
         {
-            this.dataProvider = dataProvider;
+            _dataProvider = dataProvider;
         }
-
-        private readonly IDataProvider dataProvider;
 
         public IEnumerable<Task> GetAllTasksForTest(int testId)
         {
-            var a =
-                dataProvider.GetAll()
-                            .Single(test => test.Id == testId)
-                            .Tasks
-                            .ToList();
-
-            return a;
+            return 
+                _dataProvider
+                    .GetAll()
+                    .Single(test => test.Id == testId)
+                    .Tasks
+                    .ToList();
         }
         
         public Task GetSingleById(int taskId)
         {
-            var test = dataProvider.GetAll()
+            var test = _dataProvider.GetAll()
                 .SingleOrDefault(t => t.Tasks.Any(task => task.Id == taskId));
 
             if (test != null)

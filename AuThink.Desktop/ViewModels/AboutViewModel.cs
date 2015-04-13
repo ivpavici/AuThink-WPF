@@ -4,9 +4,9 @@ using AuThink.Desktop.Views;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
-namespace AuThink.Desktop.ViewModel
+namespace AuThink.Desktop.ViewModels
 {
-    public class AboutViewModel: ViewModelBase
+    public partial class AboutViewModel: ViewModelBase
     {
         public string AboutTextContent
         {
@@ -24,6 +24,7 @@ namespace AuThink.Desktop.ViewModel
         }
         private string _aboutTextContent = Language.AboutPage.AboutTextContent();
 
+        public RelayCommand BackButtonCommand { get; private set; }
         public string BackButtonContent
         {
             get { return _backButtonContent; }
@@ -40,20 +41,23 @@ namespace AuThink.Desktop.ViewModel
         }
         private string _backButtonContent = Language.AboutPage.BackButtonContent();
 
-        public RelayCommand BackButtonCommand { get; private set; }
         private void Back()
         {
             var page = new MainMenu();
             _navigationService.NavigateTo(page);
         }
+    }
 
+    public partial class AboutViewModel
+    {
         private readonly AuthinkNavigationService _navigationService;
+
         public AboutViewModel
-            (
-                AuthinkNavigationService navigationService
-            )
+        (
+            AuthinkNavigationService navigationService
+        )
         {
-            this._navigationService = navigationService;
+            _navigationService = navigationService;
             this.BackButtonCommand = new RelayCommand(Back);
         }
     }

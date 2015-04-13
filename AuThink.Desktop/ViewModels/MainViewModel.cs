@@ -4,7 +4,7 @@ using GalaSoft.MvvmLight.Command;
 using AuThink.Desktop.Views;
 using AuThink.Desktop.Services;
 
-namespace AuThink.Desktop.ViewModel
+namespace AuThink.Desktop.ViewModels
 {
     public partial class MainViewModel : ViewModelBase
     {

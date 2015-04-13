@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using AuThink.Desktop.Core;
+
 using ent = AuThink.Desktop.Core.Entities;
 
 namespace AuThink.Desktop.Model.Data.Local

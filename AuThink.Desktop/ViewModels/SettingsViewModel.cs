@@ -8,7 +8,7 @@ using AuThink.Desktop.Views;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
-namespace AuThink.Desktop.ViewModel
+namespace AuThink.Desktop.ViewModels
 {
     public partial class SettingsViewModel : ViewModelBase
     {

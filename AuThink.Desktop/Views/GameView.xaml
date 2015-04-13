@@ -14,12 +14,10 @@
         <ContentControl x:Name="draggingContentControl" IsHitTestVisible="False" />
 
         <Button 
-            x:Name="PauzeMenuButton" 
+            x:Name="PauseMenuButton" 
             Command="{Binding OpenPopupCommand}" 
-            Width="100" 
-            Height="100" 
-            VerticalAlignment="Top" 
-            HorizontalAlignment="right" Opacity="0.3">
+            Width="100" Height="100" VerticalAlignment="Top" HorizontalAlignment="right" Opacity="0.3">
+            
             <Image Source="/AuThink.Desktop.Model;component/Resources/Gear.png"/>
         </Button>
 
@@ -28,27 +26,23 @@
                 <Grid Height="768" Width="1366">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
                         <Button 
-        					x:Name="Popup_continue" 
+        					x:Name="PopupContinue" 
         					HorizontalAlignment="Center" 
-        					Content="{Binding Popup_close}" 
-        					MinWidth="360" 
-        					MinHeight="41"
-                            FontSize="29.333"
+        					Content="{Binding PopupClose}" 
+        					MinWidth="360" MinHeight="41" FontSize="29.333"
         					Click="Popup_continue_OnClick" Margin="0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" />
                         <Button 
-        					x:Name="PopupButton_mainMenu" 
+        					x:Name="PopupButtonMainMenu" 
         					HorizontalAlignment="Center" 
-        					Command="{Binding PopupButton_mainMenuCommand}" 
-        					Content="{Binding Popup_mainMenu}" 
-        					MinWidth="360" 
-        					MinHeight="41" Margin="0,25,0,0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" FontSize="29.333"/>
+        					Command="{Binding PopupButtonMainMenuCommand}" 
+        					Content="{Binding PopupMainMenu}" 
+        					MinWidth="360" MinHeight="41" Margin="0,25,0,0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" FontSize="29.333"/>
                         <Button 
-        					x:Name="PopupButton_testMenu" 
+        					x:Name="PopupButtonTestMenu" 
         					HorizontalAlignment="Center"
-        					Command="{Binding PopupButton_testMenuCommand}" 
-        					Content="{Binding Popup_testMenu}"
-        					MinWidth="360" 
-        					MinHeight="41" Margin="0,25,0,0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" FontSize="29.333"/>
+        					Command="{Binding PopupButtonTestMenuCommand}" 
+        					Content="{Binding PopupTestMenu}"
+        					MinWidth="360" MinHeight="41" Margin="0,25,0,0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" FontSize="29.333"/>
                     </StackPanel>
                 </Grid>
             </Viewbox>

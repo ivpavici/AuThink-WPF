@@ -23,26 +23,17 @@
 
         <Viewbox Stretch="Uniform" >
             <Grid Width="1366" Height="768">
-                <StackPanel HorizontalAlignment="Center"
-                    VerticalAlignment="Top" 
-                    Margin="0,50,0,0">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
                     <TextBlock 
                         Text="{Binding SettingsText}" 
-                        Padding="20" 
-                        HorizontalAlignment="Center" 
-                        FontSize="40" 
-                        Foreground="White" 
-                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" 
-                        VerticalAlignment="Top"/>
+                        Padding="20" HorizontalAlignment="Center" FontSize="40" Foreground="White" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Top"
+                        />
                 </StackPanel>
-                <StackPanel
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center"
-                    Margin="0,50,0,0">
-                    <TextBlock            			
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,50,0,0">
+                    <TextBlock			
             			Text="{Binding ChooseLangText, Mode=TwoWay}" 
-            			FontSize="33.333"
-            			FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            			FontSize="33.333" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"
+                        />
                     <RadioButton 
             			x:Name="ChooseCroatianButton" 
             			Content="{Binding CroatianLanguage, Mode=TwoWay}"
@@ -65,11 +56,10 @@
                     </RadioButton>
                     <Button 
             		    Content="{Binding BackButtonContent, Mode=TwoWay}"
-            		    HorizontalAlignment="Stretch" 
-            		    VerticalAlignment="Center"
-            		    Command="{Binding BackCommand}"
-            		    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" MinWidth="250" MinHeight="41"
-                        FontSize="22"/>
+            		    HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                        Command="{Binding BackCommand}"
+            		    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" MinWidth="250" MinHeight="41" FontSize="22"
+                        />
                 </StackPanel>
             </Grid>
         </Viewbox>

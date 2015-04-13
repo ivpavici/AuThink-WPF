@@ -35,43 +35,32 @@
                         <Image Grid.Row="0" Source="/Assets/Logo/lite-tile.png"
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center"/>
-                        <Border 
-                    	Grid.Row="1" 
-                    	HorizontalAlignment="Center" BorderThickness="0,1">
+                        <Border Grid.Row="1" HorizontalAlignment="Center" BorderThickness="0,1">
                             <Border.BorderBrush>
-                                <LinearGradientBrush StartPoint="0,0" EndPoint="4,4"
-											 SpreadMethod="Repeat" MappingMode="Absolute">
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="4,4" SpreadMethod="Repeat" MappingMode="Absolute">
                                     <GradientStop Color="Transparent" Offset="0" />
                                     <GradientStop Color="Transparent" Offset="0.49" />
                                     <GradientStop Color="#FF0C5371" Offset="0.5" />
                                 </LinearGradientBrush>
                             </Border.BorderBrush>
-                            <TextBlock
-                    		Text="{Binding AboutTextContent}" 
-                    		TextWrapping="Wrap" 
-                    		FontFamily="Segoe UI Light"
-                    		FontSize="22" 
-                            Foreground="Black" 
-                            Padding="10,10,10,10" Margin="0,10"/>
+                            <TextBlock 
+                                Text="{Binding AboutTextContent}" 
+                                TextWrapping="Wrap" FontFamily="Segoe UI Light" FontSize="22" Foreground="Black" Padding="10,10,10,10" Margin="0,10"/>
                         </Border>
                         <Grid  Grid.Row="2" HorizontalAlignment="Center">
-                            <StackPanel
-                    		HorizontalAlignment="Center" 
-                    		VerticalAlignment="Center">
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"> 
                                 <Button 
-                    			Content="{Binding BackButtonContent}"
-                    			Command="{Binding BackButtonCommand}"
-                    			FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" 
-                    			FontSize="22" 
-                    			MinWidth="250" 
-                    			MinHeight="41" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-
+                                    Content="{Binding BackButtonContent}"
+                                    Command="{Binding BackButtonCommand}"
+                                    FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" FontSize="22" MinWidth="250" MinHeight="41" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                    />
                             </StackPanel>
 
                             <TextBlock Text="Disclaimer: the background picture is property of Adventure Time, Frederator Studios, Cartoon Network Studios" 
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Bottom" 
-                                   Margin="0,0,0,10" Foreground="#3F000000" />
+                                   Margin="0,0,0,10" Foreground="#3F000000" 
+                                       />
                         </Grid>
                     </Grid>
                 </Border>

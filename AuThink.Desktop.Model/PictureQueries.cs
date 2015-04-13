@@ -7,20 +7,20 @@ namespace AuThink.Desktop.Model
 {
     public class PictureQueries: IPictureQueries
     {
+        private readonly ITaskQueries _taskprovider;
+
         public PictureQueries
         (
             ITaskQueries taskProvider
         )
         {
-            this.taskprovider = taskProvider;
+            _taskprovider = taskProvider;
         }
-
-        private readonly ITaskQueries taskprovider;
 
         public IEnumerable<Picture> GetAllPicturesForTask(int taskId)
         {
             return
-                taskprovider.GetSingleById(taskId)
+                _taskprovider.GetSingleById(taskId)
                             .Pictures
                             .ToList();
         }

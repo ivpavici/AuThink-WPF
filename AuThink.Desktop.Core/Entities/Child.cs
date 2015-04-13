@@ -4,7 +4,7 @@ namespace AuThink.Desktop.Core.Entities
 {
     public class Child
     {
-        public Child
+        public Child 
         (
             int id,
             string firstname,
@@ -19,9 +19,7 @@ namespace AuThink.Desktop.Core.Entities
             this.Lastname = lastname;
             this.ProfilePictureUrl = profilePictureUrl;
             this.Tests = tests;
-
         }
-
         public int Id { get; private set; }
         public string Firstname { get; private set; }
         public string Lastname { get; private set; }

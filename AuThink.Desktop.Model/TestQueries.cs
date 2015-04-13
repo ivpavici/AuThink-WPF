@@ -7,20 +7,20 @@ namespace AuThink.Desktop.Model
 {
     public class TestQueries: ITestQueries
     {
+        private readonly IDataProvider _dataProvider;
+
         public TestQueries
         (
             IDataProvider dataProvider
         )
         {
-            this.dataProvider = dataProvider;
+            _dataProvider = dataProvider;
         }
-
-        private readonly IDataProvider dataProvider;
 
         public IEnumerable<Test> GetAll()
         {
             return
-                dataProvider.GetAll().ToList();
+                _dataProvider.GetAll().ToList();
         }
     }
 }

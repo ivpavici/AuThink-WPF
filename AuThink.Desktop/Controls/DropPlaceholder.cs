@@ -8,11 +8,12 @@ namespace Authink.Desktop.Controls
 {
     public sealed class DropPlaceholder : Button
     {
+        public bool IsFull { get; private set; }
+
         public DropPlaceholder()
         {
             this.DefaultStyleKey = typeof (DropPlaceholder);
         }
-
 
         public object ExpectedPairId
         {
@@ -23,8 +24,6 @@ namespace Authink.Desktop.Controls
         public static readonly DependencyProperty ExpectedPairIdProperty =
             DependencyProperty.Register("ExpectedPairId", typeof (object), typeof (DropPlaceholder),
                                         new PropertyMetadata(null));
-
-        public bool IsFull { get; private set; }
 
         public delegate void DropSuccessful(object sender, EventArgs e);
         public event DropSuccessful OnDropSuccessful;

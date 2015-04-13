@@ -8,7 +8,7 @@ using AuThink.Desktop.Views;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
-namespace AuThink.Desktop.ViewModel
+namespace AuThink.Desktop.ViewModels
 {
     public partial class TestListViewModel: ViewModelBase
     {
@@ -80,9 +80,9 @@ namespace AuThink.Desktop.ViewModel
         public RelayCommand RunTestCommand { get; private set; }
         private void RunTest()
         {
-            var tasks_ids = taskQueries.GetAllTasksForTest(SelectedTest.Id).Select(task => task.Id).SkipWhile(x => SelectedTask != null && x != SelectedTask.Id).ToList();
+            var tasksIds = _taskQueries.GetAllTasksForTest(SelectedTest.Id).Select(task => task.Id).SkipWhile(x => SelectedTask != null && x != SelectedTask.Id).ToList();
 
-            GameState.Start(SelectedTest.Id, tasks_ids);
+            GameState.Start(SelectedTest.Id, tasksIds);
 
             var view = new GameView(); 
             _navigationService.NavigateTo(view);
@@ -99,22 +99,23 @@ namespace AuThink.Desktop.ViewModel
     public partial class TestListViewModel 
     {
         private readonly AuthinkNavigationService _navigationService;
+        private readonly ITaskQueries _taskQueries;
 
-        public TestListViewModel(
+        public TestListViewModel
+        (
             AuthinkNavigationService navigationService,
             ITestQueries testQueries,
-            ITaskQueries taskQueries)
+            ITaskQueries taskQueries
+        )
         {
             _navigationService = navigationService;
 
-            this.taskQueries = taskQueries;
+            _taskQueries = taskQueries;
             Tests = new List<Test>(testQueries.GetAll());
 
             this.RunTestCommand = new RelayCommand(RunTest);
             this.GoBackCommand = new RelayCommand(GoBack);
         }
-
-        private readonly ITaskQueries taskQueries;
 
         public IEnumerable<Test> Tests { get; set; }
     }

@@ -17,7 +17,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 
-namespace AuThink.Desktop.ViewModel
+namespace AuThink.Desktop.ViewModels
 {
     public class ViewModelLocator
     {
