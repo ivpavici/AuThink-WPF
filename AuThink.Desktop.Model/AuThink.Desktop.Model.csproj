@@ -62,7 +62,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Gear.png" />
     <Content Include="Resources\Images\Affiliation\1\kitchen tool_2.png" />
     <Content Include="Resources\Images\Affiliation\1\kitchen tool_3.png" />
     <Content Include="Resources\Images\Affiliation\1\Police-car.png" />
@@ -87,15 +86,33 @@
     <Content Include="Resources\Images\Affiliation\3\Road-roler.png" />
     <Content Include="Resources\Images\Affiliation\3\spoon.png" />
     <Content Include="Resources\Images\Affiliation\3\Yacht.png" />
-    <Content Include="Resources\Images\ContinueSequence\1\bowl.png" />
-    <Content Include="Resources\Images\ContinueSequence\1\casserole.png" />
-    <Content Include="Resources\Images\ContinueSequence\2\coffee cup.png" />
-    <Content Include="Resources\Images\ContinueSequence\2\cup.png" />
-    <Content Include="Resources\Images\ContinueSequence\2\frying pan.png" />
-    <Content Include="Resources\Images\ContinueSequence\3\full.png" />
-    <Content Include="Resources\Images\ContinueSequence\3\glass.png" />
-    <Content Include="Resources\Images\ContinueSequence\3\jug.png" />
-    <Content Include="Resources\Images\ContinueSequence\3\kitchen chair.png" />
+    <Content Include="Resources\Images\ContinueSequence\1\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ContinueSequence\1\casserole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ContinueSequence\2\coffee cup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ContinueSequence\2\cup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ContinueSequence\2\frying pan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ContinueSequence\3\full.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ContinueSequence\3\glass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ContinueSequence\3\jug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ContinueSequence\3\kitchen chair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\DetectColors\1\blue coffee cup.png" />
     <Content Include="Resources\Images\DetectColors\1\bowl.png" />
     <Content Include="Resources\Images\DetectColors\1\green kitchen chair.png" />
@@ -377,11 +394,6 @@
     <Content Include="Resources\Images\VoiceCommands\Show_size\9\kuhaca.jpg" />
     <Content Include="Resources\Images\VoiceCommands\Show_size\9\mala_kuhaca.png" />
     <Content Include="Resources\Images\VoiceCommands\Show_size\9\zlica.jpg" />
-    <Content Include="Resources\Nagradni ekran\checkmark.png" />
-    <Content Include="Resources\Nagradni ekran\crossmark.png" />
-    <Content Include="Resources\Nagradni ekran\nagradni ekran.png" />
-    <Content Include="Resources\placeholder.png" />
-    <Content Include="Resources\refresh.png" />
     <Content Include="Resources\Sounds\aplauz-dugi.mp3" />
     <Content Include="Resources\Sounds\bravo.mp3" />
     <Content Include="Resources\Sounds\excellent.mp3" />

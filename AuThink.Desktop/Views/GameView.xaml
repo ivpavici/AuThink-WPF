@@ -11,7 +11,7 @@
         <!--<MediaElement x:Name="mediaElement"  AutoPlay="False"  Visibility="Collapsed"/>-->
 
         <Grid x:Name="GameGrid" />
-        <ContentControl x:Name="draggingContentControl" IsHitTestVisible="False" />
+        <ContentControl x:Name="draggingContentControl" IsHitTestVisible="False" Loaded="onControl_Loaded" />
 
         <Button 
             x:Name="PauseMenuButton" 
@@ -30,7 +30,7 @@
         					HorizontalAlignment="Center" 
         					Content="{Binding PopupClose}" 
         					MinWidth="360" MinHeight="41" FontSize="29.333"
-        					Click="Popup_continue_OnClick" Margin="0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" />
+        					Click="PopupContinueOnClick" Margin="0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" />
                         <Button 
         					x:Name="PopupButtonMainMenu" 
         					HorizontalAlignment="Center" 

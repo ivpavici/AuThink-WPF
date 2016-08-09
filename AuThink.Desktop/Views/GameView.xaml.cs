@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -14,12 +15,68 @@ using System.Windows.Shapes;
 using Authink.Desktop.Controls;
 using AuThink.Desktop.Core;
 using AuThink.Desktop.Services;
+using AuThink.Desktop.Views.GameViews;
 using GalaSoft.MvvmLight.Ioc;
+
+using rules = AuThink.Desktop.Model.Rules;
 
 namespace AuThink.Desktop.Views
 {
     public partial class GameView
     {
+        private void onControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            Trace.WriteLine("text");
+
+            GameGrid.Children.Clear();
+
+            var task = _taskQueries.GetSingleById(GameState.GetTask());
+            _taskKey = task.Type;
+
+            //GameGrid.Children.Add(new ContinueSequenceUserControl());
+
+            switch (task.Type)
+            {
+//                case rules::Task.Keys.DetectDifferentItems:
+//                    if (task.Pictures.Count <= 2)
+//                    {
+//                        GameGrid.Children.Add(new DetectDifferentItems_HighDifficulty_UserControl());
+//                    }
+//                    else
+//                    {
+//                        GameGrid.Children.Add(new DetectDifferentItemsUserCotrol());
+//                    }
+//                    break;
+
+                case rules.Keys.DetectColors:
+                    GameGrid.Children.Add(new DetectColorsUserControl());
+                    break;
+
+                case rules.Keys.ContinueSequence:
+                    GameGrid.Children.Add(new ContinueSequenceUserControl());
+                    break;
+//                case rules::Task.Keys.PairHalves:
+//                    GameGrid.Children.Add(new PairHalfsUserControl());
+//                    break;
+//
+//                case rules::Task.Keys.DetectSameItems:
+//                    GameGrid.Children.Add(new DetectSameItemsUserControl());
+//                    break;
+//
+//                case rules::Task.Keys.OrderBySize:
+//                    GameGrid.Children.Add(new OrderBySizeUserControl());
+//                    break;
+//
+//                case rules::Task.Keys.VoiceCommands:
+//                    GameGrid.Children.Add(new VoiceCommandsUserControl());
+//                    break;
+//
+//                case rules::Task.Keys.PairSameItems:
+//                    GameGrid.Children.Add(new PairSameItemsUserControl());
+//                    break;
+            }
+        }
+
         private object FindParentOfElement<T>(DependencyObject element)
         {
             if (element == null) { return null; }
@@ -162,7 +219,7 @@ namespace AuThink.Desktop.Views
             _draggingElement = null;
         }
 
-        private void Popup_continue_OnClick(object sender, RoutedEventArgs e)
+        private void PopupContinueOnClick(object sender, RoutedEventArgs e)
         {
             MenuPopup.Visibility = Visibility.Collapsed;
         }
@@ -185,7 +242,7 @@ namespace AuThink.Desktop.Views
 
             _taskQueries = (ITaskQueries)SimpleIoc.Default.GetInstance(typeof(ITaskQueries));
 
-            //this.AddHandler(UIElement.PointerPressedEvent, new PointerEventHandler(_DraggableElement_PointerPressed), true);
+            //this.AddHandler(UIElement.press.PointerPressedEvent, new PointerEventHandler(_DraggableElement_PointerPressed), true);
             //this.AddHandler(UIElement.PointerReleasedEvent, new PointerEventHandler(_DropPlaceholder_PointerReleased), true);
 
             //SoundServices.Instance.Initialize(this.mediaElement);

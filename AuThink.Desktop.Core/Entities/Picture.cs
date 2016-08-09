@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace AuThink.Desktop.Core.Entities
 {
@@ -16,7 +18,7 @@ namespace AuThink.Desktop.Core.Entities
             )
             {
                 this.Id = id;
-                this.Url = url;
+                this.Url = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, url);
             }
         }
 
@@ -32,7 +34,7 @@ namespace AuThink.Desktop.Core.Entities
              )
             {
                 this.Id = id;
-                this.Url = url;
+                this.Url = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, url);
                 this.Sound = sound;
                 this.IsAnswer = isAnswer;
             }
@@ -51,7 +53,7 @@ namespace AuThink.Desktop.Core.Entities
              )
             {
                 this.Id = id;
-                this.Url = url;
+                this.Url = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, url);
                 this.Sound = sound;
                 this.Colors = colors;
             }
@@ -70,7 +72,7 @@ namespace AuThink.Desktop.Core.Entities
             )
             {
                 this.Id = id;
-                this.Url = url;
+                this.Url = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, url);
                 this.UniquePairId = uniquepairid;
                 this.IsLeftHalf = isLeftHalf;
             }

@@ -10,6 +10,7 @@ using AuThink.Desktop.Core;
 using AuThink.Desktop.Core.Entities;
 using AuThink.Desktop.Services;
 using Authink.Desktop.Services;
+using AuThink.Desktop.Views;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
@@ -17,26 +18,29 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 {
     public partial class ContinueSequenceViewModel: ViewModelBase
     {
-        private void ItemClicked(MouseButtonEventArgs e)
+        private async void ItemClicked(RoutedEventArgs e)
         {
-            var picture = (Picture.AnswerPicture)e.OriginalSource;
-            //var source = (ListView)e.OriginalSource;
+            var source = (ListView)e.Source;
+            // Refactor using .frstOrDefault()
+            var picture = (Picture.AnswerPicture)source.SelectedItems[0];
 
-            //if (picture.IsAnswer)
-            //{
-            //    var pictureToUpdate = Pictures_Sequence.Last();
-            //    pictureToUpdate.Url = picture.Url;
+            if (picture.IsAnswer)
+            {
+                var pictureToUpdate = PicturesSequence.Last();
+                pictureToUpdate.Url = picture.Url;
 
-            //    Pictures_Sequence[Pictures_Sequence.IndexOf(pictureToUpdate)] = pictureToUpdate;
+                PicturesSequence[PicturesSequence.IndexOf(pictureToUpdate)] = pictureToUpdate;
 
-            //    SoundServices.Instance.Play();
+                //SoundServices.Instance.Play();
 
-            //    source.IsHitTestVisible = false;
+                source.IsHitTestVisible = false;
 
-            //    await System.Threading.Tasks.Task.Delay(2000);
+                await System.Threading.Tasks.Task.Delay(2000);
 
-            //    _navigationService.NavigateTo(typeof(RewardView));
-            //}
+                // refactor all these view creations
+                var view = new RewardView();
+                _navigationService.NavigateTo(view);
+            }
         }
 
         public void TransformPicturesDataToModelData(List<Picture.AnswerPicture> picturesData)
@@ -48,7 +52,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
             foreach (var picture in picturesData)
             {
-                Pictures_OfferedAnswers.Add(picture);
+                PicturesOfferedAnswers.Add(picture);
             }
 
             for (var i = 0; i < randomIndex; i++)
@@ -58,22 +62,22 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
             foreach (var picture in picturesData)
             {
-                Pictures_Sequence.Add(picture);
+                PicturesSequence.Add(picture);
             }
 
-            Pictures_Sequence.Add(new Picture.AnswerPicture());
+            PicturesSequence.Add(new Picture.AnswerPicture());
 
             this.CorrectPicture.IsAnswer = true;
 
-            for (var i = 0; i < Pictures_OfferedAnswers.Count; i++)
+            for (var i = 0; i < PicturesOfferedAnswers.Count; i++)
             {
-                if (Pictures_OfferedAnswers[i].Id == this.CorrectPicture.Id)
+                if (PicturesOfferedAnswers[i].Id == this.CorrectPicture.Id)
                 {
-                    Pictures_OfferedAnswers[i].IsAnswer = true;
+                    PicturesOfferedAnswers[i].IsAnswer = true;
                 }
             }
 
-            this.Pictures_OfferedAnswers.Shuffle();
+            this.PicturesOfferedAnswers.Shuffle();
         }
 
         private void Init()
@@ -110,19 +114,19 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             _taskQueries = taskQueries;
             _navigationService = navigationService;
 
-            this.Pictures_OfferedAnswers = new ObservableCollection<Picture.AnswerPicture>();
-            this.Pictures_Sequence = new ObservableCollection<Picture.AnswerPicture>();
+            this.PicturesOfferedAnswers = new ObservableCollection<Picture.AnswerPicture>();
+            this.PicturesSequence = new ObservableCollection<Picture.AnswerPicture>();
 
-            //this.ItemClickCommand = new RelayCommand<MouseEventArgs>(ItemClicked);
+            this.ItemClickCommand = new RelayCommand<RoutedEventArgs>(ItemClicked);
             this.Random = random;
 
             Init();
         }
 
         public Picture.AnswerPicture CorrectPicture { get; set; }
-        public ObservableCollection<Picture.AnswerPicture> Pictures_OfferedAnswers { get; set; }
-        public ObservableCollection<Picture.AnswerPicture> Pictures_Sequence { get; set; }
-        public RelayCommand<MouseEventArgs> ItemClickCommand { get; set; }
+        public ObservableCollection<Picture.AnswerPicture> PicturesOfferedAnswers { get; set; }
+        public ObservableCollection<Picture.AnswerPicture> PicturesSequence { get; set; }
+        public RelayCommand<RoutedEventArgs> ItemClickCommand { get; set; }
         public Uri SoundUrl { get; set; }
     }
 }
