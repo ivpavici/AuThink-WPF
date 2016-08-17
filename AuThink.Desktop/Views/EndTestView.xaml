@@ -21,7 +21,7 @@
                        Text="{Binding SuccessfullTextContent}" 
 					   VerticalAlignment="Center"
 					    FontSize="36" 
-						FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" FontWeight="Bold"/>
+						FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" FontWeight="Bold"/>
         </StackPanel>
         <StackPanel 
             VerticalAlignment="Center" 
@@ -47,7 +47,7 @@
                     MinHeight="41"
                     Width="460"
                     Height="71"  
-                    FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" 
+                    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"
                     FontSize="30"/>
             </StackPanel>
             <StackPanel 
@@ -65,7 +65,7 @@
                     MinHeight="41"
                     Width="460" 
                     Height="71"
-                    FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" 
+                    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"
                     FontSize="30"/>
             </StackPanel>
             <StackPanel 
@@ -81,7 +81,7 @@
                     MinHeight="41"
                     Width="460" 
                     Height="71"
-                    FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" 
+                    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" 
                     FontSize="30"/>
             </StackPanel>
         </StackPanel>

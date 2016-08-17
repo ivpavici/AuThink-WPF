@@ -38,7 +38,8 @@
                         <Button x:Name="continueFurtherButton" 
                                 Content="{Binding ContinueButtonContent}" 
                                 Margin="20"
-    				            HorizontalAlignment="Center" 
+    				            HorizontalAlignment="Center"
+                                FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"
                                 Command="{Binding TempRewordCommand}" />
                     </StackPanel>
                 </StackPanel>

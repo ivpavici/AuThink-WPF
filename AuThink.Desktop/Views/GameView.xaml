@@ -6,7 +6,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="768" d:DesignWidth="1366"
       DataContext="{Binding Game, Source={StaticResource Locator}}">
-
     <Grid Background="White">
         <!--<MediaElement x:Name="mediaElement"  AutoPlay="False"  Visibility="Collapsed"/>-->
 
@@ -18,7 +17,7 @@
             Command="{Binding OpenPopupCommand}" 
             Width="100" Height="100" VerticalAlignment="Top" HorizontalAlignment="right" Opacity="0.3">
             
-            <Image Source="/AuThink.Desktop.Model;component/Resources/Gear.png"/>
+            <Image Source="/Assets/Gear.png"/>
         </Button>
 
         <Border Background="#B2000000" x:Name="MenuPopup" Visibility="Collapsed">

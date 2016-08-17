@@ -52,7 +52,7 @@
                                 <Button 
                                     Content="{Binding BackButtonContent}"
                                     Command="{Binding BackButtonCommand}"
-                                    FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" FontSize="22" MinWidth="250" MinHeight="41" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" FontSize="22" MinWidth="250" MinHeight="41" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                     />
                             </StackPanel>
 
