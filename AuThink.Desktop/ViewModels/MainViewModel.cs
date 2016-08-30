@@ -91,25 +91,19 @@ namespace AuThink.Desktop.ViewModels
         public RelayCommand PlayCommand { get; private set; }
         private void Play()
         {
-            var view = new TestListView();
-
-            _navigationService.NavigateTo(view);
+            _navigationService.NavigateTo(new TestListView());
         }
 
         public RelayCommand SettingsCommand { get; private set; }
         private void Settings()
         {
-            var view = new SettingsView();
-
-            _navigationService.NavigateTo(view); 
+            _navigationService.NavigateTo(new SettingsView()); 
         }
 
         public RelayCommand AboutCommand { get; private set; }
         private void About()
         {
-            var view = new AboutView();
-
-            _navigationService.NavigateTo(view);
+            _navigationService.NavigateTo(new AboutView());
         }
 
         public RelayCommand BackCommand { get; set; }

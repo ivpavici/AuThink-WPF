@@ -84,8 +84,7 @@ namespace AuThink.Desktop.ViewModels
 
             GameState.Start(SelectedTest.Id, tasksIds);
 
-            var view = new GameView(); 
-            _navigationService.NavigateTo(view);
+            _navigationService.NavigateTo(new GameView());
         }
 
         public RelayCommand GoBackCommand { get; private set; }

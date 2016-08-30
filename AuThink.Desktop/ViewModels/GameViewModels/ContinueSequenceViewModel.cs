@@ -37,9 +37,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
                 await System.Threading.Tasks.Task.Delay(2000);
 
-                // refactor all these view creations
-                var view = new RewardView();
-                _navigationService.NavigateTo(view);
+                _navigationService.NavigateTo(new RewardView());
             }
         }
 

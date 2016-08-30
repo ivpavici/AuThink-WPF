@@ -107,6 +107,9 @@
     <Compile Include="Views\GameViews\DetectColorsUserControl.xaml.cs">
       <DependentUpon>DetectColorsUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\GameViews\DetectSameItemsUserControl.xaml.cs">
+      <DependentUpon>DetectSameItemsUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RewardView.xaml.cs">
       <DependentUpon>RewardView.xaml</DependentUpon>
     </Compile>
@@ -146,6 +149,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\GameViews\DetectColorsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameViews\DetectSameItemsUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

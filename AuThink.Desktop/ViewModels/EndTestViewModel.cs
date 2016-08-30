@@ -83,22 +83,19 @@ namespace AuThink.Desktop.ViewModels
         {
             var taskIds = taskQueries.GetAllTasksForTest(GameState.CurrentTestId).Select(task => task.Id).ToList();
             GameState.Start(GameState.CurrentTestId, taskIds);
-            var view = new GameView();
-            navigationService.NavigateTo(view);
+            navigationService.NavigateTo(new GameView());
         }
 
         public RelayCommand GoToTestListCommand { get; set; }
         public void GoToTestList()
         {
-            var view = new TestListView();
-            navigationService.NavigateTo(view);
+            navigationService.NavigateTo(new TestListView());
         }
 
         public RelayCommand ExitToMainCommand { get; set; }
         public void ExitToMain()
         {
-            var view = new MainMenu();
-            navigationService.NavigateTo(view);
+            navigationService.NavigateTo(new MainMenu());
         }
 
     }

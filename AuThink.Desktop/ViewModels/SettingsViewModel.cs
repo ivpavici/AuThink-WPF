@@ -221,8 +221,7 @@ namespace AuThink.Desktop.ViewModels
         public RelayCommand BackCommand { get; private set; }
         private void Back()
         {
-            var view = new MainMenu();
-            _navigationService.NavigateTo(view);
+            _navigationService.NavigateTo(new MainMenu());
         }
 
         public string BackButtonContent

@@ -20,14 +20,12 @@ namespace AuThink.Desktop.ViewModels
             //System.Threading.Tasks.Task.Delay(2000);
             if (GameState.TaskIds.Any())
             {
-                var view = new GameView();
-                _navigationService.NavigateTo(view);
+                _navigationService.NavigateTo(new GameView());
             }
 
             else
             {
-                var view = new EndTestView();
-                _navigationService.NavigateTo(view);
+                _navigationService.NavigateTo(new EndTestView());
             }
         }
 

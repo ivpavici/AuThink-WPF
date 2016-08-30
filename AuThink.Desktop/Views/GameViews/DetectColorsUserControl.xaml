@@ -4,8 +4,135 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="300" d:DesignWidth="300"
+             DataContext="{Binding DetectColors,Source={StaticResource Locator}}">
+    <UserControl.Resources>
+        <DataTemplate x:Key="SlikaDviElipseTemplate">
+            <Border
+                BorderBrush="#19000000" 
+                BorderThickness="4" 
+                Padding="10"
+                Margin="20"
+                Height="300"
+                Width="300" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.33*"/>
+                        <RowDefinition Height="0.33*"/>
+                        <RowDefinition Height="0.33*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.33*" />
+                        <ColumnDefinition Width="0.33*" />
+                        <ColumnDefinition Width="0.33*" />
+                    </Grid.ColumnDefinitions>
+                    <Border
+                            Grid.Column="1"
+                            Grid.Row="1"                             
+                            Margin="-10" >
+                        <Image     
+                            Source="{Binding Url}"
+                            Stretch="Uniform" />
+                    </Border>
+                    <Button
+                            Width="55"
+                            Height="55"
+                            Background="{Binding Colors[0].Value}" 
+                            Tag="{Binding Colors[0].IsCorrect}"
+                            Grid.Column="2" 
+                            Grid.Row="2" 
+                            VerticalAlignment="Center"
+                            Command="{Binding EllipseButtonClickCommand}"
+                            CommandParameter="{Binding RelativeSource={RelativeSource Self}}" 
+                            HorizontalAlignment="Center">
+                    </Button>
+                    <Button
+                            Width="55"
+                            Height="55"
+                            Background="{Binding Colors[1].Value}" 
+                            Tag="{Binding Colors[1].IsCorrect}"
+                            Grid.Column="2" 
+                            Grid.Row="0"
+                            Command="{Binding EllipseButtonClickCommand}"
+                            VerticalAlignment="Center" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Self}}"
+                            HorizontalAlignment="Center"/>
+                    <Button
+                        Width="55"
+                        Height="55"
+                        Background="{Binding Colors[2].Value}" 
+                        Tag="{Binding Colors[2].IsCorrect}"
+                        Grid.Column="0" 
+                        Grid.Row="2" 
+                        Command="{Binding EllipseButtonClickCommand}"
+                        VerticalAlignment="Center" 
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}"
+                        HorizontalAlignment="Center"/>
+                    <Button
+                        Width="55"
+                        Height="55"
+                        Background="{Binding Colors[3].Value}" 
+                        Tag="{Binding Colors[3].IsCorrect}"
+                        Grid.Column="0" 
+                        Grid.Row="0" 
+                        Command="{Binding EllipseButtonClickCommand}"
+                        VerticalAlignment="Center" 
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}"
+                        HorizontalAlignment="Center"/>
+                    <Button
+                        Width="55"
+                        Height="55"
+                        Background="{Binding Colors[4].Value}" 
+                        Tag="{Binding Colors[4].IsCorrect}"
+                        Grid.Column="0" 
+                        Grid.Row="1" 
+                        Command="{Binding EllipseButtonClickCommand}"
+                        VerticalAlignment="Center" 
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}"
+                        HorizontalAlignment="Center"/>
+                    <Button
+                        Width="55"
+                        Height="55"
+                        Background="{Binding Colors[5].Value}" 
+                        Tag="{Binding Colors[5].IsCorrect}"
+                        Grid.Column="2" 
+                        Grid.Row="1" 
+                        Command="{Binding EllipseButtonClickCommand}"
+                        VerticalAlignment="Center"
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}"
+                        HorizontalAlignment="Center"/>
+                    <Image 
+                        Source="" 
+                        Tag="Checkmark" 
+                        VerticalAlignment="Bottom"  
+                        HorizontalAlignment="Center" 
+                        Width="75"
+                        Height="75" 
+                        Grid.Row="2" 
+                        Grid.Column="1"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="DetectColorsContainer" 
+                  Height="768" 
+                  Width="1366">
+<!--            <MediaElement Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+            <ItemsControl
+            ItemTemplate="{StaticResource SlikaDviElipseTemplate}"
+            ItemsSource="{Binding PicturesWithColors}"
+            Margin="30"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+<!--                        <VariableSizedWrapGrid -->
+<!--                        MaximumRowsOrColumns="3" -->
+<!--                        Orientation="Horizontal" />-->
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Grid>
+    </Viewbox>
 </UserControl>
