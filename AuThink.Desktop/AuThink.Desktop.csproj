@@ -86,7 +86,7 @@
     <Compile Include="ViewModels\GameViewModels\ContinueSequenceViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\DetectColorsViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\DetectDifferentItemsHighDifficultyViewModel.cs" />
-    <Compile Include="ViewModels\GameViewModels\DetectDifferentItemsUserViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModels\DetectDifferentItemsViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\DetectSameItemsViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\OrderBySizeViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\PairHalfsViewModel.cs" />
@@ -106,6 +106,9 @@
     </Compile>
     <Compile Include="Views\GameViews\DetectColorsUserControl.xaml.cs">
       <DependentUpon>DetectColorsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GameViews\DetectDifferentItemUserControl.xaml.cs">
+      <DependentUpon>DetectDifferentItemUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\GameViews\DetectSameItemsUserControl.xaml.cs">
       <DependentUpon>DetectSameItemsUserControl.xaml</DependentUpon>
@@ -149,6 +152,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\GameViews\DetectColorsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameViews\DetectDifferentItemUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

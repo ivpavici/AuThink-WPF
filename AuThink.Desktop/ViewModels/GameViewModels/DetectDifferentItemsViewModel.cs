@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
 using AuThink.Desktop.Core;
 using AuThink.Desktop.Core.Entities;
 using AuThink.Desktop.Services;
@@ -17,19 +16,13 @@ using GalaSoft.MvvmLight.Command;
 
 namespace AuThink.Desktop.ViewModels.GameViewModels
 {
-    public partial class DetectSameItemsViewModel: ViewModelBase
+    public partial class DetectDifferentItemsViewModel: ViewModelBase
     {
-        //TODO check what is this
-        public void LoadedUserControl(RoutedEventArgs e)
-        {
-            var majka = e.OriginalSource;
-        }
-
         private async void ItemClick(RoutedEventArgs e)
         {
-            var lista = (ListView)e.OriginalSource;
+            var list = (ListView)e.OriginalSource;
             var selectedPicture = (DetectSamePicture)e.Source;
-            var container = lista.Parent as StackPanel;
+            var container = list.Parent as StackPanel;
 
             //BravoTalker = (kontejner.Parent as Grid).Children.First(child => (child is MediaElement)) as MediaElement;
 
@@ -42,7 +35,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                 //BravoTalker.Source = new Uri("ms-appx:///Resources/Sounds/bravo.mp3");
                 //BravoTalker.Play();
 
-                lista.IsHitTestVisible = false;
+                list.IsHitTestVisible = false;
             }
             else
             {
@@ -57,9 +50,9 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             }
         }
 
-        private List<DetectSamePicture> GeneratePicturesRow(List<Picture.AnswerPicture> picturesData)
+        private List<DetectDifferentPicture> GeneratePicturesRow(List<Picture.AnswerPicture> picturesData)
         {
-            var correctPicture = _workingCopy.Select(picture => new DetectSamePicture(picture.Url, picture.Id, true))
+            var correctPicture = _workingCopy.Select(picture => new DetectDifferentPicture(picture.Url, picture.Id, true))
                                             .First();
 
             _workingCopy.Remove(_workingCopy.First());
@@ -69,11 +62,11 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                 _workingCopy = picturesData.Select(picture => picture).ToList();
             }
 
-            var result = new List<DetectSamePicture>();
+            var result = new List<DetectDifferentPicture>();
 
             for (var i = 0; i < picturesData.Count; i++)
             {
-                result.Add(_workingCopy.Select(picture => new DetectSamePicture(picture.Url, picture.Id, false)).First());
+                result.Add(_workingCopy.Select(picture => new DetectDifferentPicture(picture.Url, picture.Id, false)).First());
             }
 
             result.Add(correctPicture);
@@ -86,17 +79,17 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
         {
             _workingCopy = new List<Picture.AnswerPicture>(_pictures);
 
-            this.PicturesFirstList = new ObservableCollection<DetectSamePicture>(GeneratePicturesRow(_pictures));
-            this.PicturesSecondList = new ObservableCollection<DetectSamePicture>(GeneratePicturesRow(_pictures));
-            this.PicturesThirdList = new ObservableCollection<DetectSamePicture>(GeneratePicturesRow(_pictures));
-            this.PicturesFourthList = new ObservableCollection<DetectSamePicture>(GeneratePicturesRow(_pictures));
+            PicturesFirstList = new ObservableCollection<DetectDifferentPicture>(GeneratePicturesRow(_pictures));
+            PicturesSecondList = new ObservableCollection<DetectDifferentPicture>(GeneratePicturesRow(_pictures));
+            PicturesThirdList = new ObservableCollection<DetectDifferentPicture>(GeneratePicturesRow(_pictures));
+            PicturesFourthList = new ObservableCollection<DetectDifferentPicture>(GeneratePicturesRow(_pictures));
         }
 
         private void Init()
         {
             _pictures = _pictureQueries.GetAllPicturesForTask(GameState.GetTask())
-                                      .Select(picture => (Picture.AnswerPicture)picture)
-                                      .ToList();
+                                          .Select(picture => (Picture.AnswerPicture)picture)
+                                          .ToList();
 
 //            SoundUrl = SoundServices.GetInstructionsSoundUrl
 //            (
@@ -107,42 +100,49 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
         }
     }
 
-    public partial class DetectSameItemsViewModel
+    public partial class DetectDifferentItemsViewModel
     {
-        public DetectSameItemsViewModel
+        public DetectDifferentItemsViewModel
         (
             IPictureQueries pictureQueries,
+            ITaskQueries taskQueries,
             AuthinkNavigationService navigationService
         )
         {
+            _taskQueries = taskQueries;
             _pictureQueries = pictureQueries;
             _navigationService = navigationService;
 
             ItemClickCommand = new RelayCommand<RoutedEventArgs>(ItemClick);
-            LoadedUserControlCommand = new RelayCommand<RoutedEventArgs>(LoadedUserControl);
 
             Init();
         }
 
-        private static int _counter = 0;
+        private readonly ITaskQueries _taskQueries;
         private readonly IPictureQueries _pictureQueries;
         private readonly AuthinkNavigationService _navigationService;
+        public Uri SoundUrl { get; set; }
 
         private List<Picture.AnswerPicture> _workingCopy { get; set; }
         private List<Picture.AnswerPicture> _pictures { get; set; }
 
-        public ObservableCollection<DetectSamePicture> PicturesFirstList { get; set; }
-        public ObservableCollection<DetectSamePicture> PicturesSecondList { get; set; }
-        public ObservableCollection<DetectSamePicture> PicturesThirdList { get; set; }
-        public ObservableCollection<DetectSamePicture> PicturesFourthList { get; set; }
+        private static int _counter = 0;
+
+        public DetectDifferentPicture CorrectFirstList { get; set; }
+        public DetectDifferentPicture CorrectSecondList { get; set; }
+        public DetectDifferentPicture CorrectThirdList { get; set; }
+        public DetectDifferentPicture CorrectFourthList { get; set; }
+        public ObservableCollection<DetectDifferentPicture> PicturesFirstList { get; set; }
+        public ObservableCollection<DetectDifferentPicture> PicturesSecondList { get; set; }
+        public ObservableCollection<DetectDifferentPicture> PicturesThirdList { get; set; }
+        public ObservableCollection<DetectDifferentPicture> PicturesFourthList { get; set; }
 
         public RelayCommand<RoutedEventArgs> ItemClickCommand { get; set; }
-        public RelayCommand<RoutedEventArgs> LoadedUserControlCommand { get; set; }
     }
 
-    public class DetectSamePicture
+    public class DetectDifferentPicture
     {
-        public DetectSamePicture
+        public DetectDifferentPicture
         (
             string url,
             int id,

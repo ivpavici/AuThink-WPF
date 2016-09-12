@@ -71,9 +71,6 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
     public class DetectColorPicture
     {
-        private int picturesCount;
-        private readonly AuthinkNavigationService _navigationService;
-
         public DetectColorPicture
         (
             string url,
@@ -93,12 +90,14 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             this.Colors.Shuffle();
         }
 
+        private static int _counter = 0;
+        private int picturesCount;
+        private readonly AuthinkNavigationService _navigationService;
+
         public string Url { get; set; }
         public int Id { get; set; }
         public List<Color> Colors { get; set; }
         public RelayCommand<object> EllipseButtonClickCommand { get; private set; }
-
-        private static int _counter = 0;
 
         private async void EllipseButtonClick(object e)
         {

@@ -51,7 +51,7 @@ namespace AuThink.Desktop.ViewModels
             SimpleIoc.Default.Register<PairHalfsViewModel>();
             SimpleIoc.Default.Register<DetectDifferentItemsHighDifficultyViewModel>();
             SimpleIoc.Default.Register<DetectSameItemsViewModel>();
-            SimpleIoc.Default.Register<DetectDifferentItemsUserViewModel>();
+            SimpleIoc.Default.Register<DetectDifferentItemsViewModel>();
             SimpleIoc.Default.Register<OrderBySizeViewModel>();
             SimpleIoc.Default.Register<DetectColorsViewModel>();
             SimpleIoc.Default.Register<PairSameItemsViewModel>();
@@ -179,12 +179,12 @@ namespace AuThink.Desktop.ViewModels
             }
         }
 
-        public DetectDifferentItemsUserViewModel DetectDifferent
+        public DetectDifferentItemsViewModel DetectDifferent
         {
             get
             {
                 Cleanup();
-                return ServiceLocator.Current.GetInstance<DetectDifferentItemsUserViewModel>(CurrentKey);
+                return ServiceLocator.Current.GetInstance<DetectDifferentItemsViewModel>(CurrentKey);
             }
         }
 
@@ -247,7 +247,7 @@ namespace AuThink.Desktop.ViewModels
             SimpleIoc.Default.Unregister<ContinueSequenceViewModel>(CurrentKey);
             SimpleIoc.Default.Unregister<PairHalfsViewModel>(CurrentKey);
             SimpleIoc.Default.Unregister<DetectDifferentItemsHighDifficultyViewModel>(CurrentKey);
-            SimpleIoc.Default.Unregister<DetectDifferentItemsUserViewModel>(CurrentKey);
+            SimpleIoc.Default.Unregister<DetectDifferentItemsViewModel>(CurrentKey);
             SimpleIoc.Default.Unregister<DetectSameItemsViewModel>(CurrentKey);
             SimpleIoc.Default.Unregister<OrderBySizeViewModel>(CurrentKey);
             SimpleIoc.Default.Unregister<DetectColorsViewModel>(CurrentKey);

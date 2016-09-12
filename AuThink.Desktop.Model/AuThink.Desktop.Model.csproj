@@ -62,30 +62,78 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Images\Affiliation\1\kitchen tool_2.png" />
-    <Content Include="Resources\Images\Affiliation\1\kitchen tool_3.png" />
-    <Content Include="Resources\Images\Affiliation\1\Police-car.png" />
-    <Content Include="Resources\Images\Affiliation\1\spoon.png" />
-    <Content Include="Resources\Images\Affiliation\2\cat.png" />
-    <Content Include="Resources\Images\Affiliation\2\glass.png" />
-    <Content Include="Resources\Images\Affiliation\2\kitchen tool_2.png" />
-    <Content Include="Resources\Images\Affiliation\2\kitchen tool_3.png" />
-    <Content Include="Resources\Images\Affiliation\2\kitchen tool_6.png" />
-    <Content Include="Resources\Images\Affiliation\2\Plane.png" />
-    <Content Include="Resources\Images\Affiliation\2\spoon.png" />
-    <Content Include="Resources\Images\Affiliation\2\Yacht.png" />
-    <Content Include="Resources\Images\Affiliation\3\cat.png" />
-    <Content Include="Resources\Images\Affiliation\3\glass.png" />
-    <Content Include="Resources\Images\Affiliation\3\kitchen paper.png" />
-    <Content Include="Resources\Images\Affiliation\3\kitchen tool_2.png" />
-    <Content Include="Resources\Images\Affiliation\3\kitchen tool_3.png" />
-    <Content Include="Resources\Images\Affiliation\3\kitchen tool_6.png" />
-    <Content Include="Resources\Images\Affiliation\3\Plane.png" />
-    <Content Include="Resources\Images\Affiliation\3\plate_1.png" />
-    <Content Include="Resources\Images\Affiliation\3\Police-car.png" />
-    <Content Include="Resources\Images\Affiliation\3\Road-roler.png" />
-    <Content Include="Resources\Images\Affiliation\3\spoon.png" />
-    <Content Include="Resources\Images\Affiliation\3\Yacht.png" />
+    <Content Include="Resources\Images\Affiliation\1\kitchen tool_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\1\kitchen tool_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\1\Police-car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\1\spoon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\2\cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\2\glass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\2\kitchen tool_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\2\kitchen tool_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\2\kitchen tool_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\2\Plane.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\2\spoon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\2\Yacht.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\glass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\kitchen paper.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\kitchen tool_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\kitchen tool_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\kitchen tool_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\Plane.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\plate_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\Police-car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\Road-roler.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\spoon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Affiliation\3\Yacht.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\ContinueSequence\1\bowl.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -113,287 +161,847 @@
     <Content Include="Resources\Images\ContinueSequence\3\kitchen chair.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\DetectColors\1\blue coffee cup.png" />
-    <Content Include="Resources\Images\DetectColors\1\bowl.png" />
-    <Content Include="Resources\Images\DetectColors\1\green kitchen chair.png" />
-    <Content Include="Resources\Images\DetectColors\1\greenCup.png" />
-    <Content Include="Resources\Images\DetectColors\1\red glass.png" />
-    <Content Include="Resources\Images\DetectColors\1\red-casserole.png" />
-    <Content Include="Resources\Images\DetectColors\2\bowl.png" />
-    <Content Include="Resources\Images\DetectColors\2\greenCup.png" />
-    <Content Include="Resources\Images\DetectColors\2\red kitchen chair.png" />
-    <Content Include="Resources\Images\DetectColors\2\yellow kitchen tool_3.png" />
-    <Content Include="Resources\Images\DetectColors\3\greenCup.png" />
-    <Content Include="Resources\Images\DetectColors\3\red kitchen chair.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\1\bowl.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\1\casserole.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\1\frying pan.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\1\glass.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\1\kitchen tool_2.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\1\plate_1.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\2\lonac.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\2\Red_cambridge_mug.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\3\individual-red-mug.png" />
-    <Content Include="Resources\Images\DetectDifferentItems\3\Red_cambridge_mug.png" />
-    <Content Include="Resources\Images\DetectSameItems\1\casa1.png" />
-    <Content Include="Resources\Images\DetectSameItems\1\tanjur.png" />
-    <Content Include="Resources\Images\DetectSameItems\1\zlica.png" />
-    <Content Include="Resources\Images\DetectSameItems\2\casa1.png" />
-    <Content Include="Resources\Images\DetectSameItems\2\fork.png" />
-    <Content Include="Resources\Images\DetectSameItems\2\lonac.png" />
-    <Content Include="Resources\Images\DetectSameItems\2\tanjur.png" />
-    <Content Include="Resources\Images\DetectSameItems\2\zlica.png" />
-    <Content Include="Resources\Images\DetectSameItems\3\casa1.png" />
-    <Content Include="Resources\Images\DetectSameItems\3\fork.png" />
-    <Content Include="Resources\Images\DetectSameItems\3\lonac.png" />
-    <Content Include="Resources\Images\DetectSameItems\3\nož.png" />
-    <Content Include="Resources\Images\DetectSameItems\3\salica.png" />
-    <Content Include="Resources\Images\DetectSameItems\3\tanjur.png" />
-    <Content Include="Resources\Images\DetectSameItems\3\zlica.png" />
+    <Content Include="Resources\Images\DetectColors\1\blue coffee cup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\1\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\1\green kitchen chair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\1\greenCup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\1\red glass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\1\red-casserole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\2\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\2\greenCup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\2\red kitchen chair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\2\yellow kitchen tool_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\3\greenCup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectColors\3\red kitchen chair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\1\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\1\casserole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\1\frying pan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\1\glass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\1\kitchen tool_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\1\plate_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\2\lonac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\2\Red_cambridge_mug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\3\individual-red-mug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectDifferentItems\3\Red_cambridge_mug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\1\casa1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\1\tanjur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\1\zlica.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\2\casa1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\2\fork.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\2\lonac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\2\tanjur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\2\zlica.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\3\casa1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\3\fork.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\3\lonac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\3\nož.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\3\salica.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\3\tanjur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DetectSameItems\3\zlica.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Logo.png" />
-    <Content Include="Resources\Images\PairHalfs\1\bowl.png" />
-    <Content Include="Resources\Images\PairHalfs\1\casserole.png" />
-    <Content Include="Resources\Images\PairHalfs\1\plate_1.png" />
-    <Content Include="Resources\Images\PairHalfs\2\bowl.png" />
-    <Content Include="Resources\Images\PairHalfs\2\casserole.png" />
-    <Content Include="Resources\Images\PairHalfs\2\coffee cup.png" />
-    <Content Include="Resources\Images\PairHalfs\2\full.png" />
-    <Content Include="Resources\Images\PairHalfs\2\jug.png" />
-    <Content Include="Resources\Images\PairHalfs\3\bowl.png" />
-    <Content Include="Resources\Images\PairHalfs\3\casserole.png" />
-    <Content Include="Resources\Images\PairHalfs\3\coffee cup.png" />
-    <Content Include="Resources\Images\PairHalfs\3\full.png" />
-    <Content Include="Resources\Images\PairHalfs\3\jug.png" />
-    <Content Include="Resources\Images\PairHalfs\3\kitchen tool_2.png" />
-    <Content Include="Resources\Images\PairHalfs\3\plate_1.png" />
-    <Content Include="Resources\Images\PairSameItems\1\kitchen tool_2.png" />
-    <Content Include="Resources\Images\PairSameItems\1\kitchen tool_3.png" />
-    <Content Include="Resources\Images\PairSameItems\1\kitchen tool_6.png" />
-    <Content Include="Resources\Images\PairSameItems\2\bowl.png" />
-    <Content Include="Resources\Images\PairSameItems\2\casserole.png" />
-    <Content Include="Resources\Images\PairSameItems\2\cup.png" />
-    <Content Include="Resources\Images\PairSameItems\2\frying pan.png" />
-    <Content Include="Resources\Images\PairSameItems\2\kitchen chair.png" />
-    <Content Include="Resources\Images\PairSameItems\3\17622157-orange-juice-in-a-jug.png" />
-    <Content Include="Resources\Images\PairSameItems\3\693024_1.png" />
-    <Content Include="Resources\Images\PairSameItems\3\9620-08240.png" />
-    <Content Include="Resources\Images\PairSameItems\3\casa1.png" />
-    <Content Include="Resources\Images\PairSameItems\3\frying pan.png" />
-    <Content Include="Resources\Images\PairSameItems\3\kitchen-tool_2.png" />
-    <Content Include="Resources\Images\PairSameItems\3\plate_1.png" />
-    <Content Include="Resources\Images\SortBySize\1\jug-1.png" />
-    <Content Include="Resources\Images\SortBySize\1\jug-2.png" />
-    <Content Include="Resources\Images\SortBySize\1\jug-3.png" />
-    <Content Include="Resources\Images\SortBySize\2\kitchen-tool_2-1.png" />
-    <Content Include="Resources\Images\SortBySize\2\kitchen-tool_2-2.png" />
-    <Content Include="Resources\Images\SortBySize\2\kitchen-tool_2-3.png" />
-    <Content Include="Resources\Images\SortBySize\2\kitchen-tool_2-4.png" />
-    <Content Include="Resources\Images\SortBySize\3\cup-1.png" />
-    <Content Include="Resources\Images\SortBySize\3\cup-2.png" />
-    <Content Include="Resources\Images\SortBySize\3\cup-3.png" />
-    <Content Include="Resources\Images\SortBySize\3\cup-4.png" />
-    <Content Include="Resources\Images\SortBySize\3\cup-5.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\1\brise.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\1\eating-soup.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\1\guli.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\1\kuha.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\2\brise.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\2\eating-soup.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\2\guli.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\2\kuha.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\3\brise.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\3\eating-soup.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\3\guli.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\3\kuha.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\4\brise.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\4\eating-soup.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\4\guli.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\4\kuha.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\5\brise.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\5\guli.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\5\kuha.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\5\pere.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\6\brise.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\6\kuha.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\6\pere.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\6\pije.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\7\guli.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\7\kuha.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\7\pere.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\7\reze.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\8\kuha.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\8\pere.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\8\reze.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_activity\8\ribanje.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\1\crveni_lonac_picto.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\1\crveni_tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\1\crveni_vrc.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\1\salica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\2\ljubicasti_lonac_picto.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\2\plavi_lonac.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\2\zeleni_lonac_picto.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\2\zuti_lonac_picto.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\3\bowl.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\3\greenCup.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\3\greenFork.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\3\red kitchen chair.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\green kitchen chair.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\red glass.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\red-casserole.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\yellowCup.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\yellowspoon.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\1\crveni_lonac.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\1\mali_plavi_lonac.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\1\plavi_vrc.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\1\veliki_plavi_lonac.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\2\mali_zeleni_vrc.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\2\plavi_vrc.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\2\zeleni_vrc.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\2\zuti_vrc.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\3\roza salica.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\3\salica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\3\salica.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\3\zuti_vrc.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\4\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\4\zeleni_tanjur.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\4\zuti_tanjur.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\4\zuti_tanjur.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\10\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\10\daska.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\10\slavina.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\10\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\11\bat.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\11\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\11\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\11\ubrus.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\12\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\12\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\12\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\12\ubrus.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\13\fork.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\13\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\13\ubrus2.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\13\zuti_tanjur.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\14\duboki_tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\14\noz.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\14\vrč.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\14\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\15\mali_zeleni_vrc.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\15\slavina.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\15\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\15\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\16\duboki2.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\16\kuhaca.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\16\slavina.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\16\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\1\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\1\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\1\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\1\ubrus.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\2\bat.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\2\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\2\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\2\ubrus.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\3\bat.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\3\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\3\daska.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\3\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\4\bat.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\4\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\4\daska.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\4\kitchen41.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\5\lonac.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\5\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\5\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\5\ubrus.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\6\noz.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\6\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\6\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\6\ubrus.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\7\salica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\7\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\7\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\7\ubrus.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\8\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\8\daska.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\8\slavina.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\8\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\9\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\9\daska.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\9\sudoper.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object\9\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\1\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\1\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\1\ubrus2.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\1\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\2\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\2\fork.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\2\slavina.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\2\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\3\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\3\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\3\ubrus2.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\3\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\4\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\4\noz.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\4\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\4\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\5\casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\5\noz.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\5\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\5\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\6\kuhaca.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\6\noz.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\6\plavi_lonac.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\6\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\10\crveni_lonac.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\10\mali_plavi_lonac.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\10\pan.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\10\veliki_plavi_lonac.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\11\daska.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\11\m_tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\11\pan.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\11\tanjur.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\12\casa.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\12\vrč.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\12\v_casa.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\12\zuta_salica.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\1\crveni_tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\1\duboki_tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\1\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\1\zuti_tanjur.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\2\noz.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\2\tava.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\2\veliki_noz.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\2\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\3\crveni_vrc.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\3\plavi_vrc.jpeg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\3\zeleni_vrc.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\3\zuti_vrc.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\4\bat.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\4\kuhaca.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\4\mala_kuhaca.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\4\zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\5\bat.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\5\kuhaca.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\5\mala_zlica.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\5\zlica.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\6\daska.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\6\kuhaca.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\6\m_daska.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\6\v_daska.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\7\pan.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\7\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\7\tava.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\7\v_tava.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\8\duboki_tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\8\d_plate.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\8\d_plate2.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\8\tanjur.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\9\bat.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\9\kuhaca.jpg" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\9\mala_kuhaca.png" />
-    <Content Include="Resources\Images\VoiceCommands\Show_size\9\zlica.jpg" />
+    <Content Include="Resources\Images\PairHalfs\1\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\1\casserole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\1\plate_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\2\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\2\casserole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\2\coffee cup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\2\full.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\2\jug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\3\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\3\casserole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\3\coffee cup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\3\full.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\3\jug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\3\kitchen tool_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairHalfs\3\plate_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\1\kitchen tool_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\1\kitchen tool_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\1\kitchen tool_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\2\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\2\casserole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\2\cup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\2\frying pan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\2\kitchen chair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\3\17622157-orange-juice-in-a-jug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\3\693024_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\3\9620-08240.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\3\casa1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\3\frying pan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\3\kitchen-tool_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PairSameItems\3\plate_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\1\jug-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\1\jug-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\1\jug-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\2\kitchen-tool_2-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\2\kitchen-tool_2-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\2\kitchen-tool_2-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\2\kitchen-tool_2-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\3\cup-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\3\cup-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\3\cup-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\3\cup-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\SortBySize\3\cup-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\1\brise.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\1\eating-soup.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\1\guli.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\1\kuha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\2\brise.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\2\eating-soup.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\2\guli.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\2\kuha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\3\brise.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\3\eating-soup.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\3\guli.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\3\kuha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\4\brise.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\4\eating-soup.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\4\guli.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\4\kuha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\5\brise.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\5\guli.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\5\kuha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\5\pere.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\6\brise.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\6\kuha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\6\pere.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\6\pije.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\7\guli.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\7\kuha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\7\pere.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\7\reze.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\8\kuha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\8\pere.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\8\reze.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_activity\8\ribanje.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\1\crveni_lonac_picto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\1\crveni_tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\1\crveni_vrc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\1\salica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\2\ljubicasti_lonac_picto.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\2\plavi_lonac.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\2\zeleni_lonac_picto.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\2\zuti_lonac_picto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\3\bowl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\3\greenCup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\3\greenFork.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\3\red kitchen chair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\green kitchen chair.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\red glass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\red-casserole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\yellowCup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_object\4\yellowspoon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\1\crveni_lonac.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\1\mali_plavi_lonac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\1\plavi_vrc.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\1\veliki_plavi_lonac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\2\mali_zeleni_vrc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\2\plavi_vrc.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\2\zeleni_vrc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\2\zuti_vrc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\3\roza salica.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\3\salica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\3\salica.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\3\zuti_vrc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\4\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\4\zeleni_tanjur.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\4\zuti_tanjur.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_colored_size\4\zuti_tanjur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\10\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\10\daska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\10\slavina.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\10\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\11\bat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\11\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\11\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\11\ubrus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\12\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\12\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\12\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\12\ubrus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\13\fork.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\13\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\13\ubrus2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\13\zuti_tanjur.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\14\duboki_tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\14\noz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\14\vrč.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\14\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\15\mali_zeleni_vrc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\15\slavina.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\15\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\15\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\16\duboki2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\16\kuhaca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\16\slavina.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\16\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\1\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\1\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\1\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\1\ubrus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\2\bat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\2\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\2\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\2\ubrus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\3\bat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\3\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\3\daska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\3\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\4\bat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\4\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\4\daska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\4\kitchen41.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\5\lonac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\5\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\5\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\5\ubrus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\6\noz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\6\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\6\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\6\ubrus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\7\salica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\7\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\7\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\7\ubrus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\8\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\8\daska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\8\slavina.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\8\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\9\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\9\daska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\9\sudoper.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object\9\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\1\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\1\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\1\ubrus2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\1\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\2\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\2\fork.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\2\slavina.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\2\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\3\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\3\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\3\ubrus2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\3\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\4\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\4\noz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\4\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\4\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\5\casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\5\noz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\5\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\5\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\6\kuhaca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\6\noz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\6\plavi_lonac.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_object_purpose\6\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\10\crveni_lonac.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\10\mali_plavi_lonac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\10\pan.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\10\veliki_plavi_lonac.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\11\daska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\11\m_tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\11\pan.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\11\tanjur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\12\casa.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\12\vrč.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\12\v_casa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\12\zuta_salica.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\1\crveni_tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\1\duboki_tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\1\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\1\zuti_tanjur.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\2\noz.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\2\tava.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\2\veliki_noz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\2\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\3\crveni_vrc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\3\plavi_vrc.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\3\zeleni_vrc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\3\zuti_vrc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\4\bat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\4\kuhaca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\4\mala_kuhaca.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\4\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\5\bat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\5\kuhaca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\5\mala_zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\5\zlica.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\6\daska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\6\kuhaca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\6\m_daska.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\6\v_daska.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\7\pan.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\7\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\7\tava.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\7\v_tava.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\8\duboki_tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\8\d_plate.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\8\d_plate2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\8\tanjur.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\9\bat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\9\kuhaca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\9\mala_kuhaca.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VoiceCommands\Show_size\9\zlica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Sounds\aplauz-dugi.mp3" />
     <Content Include="Resources\Sounds\bravo.mp3" />
     <Content Include="Resources\Sounds\excellent.mp3" />

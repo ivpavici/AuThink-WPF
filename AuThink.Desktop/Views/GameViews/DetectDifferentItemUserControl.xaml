@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="AuThink.Desktop.Views.GameViews.DetectDifferentItemUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             DataContext="{Binding DetectDifferent,Source={StaticResource Locator}}"
+             >
+    
+    <UserControl.Resources>
+        <DataTemplate x:Key="ItemTemplate">
+            <Image 
+                    Source="{Binding Url}" 
+                    Stretch="Fill"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="150" 
+                    Height="150"/>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="DetectDifferentItemsContainer" 
+                  Height="768" 
+                  Width="1366">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.20*"/>
+                <RowDefinition Height="0.20*"/>
+                <RowDefinition Height="0.20*"/>
+                <RowDefinition Height="0.20*"/>
+            </Grid.RowDefinitions>
+            <!--<MediaElement Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+            <!--  Frst row -->
+            <StackPanel  
+            Grid.Row="0"  
+            Orientation="Horizontal" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center"
+            Margin="40,0,0,0">
+                <ListView 
+                ItemTemplate="{StaticResource ItemTemplate}" 
+        		ItemsSource="{Binding PicturesFirstList}"
+        		ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"  >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding ItemClickCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+                <Image 
+                Source=""  
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Left" 
+                Width="75" 
+                Height="75"
+                Margin="20,0,0,0" />
+            </StackPanel>
+            <!--  Second row -->
+            <StackPanel 
+            Grid.Row="1"  
+            Orientation="Horizontal" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center" 
+            Margin="40,0,0,0">
+                <ListView 
+                ItemTemplate="{StaticResource ItemTemplate}" 
+        		ItemsSource="{Binding PicturesSecondList}"
+        		ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding ItemClickCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+                <Image 
+                Source=""  
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Left"
+                Width="75"
+                Height="75"
+                Margin="20,0,0,0"/>
+            </StackPanel>
+            <!--  Third row -->
+            <StackPanel 
+            Grid.Row="2"  
+            Orientation="Horizontal" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center"
+            Margin="40,0,0,0">
+                <ListView
+                ItemTemplate="{StaticResource ItemTemplate}" 
+        		ItemsSource="{Binding PicturesThirdList}"
+        		ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding ItemClickCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+                <Image Source=""  
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Left" 
+                   Width="75"
+                   Height="75" 
+                   Margin="20,0,0,0"/>
+            </StackPanel>
+            <!--  fourth row -->
+            <StackPanel 
+            Grid.Row="3"  
+            Orientation="Horizontal" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" 
+            Margin="40,0,0,0">
+                <ListView 
+                ItemTemplate="{StaticResource ItemTemplate}" 
+        		ItemsSource="{Binding PicturesFourthList}"
+        		ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding ItemClickCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+                <Image 
+                Source=""  
+                VerticalAlignment="Center"  
+                HorizontalAlignment="Left" 
+                Width="75" 
+                Height="75" 
+                Margin="20,0,0,0" />
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+
+</UserControl>

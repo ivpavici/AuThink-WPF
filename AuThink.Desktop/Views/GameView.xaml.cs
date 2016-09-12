@@ -37,16 +37,16 @@ namespace AuThink.Desktop.Views
 
             switch (task.Type)
             {
-//                case rules::Task.Keys.DetectDifferentItems:
-//                    if (task.Pictures.Count <= 2)
-//                    {
+                case rules.Keys.DetectDifferentItems:
+                    if (task.Pictures.Count() <= 2)
+                    {
 //                        GameGrid.Children.Add(new DetectDifferentItems_HighDifficulty_UserControl());
-//                    }
-//                    else
-//                    {
-//                        GameGrid.Children.Add(new DetectDifferentItemsUserCotrol());
-//                    }
-//                    break;
+                    }
+                    else
+                    {
+                        GameGrid.Children.Add(new DetectDifferentItemUserControl());
+                    }
+                    break;
 
                 case rules.Keys.DetectColors:
                     GameGrid.Children.Add(new DetectColorsUserControl());
@@ -59,9 +59,9 @@ namespace AuThink.Desktop.Views
 //                    GameGrid.Children.Add(new PairHalfsUserControl());
 //                    break;
 //
-//                case rules::Task.Keys.DetectSameItems:
-//                    GameGrid.Children.Add(new DetectSameItemsUserControl());
-//                    break;
+                case rules.Keys.DetectSameItems:
+                    GameGrid.Children.Add(new DetectSameItemsUserControl());
+                    break;
 //
 //                case rules::Task.Keys.OrderBySize:
 //                    GameGrid.Children.Add(new OrderBySizeUserControl());

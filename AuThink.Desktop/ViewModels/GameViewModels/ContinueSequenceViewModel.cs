@@ -95,11 +95,6 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
     public partial class ContinueSequenceViewModel
     {
-        private readonly IPictureQueries _pictureQueries;
-        private readonly ITaskQueries _taskQueries;
-        private readonly AuthinkNavigationService _navigationService;
-        private Random Random { get; set; }
-
         public ContinueSequenceViewModel
         (
             IPictureQueries pictureQueries,
@@ -120,6 +115,12 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
             Init();
         }
+
+        private readonly IPictureQueries _pictureQueries;
+        private readonly ITaskQueries _taskQueries;
+        private readonly AuthinkNavigationService _navigationService;
+
+        private Random Random { get; set; }
 
         public Picture.AnswerPicture CorrectPicture { get; set; }
         public ObservableCollection<Picture.AnswerPicture> PicturesOfferedAnswers { get; set; }
