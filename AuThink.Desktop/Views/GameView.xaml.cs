@@ -26,14 +26,10 @@ namespace AuThink.Desktop.Views
     {
         private void onControl_Loaded(object sender, RoutedEventArgs e)
         {
-            Trace.WriteLine("text");
-
             GameGrid.Children.Clear();
 
             var task = _taskQueries.GetSingleById(GameState.GetTask());
             _taskKey = task.Type;
-
-            //GameGrid.Children.Add(new ContinueSequenceUserControl());
 
             switch (task.Type)
             {
@@ -67,9 +63,9 @@ namespace AuThink.Desktop.Views
 //                    GameGrid.Children.Add(new OrderBySizeUserControl());
 //                    break;
 //
-//                case rules::Task.Keys.VoiceCommands:
-//                    GameGrid.Children.Add(new VoiceCommandsUserControl());
-//                    break;
+                case rules.Keys.VoiceCommands:
+                    GameGrid.Children.Add(new VoiceCommandsUserControl());
+                    break;
 //
 //                case rules::Task.Keys.PairSameItems:
 //                    GameGrid.Children.Add(new PairSameItemsUserControl());
