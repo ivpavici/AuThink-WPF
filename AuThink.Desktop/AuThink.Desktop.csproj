@@ -107,6 +107,9 @@
     <Compile Include="Views\GameViews\DetectColorsUserControl.xaml.cs">
       <DependentUpon>DetectColorsUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\GameViews\DetectDifferentItemsHighDifficultyUserControl.xaml.cs">
+      <DependentUpon>DetectDifferentItemsHighDifficultyUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\GameViews\DetectDifferentItemUserControl.xaml.cs">
       <DependentUpon>DetectDifferentItemUserControl.xaml</DependentUpon>
     </Compile>
@@ -155,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\GameViews\DetectColorsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameViews\DetectDifferentItemsHighDifficultyUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

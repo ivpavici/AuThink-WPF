@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="AuThink.Desktop.Views.GameViews.DetectDifferentItemsHighDifficultyUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             DataContext ="{Binding DetectDifferentItemsHighDifficulty, Source={StaticResource Locator}}"
+             >
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="DetectDifferentItemsHighDifficultyContainer" 
+                  Height="768" 
+                  Width="1366">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="0.2*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.2*" />
+            </Grid.ColumnDefinitions>
+            <Button 
+            Style="{StaticResource PictureButtonStyle}"  
+            Grid.Column="1" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Center" 
+            >
+                <Image Source="{Binding Pictures[0].Url}"
+        		HorizontalAlignment="Center" 
+        		VerticalAlignment="Center"
+        		Tag="{Binding Pictures[0].Id}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding PointerPressedCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Button>
+            <Button 
+            Style="{StaticResource PictureButtonStyle}"  
+            Grid.Column="3" 
+            Grid.Row="1" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Center" 
+            >
+                <Image Source="{Binding Pictures[1].Url}" Tag="{Binding Pictures[1].Id}"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding PointerPressedCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Button>
+            <Button 
+            Style="{StaticResource PictureButtonStyle}"  
+            Grid.Column="5" HorizontalAlignment="Center" Margin="0,25,15,0" VerticalAlignment="Center" 
+            >
+                <Image Source="{Binding Pictures[2].Url}" Tag="{Binding Pictures[2].Id}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding PointerPressedCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Button>
+            <Button 
+            Style="{StaticResource PictureButtonStyle}"  
+            Grid.Row="2" HorizontalAlignment="Center" Margin="10,5,0,0" VerticalAlignment="Center"
+            >
+                <Image Source="{Binding Pictures[3].Url}" Tag="{Binding Pictures[3].Id}"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding PointerPressedCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Button>
+            <Button 
+            Style="{StaticResource PictureButtonStyle}"  
+            Grid.Column="2" 
+            Grid.Row="2" HorizontalAlignment="Center" Margin="15,20,0,0" VerticalAlignment="Center" MaxWidth="150" MaxHeight="150"
+            >
+                <Image Source="{Binding Pictures[4].Url}" Tag="{Binding Pictures[4].Id}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding PointerPressedCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Button>
+            <Button 
+            Style="{StaticResource PictureButtonStyle}"  
+            Grid.Column="5" 
+            Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"
+            >
+                <Image Source="{Binding Pictures[6].Url}" Tag="{Binding Pictures[6].Id}"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding PointerPressedCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Button>
+            <Button 
+            Style="{StaticResource PictureButtonStyle}"  
+            Grid.Column="7" 
+            Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,10,20"
+            >
+                <Image Source="{Binding Pictures[5].Url}" Tag="{Binding Pictures[5].Id}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding PointerPressedCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Button>
+            <Button 
+            Style="{StaticResource PictureButtonStyle}"  
+            Grid.Column="2"
+            Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,20,0"
+            >
+                <Image Source="{Binding Pictures[7].Url}" Tag="{Binding Pictures[7].Id}"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <command:EventToCommand Command="{Binding PointerPressedCommand}" PassEventArgsToCommand="True" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Button>
+<!--            <MediaElement Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+        </Grid>
+    </Viewbox>
+</UserControl>

@@ -36,7 +36,7 @@ namespace AuThink.Desktop.Views
                 case rules.Keys.DetectDifferentItems:
                     if (task.Pictures.Count() <= 2)
                     {
-//                        GameGrid.Children.Add(new DetectDifferentItems_HighDifficulty_UserControl());
+                        GameGrid.Children.Add(new DetectDifferentItemsHighDifficultyUserControl());
                     }
                     else
                     {
