@@ -58,11 +58,11 @@ namespace AuThink.Desktop.Views
                 case rules.Keys.DetectSameItems:
                     GameGrid.Children.Add(new DetectSameItemsUserControl());
                     break;
-//
-//                case rules::Task.Keys.OrderBySize:
-//                    GameGrid.Children.Add(new OrderBySizeUserControl());
-//                    break;
-//
+
+                case rules.Keys.OrderBySize:
+                    GameGrid.Children.Add(new OrderBySizeUserControl());
+                    break;
+
                 case rules.Keys.VoiceCommands:
                     GameGrid.Children.Add(new VoiceCommandsUserControl());
                     break;

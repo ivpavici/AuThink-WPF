@@ -116,6 +116,9 @@
     <Compile Include="Views\GameViews\DetectSameItemsUserControl.xaml.cs">
       <DependentUpon>DetectSameItemsUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\GameViews\OrderBySizeUserControl.xaml.cs">
+      <DependentUpon>OrderBySizeUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\GameViews\VoiceCommandsUserControl.xaml.cs">
       <DependentUpon>VoiceCommandsUserControl.xaml</DependentUpon>
     </Compile>
@@ -170,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\GameViews\DetectSameItemsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameViews\OrderBySizeUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
