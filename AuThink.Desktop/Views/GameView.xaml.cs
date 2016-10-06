@@ -16,6 +16,7 @@ using Authink.Desktop.Controls;
 using AuThink.Desktop.Core;
 using AuThink.Desktop.Services;
 using AuThink.Desktop.Views.GameViews;
+using AuThink.Desktop.Views.GameViews.PairHalfsTask;
 using GalaSoft.MvvmLight.Ioc;
 
 using rules = AuThink.Desktop.Model.Rules;
@@ -51,10 +52,11 @@ namespace AuThink.Desktop.Views
                 case rules.Keys.ContinueSequence:
                     GameGrid.Children.Add(new ContinueSequenceUserControl());
                     break;
-//                case rules::Task.Keys.PairHalves:
-//                    GameGrid.Children.Add(new PairHalfsUserControl());
-//                    break;
-//
+
+                case rules.Keys.PairHalves:
+                    GameGrid.Children.Add(new PairHalfsUserControl());
+                    break;
+
                 case rules.Keys.DetectSameItems:
                     GameGrid.Children.Add(new DetectSameItemsUserControl());
                     break;
@@ -66,10 +68,10 @@ namespace AuThink.Desktop.Views
                 case rules.Keys.VoiceCommands:
                     GameGrid.Children.Add(new VoiceCommandsUserControl());
                     break;
-//
-//                case rules::Task.Keys.PairSameItems:
-//                    GameGrid.Children.Add(new PairSameItemsUserControl());
-//                    break;
+
+                case rules.Keys.PairSameItems:
+                    GameGrid.Children.Add(new PairSameItemsUserControl());
+                    break;
             }
         }
 

@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="AuThink.Desktop.Views.GameViews.PairHalfsTask.PairHalfsTemplateUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="grid">
+        <StackPanel
+            x:Name="dropContainer"
+            Orientation="Horizontal" >
+            <Button
+              Width="150"
+              Height="150"
+              Style="{StaticResource PictureButtonStyle}"
+              Padding="0" HorizontalAlignment="Right" HorizontalContentAlignment="Right">
+                <Image
+                HorizontalAlignment="Right"
+                Source="{Binding Path=LeftImageSource}">
+                </Image>
+            </Button>
+<!--            <Controls:DropPlaceholder-->
+<!--              ExpectedPairId="{Binding UniquePairId}"-->
+<!--              OnDropSuccessful ="DropSuccessful"-->
+<!--              HorizontalAlignment="Left"-->
+<!--              Margin="0" VerticalAlignment="Center">-->
+<!--                <Button Width="150" Height="150" Style="{StaticResource PictureButtonStyle}" Padding="0" HorizontalContentAlignment="Left">-->
+<!--                    <Image Source="{Binding Path=RightImageSource}" Visibility="Collapsed" HorizontalAlignment="Left"></Image>-->
+<!--                </Button>-->
+<!--            </Controls:DropPlaceholder>-->
+        </StackPanel>
+        <StackPanel
+              x:Name="wholePictureContainer"
+             Visibility="Collapsed">
+            <Button
+                    Height="150"
+                    Style="{StaticResource PictureButtonStyle}"
+                    Padding="0" HorizontalAlignment="Stretch">
+                <Image
+                        HorizontalAlignment="Center"
+                        Source="{Binding Path=WholeImageSource}">
+                </Image>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
