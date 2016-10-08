@@ -2,11 +2,158 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:Authink.Desktop.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              DataContext ="{Binding PairSameItems, Source={StaticResource Locator}}">
-    <Grid>
-            
+
+        <UserControl.Resources>
+            <DataTemplate x:Key="DraggableElementTemplate">
+                <controls:DraggableElement 
+                VerticalAlignment="Stretch" 
+                HorizontalAlignment="Stretch"
+                PairId="{Binding Id}" Padding="0"
+                Width="150" 
+                Height="150">
+                    <Button 
+                        Width="150" 
+                        Height="150"
+                        HorizontalAlignment="Center"
+                        Padding="0">
+                        <Image
+                            Source="{Binding Path=Url}">
+                        </Image>
+                    </Button>
+                </controls:DraggableElement>
+            </DataTemplate>
+            <DataTemplate x:Key="DropPlaceholderTemplate">
+                <controls:DropPlaceholder
+                ExpectedPairId="{Binding Id}"
+                OnDropSuccessful ="DropSuccessful">
+                    <Button 
+            		    Width="150" 
+            		    Height="150"
+                        HorizontalAlignment="Center"
+                        Padding="0">
+                        <Image
+            			    Source="{Binding Url}" 
+                            Visibility="Collapsed"/>
+                    </Button>
+                </controls:DropPlaceholder>
+            </DataTemplate>
+        </UserControl.Resources>
+
+    <Grid  
+        HorizontalAlignment="Stretch"
+        Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*" />
+            <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0"
+              Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+<!--            <MediaElement Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+            <ItemsControl 
+                Grid.Column="0"
+                ItemTemplate="{StaticResource DraggableElementTemplate}" 
+                HorizontalContentAlignment="Center" 
+                ItemsSource="{Binding ItemsLeft}"
+                AllowDrop="False" 
+                IsHitTestVisible="false" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Right">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+            <ItemsControl 
+                    Grid.Column="1"
+                    x:Name="emptyControl" 
+                    HorizontalContentAlignment="Center" 
+                    AllowDrop="True" 
+                    ItemsSource="{Binding ItemsLeftEmpty}"
+                    ItemTemplate="{StaticResource DropPlaceholderTemplate}" 
+                    HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Grid>
+        <Grid 
+            Grid.Row="0"
+            Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ItemsControl  
+        		Grid.Column="0" 
+        		ItemTemplate="{StaticResource DraggableElementTemplate}" 
+        		HorizontalContentAlignment="Center"
+        		ItemsSource="{Binding ItemsRight}" 
+        		VerticalAlignment="Center" 
+        		AllowDrop="False" 
+        		IsHitTestVisible="false" HorizontalAlignment="Right" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel
+                            Orientation="Vertical" 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+            <!--Tablica paznih slika 2/2-->
+            <ItemsControl 
+        		Grid.Column="1"
+        		x:Name="emptyControl2" 
+        		HorizontalContentAlignment="Center" 
+        		VerticalAlignment="Center" 
+        		AllowDrop="True" 
+        		ItemTemplate="{StaticResource DropPlaceholderTemplate}" 
+        		ItemsSource="{Binding ItemsRightEmpty}"
+                HorizontalAlignment="Left">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Grid>
+        <Border
+        	Grid.Row="1" 
+        	Grid.ColumnSpan="2" Margin="0,-10,0,0" BorderThickness="0,2,0,0" BorderBrush="#33000000" 
+            >
+            <ItemsControl  
+        		ItemTemplate="{StaticResource DraggableElementTemplate}"
+        		ItemsSource="{Binding ItemsSelectionList}"
+        		AllowDrop="False" 
+        		ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+        		ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Border>
     </Grid>
 </UserControl>

@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using AuThink.Desktop.Services;
+using AuThink.Desktop.ViewModels.GameViewModels;
 
 namespace AuThink.Desktop.Views.GameViews
 {
@@ -20,9 +10,25 @@ namespace AuThink.Desktop.Views.GameViews
     /// </summary>
     public partial class PairSameItemsUserControl : UserControl
     {
+        public int numberOfSuccessfulDrops { get; set; }
+        private PairSameItemsViewModel _vmodel;
+        private AuthinkNavigationService _navigationService;
+
         public PairSameItemsUserControl()
         {
             InitializeComponent();
+            _vmodel = (PairSameItemsViewModel)this.DataContext;
+            _navigationService = new AuthinkNavigationService();
+        }
+
+        private async void DropSuccessful(object sender, EventArgs e)
+        {
+            numberOfSuccessfulDrops++;
+            if (numberOfSuccessfulDrops == _vmodel.ItemsSelectionList.Count)
+            {
+                await System.Threading.Tasks.Task.Delay(2000);
+                _navigationService.NavigateTo(new RewardView());
+            }
         }
     }
 }

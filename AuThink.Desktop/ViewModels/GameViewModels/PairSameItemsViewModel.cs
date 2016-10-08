@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AuThink.Desktop.Core;
+using AuThink.Desktop.Core.Entities;
 using AuThink.Desktop.Services;
+using Authink.Desktop.Services;
 using GalaSoft.MvvmLight;
 
 namespace AuThink.Desktop.ViewModels.GameViewModels
@@ -14,6 +16,51 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
     {
         private void TransformTaskDataToViewModelData()
         {
+            var pictures = _pictureQueries.GetAllPicturesForTask(GameState.GetTask())
+                           .Select(picture => (Picture.AnswerPicture)picture)
+                           .ToList();
+
+//            var sound = _taskQueries.GetSingle_byId(GameState.GetTask()).VoiceCommand;
+
+//            SoundUrl = sound != null && (bool)ApplicationData.Current.LocalSettings.Values["IsInstructionSoundEnabled"] ? new Uri(sound.Url) : null;
+
+            foreach (var picture in pictures)
+            {
+                var currentPictureIndex = pictures.ToList().IndexOf(picture);
+
+                ItemsSelectionList.Add(new PairSameItemsPicture(picture.Id, picture.Url, currentPictureIndex.ToString()));
+
+                if (currentPictureIndex < 3)
+                {
+                    this.ItemsLeftEmpty.Add(new PairSameItemsPicture(picture.Id, picture.Url, currentPictureIndex.ToString()));
+                }
+                else if (currentPictureIndex >= 3)
+                {
+                    this.ItemsRightEmpty.Add(new PairSameItemsPicture(picture.Id, picture.Url, currentPictureIndex.ToString()));
+                }
+            }
+
+            foreach (var picture in pictures)
+            {
+                var currentPictureIndex = pictures.ToList().IndexOf(picture);
+
+                if (currentPictureIndex < 3)
+                {
+                    this.ItemsLeft.Add
+                    (
+                        new PairSameItemsPicture(picture.Id, picture.Url, currentPictureIndex.ToString())
+                    );
+
+                }
+                else if (currentPictureIndex >= 3)
+                {
+                    this.ItemsRight.Add
+                    (
+                       new PairSameItemsPicture(picture.Id, picture.Url, currentPictureIndex.ToString())
+                    );
+                }
+            }
+            this.ItemsSelectionList.Shuffle();
         }
     }
 
