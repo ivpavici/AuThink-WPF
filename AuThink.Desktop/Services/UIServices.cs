@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Windows.Controls;
 using System.Windows.Media.Animation;
+using AuThink.Desktop.Core.Entities;
 
 
 namespace AuThink.Desktop.Services
@@ -133,53 +135,53 @@ namespace AuThink.Desktop.Services
         }
     }
 
-//    public class SoundServices
-//    {
-//        private static volatile SoundServices _instance;
-//        private MediaElement _mediaElement;
-//        public bool IsInitialized { get; private set; }
+    public class SoundServices
+    {
+        private static volatile SoundServices _instance;
+        private MediaElement _mediaElement;
+        public bool IsInitialized { get; private set; }
 
-//        private SoundServices() { }
+        private SoundServices() { }
 
-//        public static SoundServices Instance
-//        {
-//            get { return _instance ?? (_instance = new SoundServices()); }
-//        }
+        public static SoundServices Instance
+        {
+            get { return _instance ?? (_instance = new SoundServices()); }
+        }
 
-//        public void Initialize(MediaElement mediaElement)
-//        {
-//            if (mediaElement == null)
-//            {
-//                throw new ArgumentNullException("mediaElement");
-//            }
+        public void Initialize(MediaElement mediaElement)
+        {
+            if (mediaElement == null)
+            {
+                throw new ArgumentNullException("mediaElement");
+            }
 
-//            _mediaElement = mediaElement;
-//            _mediaElement.Source = (string)ApplicationData.Current.LocalSettings.Values["Language"] == "En"
-//                                      ? new Uri("ms-appx:///Resources/Sounds/excellent.mp3")
-//                                      : new Uri("ms-appx:///Resources/Sounds/bravo.mp3");
+            _mediaElement = mediaElement;
+            _mediaElement.Source = AuThink.Desktop.Properties.Settings.Default.Language == "En"
+                                      ? new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/excellent.mp3"))
+                                      : new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/bravo.mp3"));
 
-//            this.IsInitialized = true;
-//        }
+            this.IsInitialized = true;
+        }
 
-//        public void Play()
-//        {
-//            if (!this.IsInitialized)
-//            {
-//                throw new InvalidOperationException("Player first needs to be initialized!");
-//            }
+        public void Play()
+        {
+            if (!this.IsInitialized)
+            {
+                throw new InvalidOperationException("Player first needs to be initialized!");
+            }
 
-//            if ((bool)ApplicationData.Current.LocalSettings.Values["IsRewardSoundEnabled"])
-//            {
-//                _mediaElement.Play();
-//            }
-//        }
+            if (AuThink.Desktop.Properties.Settings.Default.IsRewardSoundEnabled)
+            {
+                _mediaElement.Play();
+            }
+        }
 
-//        public static Uri GetInstructionsSoundUrl(ent::Sound sound)
-//        {
-//            return
-//                sound != null && (bool)ApplicationData.Current.LocalSettings.Values["IsInstructionSoundEnabled"]
-//                ? new Uri(sound.Url)
-//                : null;
-//        }
-//    }
+        public static Uri GetInstructionsSoundUrl(Sound sound)
+        {
+            return
+                sound != null && AuThink.Desktop.Properties.Settings.Default.IsInstructionSoundEnabled
+                ? new Uri(sound.Url)
+                : null;
+        }
+    }
 }

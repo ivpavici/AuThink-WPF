@@ -31,7 +31,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
                 PicturesSequence[PicturesSequence.IndexOf(pictureToUpdate)] = pictureToUpdate;
 
-                //SoundServices.Instance.Play();
+                SoundServices.Instance.Play();
 
                 source.IsHitTestVisible = false;
 
@@ -84,10 +84,10 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                                              .Select(picture => (Picture.AnswerPicture)picture)
                                              .ToList();
 
-            //SoundUrl = SoundServices.GetInstructionsSoundUrl
-            //(
-            //    sound: taskQueries.GetSingle_byId(GameState.GetTask()).VoiceCommand
-            //);
+            SoundUrl = SoundServices.GetInstructionsSoundUrl
+            (
+                sound: _taskQueries.GetSingleById(GameState.GetTask()).VoiceCommand
+            );
 
             TransformPicturesDataToModelData(picturesData);
         }

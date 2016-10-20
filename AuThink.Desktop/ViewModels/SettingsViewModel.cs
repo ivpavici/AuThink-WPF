@@ -34,31 +34,31 @@ namespace AuThink.Desktop.ViewModels
             AuThink.Desktop.Properties.Settings.Default.Save(); 
         }
 
-        //public RelayCommand<string> ToggleRewardSoundEnableCommand { get; private set; }
-        //private void ToggleRewardSoundEnable(string isEnabled)
-        //{
-        //    if (isEnabled == "true")
-        //    {
-        //        ApplicationData.Current.LocalSettings.Values["IsRewardSoundEnabled"] = true;
-        //    }
-        //    else
-        //    {
-        //        ApplicationData.Current.LocalSettings.Values["IsRewardSoundEnabled"] = false;
-        //    }
-        //}
+        public RelayCommand<string> ToggleRewardSoundEnableCommand { get; private set; }
+        private void ToggleRewardSoundEnable(string isEnabled)
+        {
+            if (isEnabled == "true")
+            {
+                AuThink.Desktop.Properties.Settings.Default.IsRewardSoundEnabled = true;
+            }
+            else
+            {
+                AuThink.Desktop.Properties.Settings.Default.IsRewardSoundEnabled = false;
+            }
+        }
 
-        //public RelayCommand<string> ToggleInstructionSoundEnableCommand { get; private set; }
-        //private void ToggleInstructionSoundEnable(string isEnabled)
-        //{
-        //    if (isEnabled == "true")
-        //    {
-        //        ApplicationData.Current.LocalSettings.Values["IsInstructionSoundEnabled"] = true;
-        //    }
-        //    else
-        //    {
-        //        ApplicationData.Current.LocalSettings.Values["IsInstructionSoundEnabled"] = false;
-        //    }
-        //}
+        public RelayCommand<string> ToggleInstructionSoundEnableCommand { get; private set; }
+        private void ToggleInstructionSoundEnable(string isEnabled)
+        {
+            if (isEnabled == "true")
+            {
+                AuThink.Desktop.Properties.Settings.Default.IsInstructionSoundEnabled = true;
+            }
+            else
+            {
+                AuThink.Desktop.Properties.Settings.Default.IsInstructionSoundEnabled = false;
+            }
+        }
 
         public string CroatianLanguage
         {
@@ -267,8 +267,8 @@ namespace AuThink.Desktop.ViewModels
             _navigationService = navigationService;
 
             this.ChangeLanguage = new RelayCommand<string>(LanguageSelectionChange);
-            //this.ToggleRewardSoundEnableCommand = new RelayCommand<string>(ToggleRewardSoundEnable);
-            //this.ToggleInstructionSoundEnableCommand = new RelayCommand<string>(ToggleInstructionSoundEnable);
+            this.ToggleRewardSoundEnableCommand = new RelayCommand<string>(ToggleRewardSoundEnable);
+            this.ToggleInstructionSoundEnableCommand = new RelayCommand<string>(ToggleInstructionSoundEnable);
             this.BackCommand = new RelayCommand(Back);
         }
     }

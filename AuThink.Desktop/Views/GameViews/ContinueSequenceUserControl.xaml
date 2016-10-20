@@ -69,6 +69,7 @@
                 Margin="20,0,0,0" 
                 Grid.Column="1">
 
+                    <MediaElement Source="{Binding SoundUrl}" Visibility="Collapsed"/>
                     <ListView 
                         ItemTemplate="{StaticResource ItemTemplateWithRewardPictures}"
         	            ItemsSource="{Binding PicturesOfferedAnswers}"

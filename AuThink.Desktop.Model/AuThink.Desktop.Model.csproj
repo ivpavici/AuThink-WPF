@@ -1002,131 +1002,381 @@
     <Content Include="Resources\Images\VoiceCommands\Show_size\9\zlica.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Sounds\aplauz-dugi.mp3" />
-    <Content Include="Resources\Sounds\bravo.mp3" />
-    <Content Include="Resources\Sounds\excellent.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\continue_sequence.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\detecet_different.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\detect_colors.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_cook.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_cut.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_drink.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_eat.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_eat_soup.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_wipe.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\pair_halves.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\pair_items.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_cooking.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_cutting.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_drinking.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_eating.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_peeling.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_scrubbing.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_washing.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_wiping.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_color\s_blue_cass.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_color\s_green_fork.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_color\s_red_plate.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_color\s_yellow_spoon.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_color_size\s_big_red_cup.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_color_size\s_big_yellow_plate.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_color_size\s_small_b_cass.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_color_size\s_small_green_jug.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_casserole.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_cooking_spoon.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_cup.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_drinking_glass.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_faucet.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_fork.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_jug.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_kitchen.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_kitchen_b.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_knife.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_meat_hamm.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_napkin.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_pan.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_plate.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_sink.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_item\s_spoon.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\show_big_casserole.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_biggest_pan.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_big_c_spoon.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_big_drinking_glass.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_big_plate.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_deep_plate.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_shallow_plate.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_smallest_kb.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_small_c_spoon.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_small_jug.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_small_knife.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\Show_size\s_small_spoon.mp3" />
-    <Content Include="Resources\Sounds\Task_sound\sort_size.mp3" />
-    <Content Include="Resources\Sounds\test.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_predmet\p_crveni_tanjur1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_predmet\p_plavi_lonac1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_predmet\p_zelenu_vilicu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_predmet\p_zutu_salicu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_velicina\p_mali_zeleni_vrc1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_velicina\p_m_plavi_lonac1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_velicina\p_v_crvenu_salicu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_velicina\p_v_zuti_tanjur1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\cime_brises.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\cime_jedes.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\cime_jedes_juhu.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\cime_rezes.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\iz_cega_pijes1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\u_cemu_se_kuha1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\pokazi_kuhacu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_bat.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_casu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_dasku1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_kuhinju.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_lonac1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_noz.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_salicu.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_slavinu.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_sudoper.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_tanjur.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_tavu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_ubrus.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_vilicu.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_vrc.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_zlicu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_brise1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_guli1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_jede1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_kuha1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_pere1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_pije1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_reze1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_riba1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_duboki_tanjur1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_mali_noz1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_mali_vrc.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_malu_kuhacu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_malu_zlicu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_najmanju_dasku1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_najvecu_tavu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_plitki_tanjur1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_veliki_lonac1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_veliki_tanjur1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_veliku_casu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_veliku_kuhacu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\bravo.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\koje_boje1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\nastavi_niz.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\pokazi_pripadaju.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\popuni_tablicu1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\poredaj_po_velicini1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\pronadji_isti1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\pronadji_polovina1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\pronadji_razliciti1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\spoji_parove1.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\spremi_posudje_u_kutije.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\spremi_u_ladice.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\tocno.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\upari_boje.mp3" />
-    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\upari_oblik1.mp3" />
+    <Content Include="Resources\Sounds\aplauz-dugi.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\bravo.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\excellent.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\continue_sequence.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\detecet_different.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\detect_colors.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_cook.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_cut.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_drink.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_eat.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_eat_soup.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Item_by_purpose\w_wipe.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\pair_halves.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\pair_items.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_cooking.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_cutting.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_drinking.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_eating.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_peeling.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_scrubbing.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_washing.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_activity\w_wiping.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_color\s_blue_cass.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_color\s_green_fork.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_color\s_red_plate.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_color\s_yellow_spoon.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_color_size\s_big_red_cup.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_color_size\s_big_yellow_plate.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_color_size\s_small_b_cass.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_color_size\s_small_green_jug.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_casserole.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_cooking_spoon.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_cup.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_drinking_glass.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_faucet.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_fork.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_jug.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_kitchen.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_kitchen_b.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_knife.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_meat_hamm.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_napkin.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_pan.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_plate.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_sink.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_item\s_spoon.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\show_big_casserole.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_biggest_pan.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_big_c_spoon.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_big_drinking_glass.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_big_plate.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_deep_plate.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_shallow_plate.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_smallest_kb.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_small_c_spoon.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_small_jug.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_small_knife.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\Show_size\s_small_spoon.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Task_sound\sort_size.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\test.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_predmet\p_crveni_tanjur1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_predmet\p_plavi_lonac1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_predmet\p_zelenu_vilicu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_predmet\p_zutu_salicu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_velicina\p_mali_zeleni_vrc1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_velicina\p_m_plavi_lonac1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_velicina\p_v_crvenu_salicu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_boja_velicina\p_v_zuti_tanjur1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\cime_brises.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\cime_jedes.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\cime_jedes_juhu.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\cime_rezes.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\iz_cega_pijes1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_funkcija\u_cemu_se_kuha1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\pokazi_kuhacu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_bat.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_casu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_dasku1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_kuhinju.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_lonac1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_noz.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_salicu.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_slavinu.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_sudoper.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_tanjur.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_tavu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_ubrus.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_vilicu.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_vrc.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_predmet_zvuk\p_zlicu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_brise1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_guli1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_jede1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_kuha1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_pere1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_pije1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_reze1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_radnje\tko_riba1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_duboki_tanjur1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_mali_noz1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_mali_vrc.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_malu_kuhacu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_malu_zlicu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_najmanju_dasku1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_najvecu_tavu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_plitki_tanjur1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_veliki_lonac1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_veliki_tanjur1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_veliku_casu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\pokazi_velicina\p_veliku_kuhacu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\bravo.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\koje_boje1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\nastavi_niz.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\pokazi_pripadaju.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\popuni_tablicu1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\poredaj_po_velicini1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\pronadji_isti1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\pronadji_polovina1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\pronadji_razliciti1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\spoji_parove1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\spremi_posudje_u_kutije.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\spremi_u_ladice.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\tocno.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\upari_boje.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\Zadaci_zvuk\zadaci_upute\upari_oblik1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\TaskIcons\task-affiliation-256x256.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

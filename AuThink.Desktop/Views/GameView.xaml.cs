@@ -243,7 +243,7 @@ namespace AuThink.Desktop.Views
             //this.AddHandler(UIElement.press.PointerPressedEvent, new PointerEventHandler(_DraggableElement_PointerPressed), true);
             //this.AddHandler(UIElement.PointerReleasedEvent, new PointerEventHandler(_DropPlaceholder_PointerReleased), true);
 
-            //SoundServices.Instance.Initialize(this.mediaElement);
+            SoundServices.Instance.Initialize(this.mediaElement);
             //PopUpService.Instance.Initialize(this.PopupStoryboard);
         }
     }

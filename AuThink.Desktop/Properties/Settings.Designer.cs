@@ -34,5 +34,35 @@ namespace AuThink.Desktop.Properties {
                 this["Language"] = value;
             }
         }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("true")]
+        public bool IsRewardSoundEnabled
+        {
+            get
+            {
+                return ((bool)(this["IsRewardSoundEnabled"]));
+            }
+            set
+            {
+                this["IsRewardSoundEnabled"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("true")]
+        public bool IsInstructionSoundEnabled
+        {
+            get
+            {
+                return ((bool)(this["IsInstructionSoundEnabled"]));
+            }
+            set
+            {
+                this["IsInstructionSoundEnabled"] = value;
+            }
+        }
     }
 }

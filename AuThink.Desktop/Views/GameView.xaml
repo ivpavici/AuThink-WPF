@@ -7,7 +7,7 @@
       d:DesignHeight="768" d:DesignWidth="1366"
       DataContext="{Binding Game, Source={StaticResource Locator}}">
     <Grid Background="White">
-        <!--<MediaElement x:Name="mediaElement"  AutoPlay="False"  Visibility="Collapsed"/>-->
+        <MediaElement x:Name="mediaElement" LoadedBehavior="Manual" Visibility="Collapsed"/>
 
         <Grid x:Name="GameGrid" />
         <ContentControl x:Name="draggingContentControl" IsHitTestVisible="False" Loaded="onControl_Loaded" />

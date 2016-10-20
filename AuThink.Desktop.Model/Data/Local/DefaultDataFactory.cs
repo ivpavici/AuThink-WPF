@@ -47,7 +47,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                      new ent::Picture.AnswerPicture(21, @"Resources/Images/ContinueSequence/1/bowl.png",     null, false),
                                                      new ent::Picture.AnswerPicture(22, @"Resources/Images/ContinueSequence/1/casserole.png",null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3"), "title")
                                   ),
                                   new ent::Task
                                    (
@@ -63,7 +63,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                      new ent::Picture.AnswerPicture(24, @"Resources/Images/ContinueSequence/2/cup.png",        null, false),
                                                      new ent::Picture.AnswerPicture(25, @"Resources/Images/ContinueSequence/2/frying pan.png", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3"), "title")
                                   ),
                                   new ent::Task
                                    (
@@ -80,7 +80,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                      new ent::Picture.AnswerPicture(28, @"Resources/Images/ContinueSequence/3/kitchen chair.png", null, false),
                                                      new ent::Picture.AnswerPicture(29, @"Resources/Images/ContinueSequence/3/glass.png",         null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/nastavi_niz.mp3"), "title")
                                   ),
                                }),
                         new ent::Test
@@ -107,7 +107,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.ColorPicture(34, @"Resources/Images/DetectColors/1/red glass.png",          null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 32)}),
                                                     new ent::Picture.ColorPicture(35, @"Resources/Images/DetectColors/1/green kitchen chair.png",null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#0000FF", false, 33)})
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -124,7 +124,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.ColorPicture(38, @"Resources/Images/DetectColors/2/red kitchen chair.png",    null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 36),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#0000FF", false, 36)}),
                                                     new ent::Picture.ColorPicture(39, @"Resources/Images/DetectColors/2/yellow kitchen tool_3.png",null, new List<ent::Color>{new ent::Color(1, "#FFFF00", true, 28),new ent::Color(1, "#0000FF", false, 37),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#008000", false, 37)})
                                                 }                                                                                                    ,
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")                                                                                                                
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3"), "title")                                                                                                                
                                    ),
                                    new ent::Task
                                    (
@@ -139,7 +139,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.ColorPicture(40, @"Resources/Images/DetectColors/3/red kitchen chair.png",null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 34),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#0000FF", false, 34),new ent::Color(1, "#A52A2A", false, 34),new ent::Color(1, "#FFFF00", false, 34)}),
                                                     new ent::Picture.ColorPicture(41, @"Resources/Images/DetectColors/3/greenCup.png",         null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#FF0000", false, 35),new ent::Color(1, "#0000FF", false, 28),new ent::Color(1, "#FFA500", false, 35),new ent::Color(1, "#FFFF00", false, 35),new ent::Color(1, "#A52A2A", false, 35)})
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/koje_boje1.mp3"), "title")
                                    )}),
                         new ent::Test
                         (
@@ -165,7 +165,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(46, "Resources/Images/DetectDifferentItems/1/kitchen tool_2.png", null, false),
                                                     new ent::Picture.AnswerPicture(47, "Resources/Images/DetectDifferentItems/1/plate_1.png",        null, false)
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -181,7 +181,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(49, "Resources/Images/DetectDifferentItems/2/Red_cambridge_mug.png", null, false),
                                                     
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -196,7 +196,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(50, "Resources/Images/DetectDifferentItems/3/individual-red-mug.png", null, true ),
                                                     new ent::Picture.AnswerPicture(51, "Resources/Images/DetectDifferentItems/3/Red_cambridge_mug.png",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_razliciti1.mp3"), "title")
                                    )}),
                         new ent::Test
                         (
@@ -219,7 +219,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                    new ent::Picture.BasicDetails(68, @"Resources/Images/PairHalfs/1/casserole.png"),
                                                    new ent::Picture.BasicDetails(69, @"Resources/Images/PairHalfs/1/plate_1.png"),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -237,7 +237,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                    new ent::Picture.BasicDetails(70, @"Resources/Images/PairHalfs/2/full.png"),
                                                    new ent::Picture.BasicDetails(71, @"Resources/Images/PairHalfs/2/jug.png"),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -257,7 +257,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                    new ent::Picture.BasicDetails(72, @"Resources/Images/PairHalfs/3/kitchen tool_2.png"),
                                                    new ent::Picture.BasicDetails(73, @"Resources/Images/PairHalfs/3/plate_1.png"),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_polovina1.mp3"), "title")
                                    )}),
                         new ent::Test
                         (
@@ -281,7 +281,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(97, @"Resources/Images/PairSameItems/1/kitchen tool_6.png", null, true),
                                                    
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3"), "title")
                                    ),
                                     new ent::Task
                                    (
@@ -299,7 +299,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(101, @"Resources/Images/PairSameItems/2/kitchen chair.png", null, true),
                                                     new ent::Picture.AnswerPicture(102, @"Resources/Images/PairSameItems/2/frying pan.png",    null, true)
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -319,7 +319,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(106, @"Resources/Images/PairSameItems/3/plate_1.png",                        null, true)
                                                     
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/pronadji_isti1.mp3"), "title")
                                    )
                                }),
                         new ent::Test
@@ -343,7 +343,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(108, @"Resources/Images/SortBySize/1/jug-2.png", null, true),
                                                     new ent::Picture.AnswerPicture(109, @"Resources/Images/SortBySize/1/jug-3.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -360,7 +360,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(112, @"Resources/Images/SortBySize/2/kitchen-tool_2-3.png", null, true),
                                                     new ent::Picture.AnswerPicture(113, @"Resources/Images/SortBySize/2/kitchen-tool_2-4.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -378,7 +378,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(117, @"Resources/Images/SortBySize/3/cup-4.png", null, true),
                                                     new ent::Picture.AnswerPicture(118, @"Resources/Images/SortBySize/3/cup-5.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/zadaci_upute/poredaj_po_velicini1.mp3"), "title")
                                    )
                                }),
                         new ent::Test
@@ -403,7 +403,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_object/1/tava.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_object/1/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_casu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_casu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -420,7 +420,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_object/2/tava.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_object/2/ubrus.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_bat.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_bat.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -437,7 +437,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_object/3/tava.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_object/3/daska.jpg", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_dasku1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_dasku1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -454,7 +454,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_object/4/kitchen41.jpg", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_object/4/daska.jpg",     null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_kuhinju.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_kuhinju.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -471,7 +471,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(136, @"Resources/Images/VoiceCommands/Show_object/5/tava.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(137, @"Resources/Images/VoiceCommands/Show_object/5/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_lonac1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_lonac1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -488,7 +488,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(140, @"Resources/Images/VoiceCommands/Show_object/6/tava.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(141, @"Resources/Images/VoiceCommands/Show_object/6/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_noz.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_noz.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -505,7 +505,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(144, @"Resources/Images/VoiceCommands/Show_object/7/tava.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(145, @"Resources/Images/VoiceCommands/Show_object/7/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_salicu.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_salicu.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -522,7 +522,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(148, @"Resources/Images/VoiceCommands/Show_object/8/casa.jpg",    null, false),
                                                     new ent::Picture.AnswerPicture(149, @"Resources/Images/VoiceCommands/Show_object/8/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_slavinu.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_slavinu.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -539,7 +539,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(152, @"Resources/Images/VoiceCommands/Show_object/9/casa.jpg",    null, false),
                                                     new ent::Picture.AnswerPicture(153, @"Resources/Images/VoiceCommands/Show_object/9/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_sudoper.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_sudoper.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -556,7 +556,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(156, @"Resources/Images/VoiceCommands/Show_object/10/casa.jpg",    null, false),
                                                     new ent::Picture.AnswerPicture(157, @"Resources/Images/VoiceCommands/Show_object/10/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_tanjur.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_tanjur.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -573,7 +573,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(160, @"Resources/Images/VoiceCommands/Show_object/11/casa.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(161, @"Resources/Images/VoiceCommands/Show_object/11/ubrus.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_tavu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_tavu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -590,7 +590,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(164, @"Resources/Images/VoiceCommands/Show_object/12/casa.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(165, @"Resources/Images/VoiceCommands/Show_object/12/ubrus.jpg",  null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_ubrus.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_ubrus.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -607,7 +607,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(168, @"Resources/Images/VoiceCommands/Show_object/13/ubrus2.jpg",       null, false),
                                                     new ent::Picture.AnswerPicture(169, @"Resources/Images/VoiceCommands/Show_object/13/fork.png",         null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_vilicu.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_vilicu.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -624,7 +624,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(172, @"Resources/Images/VoiceCommands/Show_object/14/vrč.jpg",           null, true),
                                                     new ent::Picture.AnswerPicture(173, @"Resources/Images/VoiceCommands/Show_object/14/zlica.jpg",         null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_vrc.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_vrc.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -641,7 +641,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(176, @"Resources/Images/VoiceCommands/Show_object/15/zlica.jpg",           null, true),
                                                     new ent::Picture.AnswerPicture(177, @"Resources/Images/VoiceCommands/Show_object/15/mali_zeleni_vrc.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_zlicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/p_zlicu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -658,7 +658,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(180, @"Resources/Images/VoiceCommands/Show_object/16/slavina.jpg", null, false),
                                                     new ent::Picture.AnswerPicture(181, @"Resources/Images/VoiceCommands/Show_object/16/kuhaca.jpg",  null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/pokazi_kuhacu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_predmet_zvuk/pokazi_kuhacu1.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -683,7 +683,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_colored_object/1/crveni_vrc.png",         null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_colored_object/1/salica.jpg",             null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_crveni_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_crveni_tanjur1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -700,7 +700,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_colored_object/2/zeleni_lonac_picto.jpg",     null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_colored_object/2/zuti_lonac_picto.png",       null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_plavi_lonac1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_plavi_lonac1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -717,7 +717,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_colored_object/3/greenCup.png",          null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_colored_object/3/greenFork.png",         null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_zelenu_vilicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_zelenu_vilicu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -734,7 +734,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_colored_object/4/yellowCup.png",           null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_colored_object/4/green kitchen chair.png", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_zutu_salicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_boja_predmet/p_zutu_salicu1.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -759,7 +759,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_colored_size/1/plavi_vrc.jpeg",         null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_colored_size/1/veliki_plavi_lonac.png", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_m_plavi_lonac1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_m_plavi_lonac1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -776,7 +776,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_colored_size/2/zeleni_vrc.jpg",     null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_colored_size/2/zuti_vrc.jpg",       null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_mali_zeleni_vrc1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_mali_zeleni_vrc1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -793,7 +793,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_colored_size/3/salica.png",       null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_colored_size/3/zuti_vrc.jpg",     null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_v_crvenu_salicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_v_crvenu_salicu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -810,7 +810,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.jpeg",  null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_colored_size/4/zeleni_tanjur.jpeg",null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_v_zuti_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_boja_velicina/p_v_zuti_tanjur1.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -835,7 +835,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_object_purpose/1/zlica.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_object_purpose/1/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_brises.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_brises.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -852,7 +852,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_object_purpose/2/slavina.jpg",null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_object_purpose/2/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_jedes.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_jedes.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -869,7 +869,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_object_purpose/3/zlica.jpg",  null, true),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_object_purpose/3/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_jedes_juhu.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_jedes_juhu.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -886,7 +886,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_object_purpose/4/zlica.jpg", null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_object_purpose/4/tanjur.jpg",null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_rezes.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/cime_rezes.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -903,7 +903,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_object_purpose/5/zlica.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_object_purpose/5/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/iz_cega_pijes1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/iz_cega_pijes1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -920,7 +920,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_object_purpose/6/plavi_lonac.jpeg", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_object_purpose/6/zlica.jpg",        null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/u_cemu_se_kuha1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_funkcija/u_cemu_se_kuha1.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -945,7 +945,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_activity/1/guli.jpg",        null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_activity/1/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_brise1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_brise1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -962,7 +962,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_activity/2/guli.jpg",        null, true),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_activity/2/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_guli1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_guli1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -979,7 +979,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_activity/3/guli.jpg",        null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_activity/3/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_jede1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_jede1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -996,7 +996,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/4/guli.jpg",        null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/4/kuha.jpg",        null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_kuha1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_kuha1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1013,7 +1013,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/5/guli.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/5/kuha.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_pere1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_pere1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1030,7 +1030,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/6/pere.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/6/kuha.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_pije1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_pije1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1047,7 +1047,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/7/guli.jpg", null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/7/kuha.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_reze1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_reze1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1064,7 +1064,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/8/ribanje.jpg", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/8/kuha.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_riba1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_radnje/tko_riba1.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -1089,7 +1089,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_size/1/zuti_tanjur.jpeg",  null, false),
                                                     new ent::Picture.AnswerPicture(123, @"Resources/Images/VoiceCommands/Show_size/1/duboki_tanjur.jpg", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_duboki_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_duboki_tanjur1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1106,7 +1106,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_size/2/veliki_noz.jpg", null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_size/2/zlica.jpg",      null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_mali_noz1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_mali_noz1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1123,7 +1123,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_size/3/plavi_vrc.jpeg",  null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_size/3/crveni_vrc.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_mali_vrc.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_mali_vrc.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1140,7 +1140,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/4/mala_kuhaca.png", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/4/zlica.jpg",       null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_malu_kuhacu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_malu_kuhacu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1157,7 +1157,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/5/mala_zlica.jpg", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/5/zlica.png",      null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_malu_zlicu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_malu_zlicu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1174,7 +1174,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/6/daska.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/6/v_daska.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_najmanju_dasku1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_najmanju_dasku1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1191,7 +1191,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/7/v_tava.png", null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/7/tava.png",   null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_najvecu_tavu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_najvecu_tavu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1208,7 +1208,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/8/d_plate2.jpg",      null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/8/duboki_tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_plitki_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_plitki_tanjur1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1225,7 +1225,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/9/mala_kuhaca.png", null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/9/zlica.jpg",       null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliku_kuhacu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliku_kuhacu1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1242,7 +1242,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/10/pan.jpg",                null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/10/veliki_plavi_lonac.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliki_lonac1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliki_lonac1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1259,7 +1259,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/11/pan.jpg",      null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/11/daska.jpg",    null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliki_tanjur1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliki_tanjur1.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1276,7 +1276,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/12/v_casa.jpg",     null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/12/zuta_salica.png",null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliku_casu1.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Zadaci_zvuk/pokazi_velicina/p_veliku_casu1.mp3"), "title")
                                    ),
                                }),
                     }
@@ -1308,7 +1308,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                      new ent::Picture.AnswerPicture(21, @"Resources/Images/ContinueSequence/1/bowl.png",     null, false ),
                                                      new ent::Picture.AnswerPicture(22, @"Resources/Images/ContinueSequence/1/casserole.png",null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/continue_sequence.mp3"), "title")
                                   ),
                                   new ent::Task
                                    (
@@ -1324,7 +1324,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                      new ent::Picture.AnswerPicture(24, @"Resources/Images/ContinueSequence/2/cup.png",        null, false),
                                                      new ent::Picture.AnswerPicture(25, @"Resources/Images/ContinueSequence/2/frying pan.png", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/continue_sequence.mp3"), "title")
                                   ),
                                   new ent::Task
                                    (
@@ -1341,7 +1341,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                      new ent::Picture.AnswerPicture(22, @"Resources/Images/ContinueSequence/3/kitchen chair.png", null, false),
                                                      new ent::Picture.AnswerPicture(27, @"Resources/Images/ContinueSequence/3/glass.png",         null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/continue_sequence.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/continue_sequence.mp3"), "title")
                                   ),
                                }),
                         new ent::Test
@@ -1368,7 +1368,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.ColorPicture(34, @"Resources/Images/DetectColors/1/red glass.png",          null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 32)}),
                                                     new ent::Picture.ColorPicture(35, @"Resources/Images/DetectColors/1/green kitchen chair.png",null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#0000FF", false, 33)})
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/detect_colors.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/detect_colors.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1385,7 +1385,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.ColorPicture(38, @"Resources/Images/DetectColors/2/red kitchen chair.png",    null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 36),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#0000FF", false, 36)}),
                                                     new ent::Picture.ColorPicture(39, @"Resources/Images/DetectColors/2/yellow kitchen tool_3.png",null, new List<ent::Color>{new ent::Color(1, "#FFFF00", true, 28),new ent::Color(1, "#0000FF", false, 37),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#008000", false, 37)})
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/detect_colors.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/detect_colors.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1400,7 +1400,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.ColorPicture(40, @"Resources/Images/DetectColors/3/red kitchen chair.png",null, new List<ent::Color>{new ent::Color(1, "#FF0000", true, 28),new ent::Color(1, "#008000", false, 34),new ent::Color(1, "#FFA500", false, 28),new ent::Color(1, "#0000FF", false, 34),new ent::Color(1, "#A52A2A", false, 34),new ent::Color(1, "#FFFF00", false, 34)}),
                                                     new ent::Picture.ColorPicture(41, @"Resources/Images/DetectColors/3/greenCup.png",         null, new List<ent::Color>{new ent::Color(1, "#008000", true, 28),new ent::Color(1, "#FF0000", false, 35),new ent::Color(1, "#0000FF", false, 28),new ent::Color(1, "#FFA500", false, 35),new ent::Color(1, "#FFFF00", false, 35),new ent::Color(1, "#A52A2A", false, 35)})
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/detect_colors.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/detect_colors.mp3"), "title")
                                    )}),
                         new ent::Test
                         (
@@ -1426,7 +1426,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(32, @"Resources/Images/DetectDifferentItems/1/kitchen tool_2.png", null, false),
                                                     new ent::Picture.AnswerPicture(33, @"Resources/Images/DetectDifferentItems/1/plate_1.png",        null, false)
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/detecet_different.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/detecet_different.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1442,7 +1442,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(35, @"Resources/Images/DetectDifferentItems/2/Red_cambridge_mug.png", null, false),
                                                     
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/detecet_different.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/detecet_different.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1457,7 +1457,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(36, @"Resources/Images/DetectDifferentItems/3/individual-red-mug.png", null, true ),
                                                     new ent::Picture.AnswerPicture(37, @"Resources/Images/DetectDifferentItems/3/Red_cambridge_mug.png",  null, false),  
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/detecet_different.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/detecet_different.mp3"), "title")
                                    )}),
 
                         new ent::Test
@@ -1481,7 +1481,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                    new ent::Picture.BasicDetails(68, @"Resources/Images/PairHalfs/1/casserole.png"),
                                                    new ent::Picture.BasicDetails(69, @"Resources/Images/PairHalfs/1/plate_1.png"),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/pair_halves.mp3", "title")                                                                                                  
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/pair_halves.mp3"), "title")                                                                                                  
                                    ),
                                    new ent::Task
                                    (
@@ -1499,7 +1499,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                    new ent::Picture.BasicDetails(70, @"Resources/Images/PairHalfs/2/full.png"),
                                                    new ent::Picture.BasicDetails(71, @"Resources/Images/PairHalfs/2/jug.png"),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/pair_halves.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/pair_halves.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1519,7 +1519,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                    new ent::Picture.BasicDetails(72, @"Resources/Images/PairHalfs/3/kitchen tool_2.png"),
                                                    new ent::Picture.BasicDetails(73, @"Resources/Images/PairHalfs/3/plate_1.png"),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/pair_halves.mp3", "title")                                                                                                   
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/pair_halves.mp3"), "title")                                                                                                   
                                    )}),
                         new ent::Test
                         (
@@ -1542,7 +1542,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(76, @"Resources/Images/PairSameItems/1/kitchen tool_3.png", null, true),
                                                     new ent::Picture.AnswerPicture(77, @"Resources/Images/PairSameItems/1/kitchen tool_6.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/pair_items.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/pair_items.mp3"), "title")
                                    ),
                                     new ent::Task
                                    (
@@ -1560,7 +1560,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(81, @"Resources/Images/PairSameItems/2/kitchen chair.png", null, true),
                                                     new ent::Picture.AnswerPicture(101, @"Resources/Images/PairSameItems/2/frying pan.png",   null, true)
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/pair_items.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/pair_items.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1579,7 +1579,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(85, @"Resources/Images/PairSameItems/3/kitchen-tool_2.png",                 null, true),
                                                     new ent::Picture.AnswerPicture(86, @"Resources/Images/PairSameItems/3/plate_1.png",                        null, true)
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/pair_items.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/pair_items.mp3"), "title")
                                    )
                                }),
                         new ent::Test
@@ -1603,7 +1603,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(88, @"Resources/Images/SortBySize/1/jug-2.png", null, true),
                                                     new ent::Picture.AnswerPicture(89, @"Resources/Images/SortBySize/1/jug-3.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/sort_size.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/sort_size.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1620,7 +1620,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(92, @"Resources/Images/SortBySize/2/kitchen-tool_2-3.png", null, true),
                                                     new ent::Picture.AnswerPicture(93, @"Resources/Images/SortBySize/2/kitchen-tool_2-4.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/sort_size.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/sort_size.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1638,7 +1638,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(96, @"Resources/Images/SortBySize/3/cup-4.png", null, true),
                                                     new ent::Picture.AnswerPicture(97, @"Resources/Images/SortBySize/3/cup-5.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/sort_size.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/sort_size.mp3"), "title")
                                    )
                                }),
                         new ent::Test
@@ -1663,7 +1663,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_object/1/tava.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_object/1/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_drinking_glass.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_drinking_glass.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1680,7 +1680,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_object/2/tava.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_object/2/ubrus.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_meat_hamm.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_meat_hamm.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1697,7 +1697,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_object/3/tava.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_object/3/daska.jpg", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_kitchen_b.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_kitchen_b.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1714,7 +1714,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_object/4/kitchen41.jpg", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_object/4/daska.jpg",     null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_kitchen.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_kitchen.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1731,7 +1731,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(136, @"Resources/Images/VoiceCommands/Show_object/5/tava.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(137, @"Resources/Images/VoiceCommands/Show_object/5/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_casserole.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_casserole.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1748,7 +1748,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(140, @"Resources/Images/VoiceCommands/Show_object/6/tava.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(141, @"Resources/Images/VoiceCommands/Show_object/6/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_knife.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_knife.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1765,7 +1765,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(144, @"Resources/Images/VoiceCommands/Show_object/7/tava.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(145, @"Resources/Images/VoiceCommands/Show_object/7/ubrus.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_cup.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_cup.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1782,7 +1782,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(148, @"Resources/Images/VoiceCommands/Show_object/8/casa.jpg",    null, false),
                                                     new ent::Picture.AnswerPicture(149, @"Resources/Images/VoiceCommands/Show_object/8/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_faucet.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_faucet.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1799,7 +1799,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(152, @"Resources/Images/VoiceCommands/Show_object/9/casa.jpg",    null, false),
                                                     new ent::Picture.AnswerPicture(153, @"Resources/Images/VoiceCommands/Show_object/9/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_sink.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_sink.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1816,7 +1816,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(156, @"Resources/Images/VoiceCommands/Show_object/10/casa.jpg",    null, false),
                                                     new ent::Picture.AnswerPicture(157, @"Resources/Images/VoiceCommands/Show_object/10/daska.jpg",   null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_plate.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1833,7 +1833,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(160, @"Resources/Images/VoiceCommands/Show_object/11/casa.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(161, @"Resources/Images/VoiceCommands/Show_object/11/ubrus.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_pan.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_pan.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1850,7 +1850,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(164, @"Resources/Images/VoiceCommands/Show_object/12/casa.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(165, @"Resources/Images/VoiceCommands/Show_object/12/ubrus.jpg",  null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_napkin.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_napkin.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1867,7 +1867,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(168, @"Resources/Images/VoiceCommands/Show_object/13/ubrus2.jpg",       null, false),
                                                     new ent::Picture.AnswerPicture(169, @"Resources/Images/VoiceCommands/Show_object/13/fork.png",         null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_fork.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_fork.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1884,7 +1884,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(172, @"Resources/Images/VoiceCommands/Show_object/14/vrč.jpg",           null, true),
                                                     new ent::Picture.AnswerPicture(173, @"Resources/Images/VoiceCommands/Show_object/14/zlica.jpg",         null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_jug.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_jug.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1901,7 +1901,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(176, @"Resources/Images/VoiceCommands/Show_object/15/zlica.jpg",           null, true),
                                                     new ent::Picture.AnswerPicture(177, @"Resources/Images/VoiceCommands/Show_object/15/mali_zeleni_vrc.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_spoon.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1918,7 +1918,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(180, @"Resources/Images/VoiceCommands/Show_object/16/slavina.jpg", null, false),
                                                     new ent::Picture.AnswerPicture(181, @"Resources/Images/VoiceCommands/Show_object/16/kuhaca.jpg",  null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_item/s_cooking_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_item/s_cooking_spoon.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -1943,7 +1943,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_colored_object/1/crveni_vrc.png",         null, false),
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_colored_object/1/salica.jpg",             null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_color/s_red_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_color/s_red_plate.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1960,7 +1960,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_colored_object/2/zeleni_lonac_picto.jpg",     null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_colored_object/2/zuti_lonac_picto.png",       null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_color/s_blue_cass.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_color/s_blue_cass.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1977,7 +1977,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_colored_object/3/greenCup.png",          null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_colored_object/3/greenFork.png",         null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_color/s_green_fork.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_color/s_green_fork.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -1994,7 +1994,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_colored_object/4/yellowspoon.png",         null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_colored_object/4/green kitchen chair.png", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_color/s_yellow_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_color/s_yellow_spoon.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -2019,7 +2019,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_colored_size/1/plavi_vrc.jpeg",         null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_colored_size/1/veliki_plavi_lonac.png", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_color_size/s_small_b_cass.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_color_size/s_small_b_cass.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2036,7 +2036,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_colored_size/2/zeleni_vrc.jpg",     null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_colored_size/2/zuti_vrc.jpg",       null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_color_size/s_small_green_jug.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_color_size/s_small_green_jug.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2053,7 +2053,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_colored_size/3/salica.png",       null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_colored_size/3/zuti_vrc.jpg",     null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_color_size/s_big_red_cup.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_color_size/s_big_red_cup.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2070,7 +2070,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_colored_size/4/zuti_tanjur.jpeg",  null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_colored_size/4/zeleni_tanjur.jpeg",null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_color_size/s_big_yellow_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_color_size/s_big_yellow_plate.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -2095,7 +2095,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_object_purpose/1/zlica.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_object_purpose/1/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Item_by_purpose/w_wipe.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Item_by_purpose/w_wipe.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2112,7 +2112,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_object_purpose/2/slavina.jpg",null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_object_purpose/2/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Item_by_purpose/w_eat.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Item_by_purpose/w_eat.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2129,7 +2129,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_object_purpose/3/zlica.jpg",  null, true),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_object_purpose/3/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Item_by_purpose/w_eat_soup.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Item_by_purpose/w_eat_soup.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2146,7 +2146,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_object_purpose/4/zlica.jpg", null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_object_purpose/4/tanjur.jpg",null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Item_by_purpose/w_cut.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Item_by_purpose/w_cut.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2163,7 +2163,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_object_purpose/5/zlica.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_object_purpose/5/tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Item_by_purpose/w_drink.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Item_by_purpose/w_drink.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2180,7 +2180,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_object_purpose/6/plavi_lonac.jpeg", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_object_purpose/6/zlica.jpg",        null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Item_by_purpose/w_cook.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Item_by_purpose/w_cook.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -2205,7 +2205,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_activity/1/guli.jpg",        null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_activity/1/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_activity/w_wiping.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_activity/w_wiping.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2222,7 +2222,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_activity/2/guli.jpg",        null, true),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_activity/2/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_activity/w_peeling.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_activity/w_peeling.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2239,7 +2239,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_activity/3/guli.jpg",        null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_activity/3/kuha.jpg",        null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_activity/w_eating.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_activity/w_eating.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2256,7 +2256,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/4/guli.jpg",        null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/4/kuha.jpg",        null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_activity/w_cooking.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_activity/w_cooking.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2273,7 +2273,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/5/guli.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/5/kuha.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_activity/w_washing.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_activity/w_washing.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2290,7 +2290,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/6/pere.jpg",  null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/6/kuha.jpg",  null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_activity/w_drinking.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_activity/w_drinking.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2307,7 +2307,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/7/guli.jpg", null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/7/kuha.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_activity/w_cutting.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_activity/w_cutting.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2324,7 +2324,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_activity/8/ribanje.jpg", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_activity/8/kuha.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_activity/w_scrubbing.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_activity/w_scrubbing.mp3"), "title")
                                    ),
                                }),
                         new ent::Test
@@ -2349,7 +2349,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(121, @"Resources/Images/VoiceCommands/Show_size/1/zuti_tanjur.jpeg",  null, false),
                                                     new ent::Picture.AnswerPicture(122, @"Resources/Images/VoiceCommands/Show_size/1/duboki_tanjur.jpg", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_deep_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_deep_plate.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2366,7 +2366,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(124, @"Resources/Images/VoiceCommands/Show_size/2/veliki_noz.jpg", null, false),
                                                     new ent::Picture.AnswerPicture(125, @"Resources/Images/VoiceCommands/Show_size/2/zlica.jpg",      null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_small_knife.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_small_knife.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2383,7 +2383,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(128, @"Resources/Images/VoiceCommands/Show_size/3/plavi_vrc.jpeg",  null, false),
                                                     new ent::Picture.AnswerPicture(129, @"Resources/Images/VoiceCommands/Show_size/3/crveni_vrc.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_small_jug.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_small_jug.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2400,7 +2400,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/4/mala_kuhaca.png", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/4/zlica.jpg",       null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_small_c_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_small_c_spoon.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2417,7 +2417,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/5/mala_zlica.jpg", null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/5/zlica.png",      null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_small_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_small_spoon.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2434,7 +2434,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/6/daska.jpg",   null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/6/v_daska.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_smallest_kb.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_smallest_kb.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2451,7 +2451,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/7/v_tava.png", null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/7/tava.png",   null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_biggest_pan.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_biggest_pan.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2468,7 +2468,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/8/d_plate2.jpg",      null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/8/duboki_tanjur.jpg", null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_shallow_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_shallow_plate.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2485,7 +2485,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/9/mala_kuhaca.png", null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/9/zlica.jpg",       null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_big_c_spoon.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_big_c_spoon.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2502,7 +2502,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/10/pan.jpg",                null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/10/veliki_plavi_lonac.png", null, true),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/show_big_casserole.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/show_big_casserole.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2519,7 +2519,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/11/pan.jpg",      null, false),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/11/daska.jpg",    null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_big_plate.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_big_plate.mp3"), "title")
                                    ),
                                    new ent::Task
                                    (
@@ -2536,7 +2536,7 @@ namespace AuThink.Desktop.Model.Data.Local
                                                     new ent::Picture.AnswerPicture(132, @"Resources/Images/VoiceCommands/Show_size/12/v_casa.jpg",     null, true),
                                                     new ent::Picture.AnswerPicture(133, @"Resources/Images/VoiceCommands/Show_size/12/zuta_salica.png",null, false),
                                                 },
-                                   voiceCommand:new ent::Sound(1,"Resources/Sounds/Task_sound/Show_size/s_big_drinking_glass.mp3", "title")
+                                   voiceCommand:new ent::Sound(1, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/Task_sound/Show_size/s_big_drinking_glass.mp3"), "title")
                                    ),
                                }),
 
