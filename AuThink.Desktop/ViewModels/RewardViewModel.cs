@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace AuThink.Desktop.ViewModels
         public void Continue()
         {
             GameState.EndTask();
-            //System.Threading.Tasks.Task.Delay(2000);
+            System.Threading.Tasks.Task.Delay(2000);
             if (GameState.TaskIds.Any())
             {
                 _navigationService.NavigateTo(new GameView());
@@ -71,7 +72,9 @@ namespace AuThink.Desktop.ViewModels
         {
             _navigationService = navigationService;
             this.TempRewordCommand = new RelayCommand(Continue);
-            //this.SoundUrl = (bool)ApplicationData.Current.LocalSettings.Values["IsRewardSoundEnabled"] ? new Uri("ms-appx:///Resources/Sounds/aplauz-dugi.mp3") : null;
+            this.SoundUrl = AuThink.Desktop.Properties.Settings.Default.IsInstructionSoundEnabled
+                ? new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/aplauz-dugi.mp3"))
+                : null;
         }
     }
 }

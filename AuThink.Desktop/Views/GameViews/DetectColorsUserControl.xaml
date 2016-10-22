@@ -118,7 +118,7 @@
         <Grid x:Name="DetectColorsContainer" 
                   Height="768" 
                   Width="1366">
-<!--            <MediaElement Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+            <MediaElement Source="{Binding SoundUrl}" Visibility="Collapsed"/>
             <ItemsControl
             ItemTemplate="{StaticResource SlikaDviElipseTemplate}"
             ItemsSource="{Binding PicturesWithColors}"

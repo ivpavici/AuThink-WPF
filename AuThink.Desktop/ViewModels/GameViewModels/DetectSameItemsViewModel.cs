@@ -98,10 +98,10 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                                       .Select(picture => (Picture.AnswerPicture)picture)
                                       .ToList();
 
-//            SoundUrl = SoundServices.GetInstructionsSoundUrl
-//            (
-//                sound: taskQueries.GetSingle_byId(GameState.GetTask()).VoiceCommand
-//            );
+            SoundUrl = SoundServices.GetInstructionsSoundUrl
+            (
+                sound: _taskQueries.GetSingleById(GameState.GetTask()).VoiceCommand
+            );
 
             TransformPicturesDataToModelData();
         }
@@ -112,10 +112,12 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
         public DetectSameItemsViewModel
         (
             IPictureQueries pictureQueries,
+            ITaskQueries taskQueries,
             AuthinkNavigationService navigationService
         )
         {
             _pictureQueries = pictureQueries;
+            _taskQueries = taskQueries;
             _navigationService = navigationService;
 
             ItemClickCommand = new RelayCommand<RoutedEventArgs>(ItemClick);
@@ -126,7 +128,9 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
         private static int _counter = 0;
         private readonly IPictureQueries _pictureQueries;
+        private readonly ITaskQueries _taskQueries;
         private readonly AuthinkNavigationService _navigationService;
+        public Uri SoundUrl { get; set; }
 
         private List<Picture.AnswerPicture> _workingCopy { get; set; }
         private List<Picture.AnswerPicture> _pictures { get; set; }

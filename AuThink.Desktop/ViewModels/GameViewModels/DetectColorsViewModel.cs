@@ -21,10 +21,10 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                                               .Select(picture => (Picture.ColorPicture)picture)
                                               .ToList();
 
-//            SoundUrl = SoundServices.GetInstructionsSoundUrl
-//            (
-//                sound: taskQueries.GetSingle_byId(GameState.GetTask()).VoiceCommand
-//            );
+            SoundUrl = SoundServices.GetInstructionsSoundUrl
+            (
+                sound: taskQueries.GetSingleById(GameState.GetTask()).VoiceCommand
+            );
 
             TransformPicturesDataToModelData(picturesData);
         }

@@ -10,6 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/Reward_screen/reward_screen.png" Stretch="UniformToFill"/>
         </Grid.Background>
+        <MediaElement x:Name="mediaPlayer" Source="{Binding SoundUrl}"/>
         <Viewbox Stretch="Uniform">
             <Grid x:Name="RewardContainer" 
                   Height="768" 

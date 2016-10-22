@@ -20,9 +20,10 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                            .Select(picture => (Picture.AnswerPicture)picture)
                            .ToList();
 
-//            var sound = _taskQueries.GetSingle_byId(GameState.GetTask()).VoiceCommand;
-
-//            SoundUrl = sound != null && (bool)ApplicationData.Current.LocalSettings.Values["IsInstructionSoundEnabled"] ? new Uri(sound.Url) : null;
+            SoundUrl = SoundServices.GetInstructionsSoundUrl
+            (
+                sound: _taskQueries.GetSingleById(GameState.GetTask()).VoiceCommand
+            );
 
             foreach (var picture in pictures)
             {

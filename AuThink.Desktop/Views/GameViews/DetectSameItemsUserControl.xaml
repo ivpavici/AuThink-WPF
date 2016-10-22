@@ -37,7 +37,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-<!--        <MediaElement x:Name="mediaElement" AudioCategory="BackgroundCapableMedia" />-->
+        <MediaElement x:Name="mediaElement" Source="{Binding SoundUrl}" Visibility="Collapsed" />
 
         <Border 
             BorderThickness="1" 

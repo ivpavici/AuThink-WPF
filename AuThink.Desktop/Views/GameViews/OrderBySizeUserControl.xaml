@@ -33,7 +33,7 @@
                 <RowDefinition Height="0.4*"></RowDefinition>
             </Grid.RowDefinitions>
 
-<!--            <MediaElement Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+            <MediaElement Source="{Binding SoundUrl}" Visibility="Collapsed"/>
             <ListView 
                 ItemTemplate="{StaticResource ItemTemplate}" 
         		ItemsSource="{Binding SelectedPictures}"

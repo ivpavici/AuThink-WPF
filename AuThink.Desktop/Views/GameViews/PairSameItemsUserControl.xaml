@@ -61,7 +61,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-<!--            <MediaElement Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+            <MediaElement Source="{Binding SoundUrl}" Visibility="Collapsed"/>
             <ItemsControl 
                 Grid.Column="0"
                 ItemTemplate="{StaticResource DraggableElementTemplate}" 

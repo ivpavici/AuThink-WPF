@@ -134,7 +134,7 @@
                     </i:Interaction.Triggers>
                 </Image>
             </Button>
-<!--            <MediaElement Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+            <MediaElement Source="{Binding SoundUrl}" Visibility="Collapsed"/>
         </Grid>
     </Viewbox>
 </UserControl>

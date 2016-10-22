@@ -37,11 +37,7 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-<!--            <MediaElement-->
-<!--                Source="{Binding SoundUrl}" -->
-<!--                AutoPlay="True" -->
-<!--                AudioCategory="BackgroundCapableMedia" -->
-<!--                Visibility="Collapsed"/>-->
+            <MediaElement Source="{Binding SoundUrl}" Visibility="Collapsed"/>
             <ItemsControl 
                 ItemTemplate="{StaticResource PairHalfsConteinerTemplate}" 
                 HorizontalContentAlignment="Center" 

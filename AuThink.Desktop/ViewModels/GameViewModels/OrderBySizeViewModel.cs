@@ -64,7 +64,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                                          .Select(x => (Picture.AnswerPicture)x)
                                          .First();
 
-            //SoundUrl = SoundServices.GetInstructionsSoundUrl(task.VoiceCommand);
+            SoundUrl = SoundServices.GetInstructionsSoundUrl(task.VoiceCommand);
 
             TransformPicturesDataToModelData
             (

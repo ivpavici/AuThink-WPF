@@ -46,7 +46,7 @@
                 HorizontalAlignment="Center" 
                 Margin="20,0,0,0" 
                 Grid.Column="0">
-<!--                        <MediaElement x:Name="Sound" Source="{Binding SoundUrl}" AutoPlay="True" AudioCategory="BackgroundCapableMedia" Visibility="Collapsed"/>-->
+                        <MediaElement x:Name="Sound" Source="{Binding SoundUrl}" Visibility="Collapsed"/>
                         <ListView 
                         ItemTemplate="{StaticResource ItemTemplate}"
         	            ItemsSource="{Binding Pictures}"
