@@ -20,46 +20,151 @@
         </Grid.Background>
 
         <Rectangle Fill="#7F000000"/>
-
         <Viewbox Stretch="Uniform" >
-            <Grid Width="1366" Height="768">
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
-                    <TextBlock 
-                        Text="{Binding SettingsText}" 
-                        Padding="20" HorizontalAlignment="Center" FontSize="40" Foreground="White" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Top"
-                        />
-                </StackPanel>
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,50,0,0">
-                    <TextBlock			
-            			Text="{Binding ChooseLangText, Mode=TwoWay}" 
-            			FontSize="33.333" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"
-                        />
-                    <RadioButton 
+            <Grid x:Name="SettingsContainer" 
+                  Height="768" 
+                  Width="1366">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.7*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <TextBlock 
+                Grid.Row="0"
+        		Text="{Binding SettingsText, Mode=TwoWay}"  
+        		HorizontalAlignment="Center" 
+        		FontSize="40" 
+        		Foreground="White" 
+        		FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" 
+                VerticalAlignment="Center"/>
+                <Grid  Grid.Row="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock            			
+            			    Grid.Column="0" 
+            			    Text="{Binding ChooseLangText, Mode=TwoWay}" 
+            			    FontSize="33.333"
+            			    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                        <RadioButton 
+            			Grid.Column="1"
             			x:Name="ChooseCroatianButton" 
             			Content="{Binding CroatianLanguage, Mode=TwoWay}"
-            			Loaded="ChooselanguageButton_Loaded">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Checked">
-                                <i:InvokeCommandAction CommandParameter="Hr" Command="{Binding ChangeLanguage}"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </RadioButton>
-                    <RadioButton 
+            			Loaded="ChooselanguageButton_Loaded"
+            		    HorizontalAlignment="Right">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Checked">
+                                    <i:InvokeCommandAction CommandParameter="Hr" Command="{Binding ChangeLanguage}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RadioButton>
+                        <RadioButton 
+            			Grid.Column="2"
             			x:Name="ChooseEnglishButton"
             			Content="{Binding EnglishLanguage, Mode=TwoWay}" 
-            			Loaded="ChooselanguageButton_Loaded" >
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Checked">
-                                <i:InvokeCommandAction CommandParameter="En" Command="{Binding ChangeLanguage}"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </RadioButton>
+            			Loaded="ChooselanguageButton_Loaded" 
+            			HorizontalAlignment="Left"
+            			Margin="20,0,0,0">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Checked">
+                                    <i:InvokeCommandAction CommandParameter="En" Command="{Binding ChangeLanguage}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RadioButton>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+            			    Grid.Column="0" 
+            			    Text="{Binding RewardSoundText, Mode=TwoWay}" 
+            			    FontSize="33.333"
+            			    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                        <RadioButton
+                        Grid.Column="1"
+            			x:Name="EnableRewardSound"
+            			Content="{Binding RewardSoundButtonContentOn, Mode=TwoWay}"
+            			Loaded="RadioButton_Loaded"
+            			HorizontalAlignment="Right"
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Checked">
+                                    <i:InvokeCommandAction CommandParameter="true" Command="{Binding ToggleRewardSoundEnableCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RadioButton>
+                        <RadioButton
+                        Grid.Column="2"
+            			x:Name="DisableRewardSound"
+            			Content="{Binding RewardSoundButtonContentOff, Mode=TwoWay}"
+            			Loaded="RadioButton_Loaded"
+            			HorizontalAlignment="Left"
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" Margin="20,0,0,0">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Checked">
+                                    <i:InvokeCommandAction CommandParameter="false" Command="{Binding ToggleRewardSoundEnableCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RadioButton>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+            			Grid.Column="0" 
+            			Text="{Binding InstructionsSoundText, Mode=TwoWay}" 
+            			FontSize="33.333"
+            			FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                        <RadioButton
+                            Grid.Column="1"
+            			    x:Name="EnableSoundInstructions"
+            			    Content="{Binding InstructionsSoundButtonContentOn, Mode=TwoWay}"
+            			    Loaded="RadioButton_Loaded"
+            			    VerticalAlignment="Center" HorizontalAlignment="Right" 
+                            FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Checked">
+                                    <i:InvokeCommandAction CommandParameter="true" Command="{Binding ToggleInstructionSoundEnableCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RadioButton>
+                        <RadioButton
+                        Grid.Column="2"
+            			x:Name="DisableSoundInstructions"
+            			Content="{Binding InstructionsSoundButtonContentOff, Mode=TwoWay}"
+            			Loaded="RadioButton_Loaded"
+            			VerticalAlignment="Center" HorizontalAlignment="Left" 
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" Margin="20,0,0,0">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Checked">
+                                    <i:InvokeCommandAction CommandParameter="false" Command="{Binding ToggleInstructionSoundEnableCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RadioButton>
+                    </Grid>
+                </Grid>
+                <StackPanel Orientation="Vertical" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="150">
                     <Button 
-            		    Content="{Binding BackButtonContent, Mode=TwoWay}"
-            		    HorizontalAlignment="Stretch" VerticalAlignment="Center" 
-                        Command="{Binding BackCommand}"
-            		    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" MinWidth="250" MinHeight="41" FontSize="22"
-                        />
+            		Content="{Binding BackButtonContent, Mode=TwoWay}"
+            		HorizontalAlignment="Stretch" 
+            		VerticalAlignment="Center"
+            		Command="{Binding BackCommand}"
+            		FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" MinWidth="250" MinHeight="41"
+                    FontSize="22"/>
                 </StackPanel>
             </Grid>
         </Viewbox>

@@ -12,8 +12,7 @@ namespace AuThink.Desktop.ViewModels
 {
     public partial class SettingsViewModel : ViewModelBase
     {
-        public RelayCommand<string> ChangeLanguage { get; private set; }
-        
+        public RelayCommand<string> ChangeLanguage { get; private set; }   
         private void LanguageSelectionChange(string languageAbbreviation)
         {
             AuThink.Desktop.Properties.Settings.Default.Language = languageAbbreviation;
@@ -23,15 +22,30 @@ namespace AuThink.Desktop.ViewModels
             this.SettingsText = Language.SettingsPage.SettingsText();
             this.BackButtonContent = Language.SettingsPage.BackButtonContent();
             this.ChooseLangText = Language.SettingsPage.ChooseLanText();
-            //this.RewardSoundButtonContent_off = Language.SettingsPage.SoundButtonContent_off();
-            //this.RewardSoundButtonContent_on = Language.SettingsPage.SoundButtonContent_on();
-            //this.RewardSoundText = Language.SettingsPage.RewardSoundText();
-            //this.InstructionsSoundText = Language.SettingsPage.InstructionSoundText();
-            //this.InstructionsSoundButtonContent_on = Language.SettingsPage.SoundButtonContent_on();
-            //this.InstructionsSoundButtonContent_off = Language.SettingsPage.SoundButtonContent_off();
+            this.RewardSoundButtonContentOff = Language.SettingsPage.SoundButtonContentOff();
+            this.RewardSoundButtonContentOn = Language.SettingsPage.SoundButtonContentOn();
+            this.RewardSoundText = Language.SettingsPage.RewardSoundText();
+            this.InstructionsSoundText = Language.SettingsPage.InstructionSoundText();
+            this.InstructionsSoundButtonContentOn = Language.SettingsPage.SoundButtonContentOn();
+            this.InstructionsSoundButtonContentOff = Language.SettingsPage.SoundButtonContentOff();
 
             SetLanguageModel();
             AuThink.Desktop.Properties.Settings.Default.Save(); 
+        }
+
+        // Save language settings for Model
+        private static void SetLanguageModel()
+        {
+            if (AuThink.Desktop.Properties.Settings.Default.Language == "Hr")
+            {
+                AuThink.Desktop.Model.Properties.Settings.Default.Language = "Hr";
+                AuThink.Desktop.Model.Properties.Settings.Default.Save();
+            }
+            else
+            {
+                AuThink.Desktop.Model.Properties.Settings.Default.Language = "En";
+                AuThink.Desktop.Model.Properties.Settings.Default.Save();
+            }
         }
 
         public RelayCommand<string> ToggleRewardSoundEnableCommand { get; private set; }
@@ -40,10 +54,12 @@ namespace AuThink.Desktop.ViewModels
             if (isEnabled == "true")
             {
                 AuThink.Desktop.Properties.Settings.Default.IsRewardSoundEnabled = true;
+                AuThink.Desktop.Properties.Settings.Default.Save();
             }
             else
             {
                 AuThink.Desktop.Properties.Settings.Default.IsRewardSoundEnabled = false;
+                AuThink.Desktop.Properties.Settings.Default.Save();
             }
         }
 
@@ -53,10 +69,12 @@ namespace AuThink.Desktop.ViewModels
             if (isEnabled == "true")
             {
                 AuThink.Desktop.Properties.Settings.Default.IsInstructionSoundEnabled = true;
+                AuThink.Desktop.Properties.Settings.Default.Save();
             }
             else
             {
                 AuThink.Desktop.Properties.Settings.Default.IsInstructionSoundEnabled = false;
+                AuThink.Desktop.Properties.Settings.Default.Save();
             }
         }
 
@@ -124,99 +142,101 @@ namespace AuThink.Desktop.ViewModels
         }
         private string _settingsText = Language.SettingsPage.SettingsText();
 
-        //public string RewardSoundText
-        //{
-        //    get { return _rewardSoundText; }
-        //    set
-        //    {
-        //        if (_rewardSoundText == value)
-        //        {
-        //            return;
-        //        }
+        public string RewardSoundText
+        {
+            get { return _rewardSoundText; }
+            set
+            {
+                if (_rewardSoundText == value)
+                {
+                    return;
+                }
 
-        //        _rewardSoundText = value;
-        //        this.RaisePropertyChanged("RewardSoundText");
-        //    }
-        //}
-        //private string _rewardSoundText = Language.SettingsPage.RewardSoundText();
+                _rewardSoundText = value;
+                this.RaisePropertyChanged("RewardSoundText");
+            }
+        }
+        private string _rewardSoundText = Language.SettingsPage.RewardSoundText();
 
-        //public string InstructionsSoundText
-        //{
-        //    get { return _instructionsSoundText; }
-        //    set
-        //    {
-        //        if (_instructionsSoundText == value)
-        //        {
-        //            return;
-        //        }
+        public string InstructionsSoundText
+        {
+            get { return _instructionsSoundText; }
+            set
+            {
+                if (_instructionsSoundText == value)
+                {
+                    return;
+                }
 
-        //        _instructionsSoundText = value;
-        //        this.RaisePropertyChanged("InstructionsSoundText");
-        //    }
-        //}
-        //private string _instructionsSoundText = Language.SettingsPage.InstructionSoundText();
+                _instructionsSoundText = value;
+                this.RaisePropertyChanged("InstructionsSoundText");
+            }
+        }
+        private string _instructionsSoundText = Language.SettingsPage.InstructionSoundText();
 
-        //public string RewardSoundButtonContent_on
-        //{
-        //    get { return _rewardSoundButtonContent_on; }
-        //    set
-        //    {
-        //        if (_rewardSoundButtonContent_on == value)
-        //        {
-        //            return;
-        //        }
+        public string RewardSoundButtonContentOn
+        {
+            get { return _rewardSoundButtonContentOn; }
+            set
+            {
+                if (_rewardSoundButtonContentOn == value)
+                {
+                    return;
+                }
 
-        //        _rewardSoundButtonContent_on = value;
-        //        this.RaisePropertyChanged("RewardSoundButtonContent_on");
-        //    }
-        //}
-        //private string _rewardSoundButtonContent_on = Language.SettingsPage.SoundButtonContent_on();
-        //public string RewardSoundButtonContent_off
-        //{
-        //    get { return _rewardSoundButtonContent_Off; }
-        //    set
-        //    {
-        //        if (_rewardSoundButtonContent_Off == value)
-        //        {
-        //            return;
-        //        }
+                _rewardSoundButtonContentOn = value;
+                this.RaisePropertyChanged("RewardSoundButtonContentOn");
+            }
+        }
+        private string _rewardSoundButtonContentOn = Language.SettingsPage.SoundButtonContentOn();
 
-        //        _rewardSoundButtonContent_Off = value;
-        //        this.RaisePropertyChanged("RewardSoundButtonContent_off");
-        //    }
-        //}
-        //private string _rewardSoundButtonContent_Off = Language.SettingsPage.SoundButtonContent_off();
+        public string RewardSoundButtonContentOff
+        {
+            get { return _rewardSoundButtonContentOff; }
+            set
+            {
+                if (_rewardSoundButtonContentOff == value)
+                {
+                    return;
+                }
 
-        //public string InstructionsSoundButtonContent_on
-        //{
-        //    get { return _instructionsSoundButtonContent_on; }
-        //    set
-        //    {
-        //        if (_instructionsSoundButtonContent_on == value)
-        //        {
-        //            return;
-        //        }
+                _rewardSoundButtonContentOff = value;
+                this.RaisePropertyChanged("RewardSoundButtonContentOff");
+            }
+        }
+        private string _rewardSoundButtonContentOff = Language.SettingsPage.SoundButtonContentOff();
 
-        //        _instructionsSoundButtonContent_on = value;
-        //        this.RaisePropertyChanged("InstructionsSoundButtonContent_on");
-        //    }
-        //}
-        //private string _instructionsSoundButtonContent_on = Language.SettingsPage.SoundButtonContent_on();
-        //public string InstructionsSoundButtonContent_off
-        //{
-        //    get { return _instructionsSoundButtonContent_off; }
-        //    set
-        //    {
-        //        if (_instructionsSoundButtonContent_off == value)
-        //        {
-        //            return;
-        //        }
+        public string InstructionsSoundButtonContentOn
+        {
+            get { return _instructionsSoundButtonContentOn; }
+            set
+            {
+                if (_instructionsSoundButtonContentOn == value)
+                {
+                    return;
+                }
 
-        //        _instructionsSoundButtonContent_off = value;
-        //        this.RaisePropertyChanged("InstructionsSoundButtonContent_off");
-        //    }
-        //}
-        //private string _instructionsSoundButtonContent_off = Language.SettingsPage.SoundButtonContent_off();
+                _instructionsSoundButtonContentOn = value;
+                this.RaisePropertyChanged("InstructionsSoundButtonContentOn");
+            }
+        }
+        private string _instructionsSoundButtonContentOn = Language.SettingsPage.SoundButtonContentOn();
+
+        public string InstructionsSoundButtonContentOff
+        {
+            get { return _instructionsSoundButtonContentOff; }
+            set
+            {
+                if (_instructionsSoundButtonContentOff == value)
+                {
+                    return;
+                }
+
+                _instructionsSoundButtonContentOff = value;
+                this.RaisePropertyChanged("InstructionsSoundButtonContentOff");
+            }
+        }
+        private string _instructionsSoundButtonContentOff = Language.SettingsPage.SoundButtonContentOff();
 
         public RelayCommand BackCommand { get; private set; }
         private void Back()
@@ -239,20 +259,6 @@ namespace AuThink.Desktop.ViewModels
             }
         }
         private string _backButtonContent = Language.SettingsPage.BackButtonContent();
-
-        private static void SetLanguageModel()
-        {
-            if (AuThink.Desktop.Properties.Settings.Default.Language == "Hr")
-            {
-                AuThink.Desktop.Model.Properties.Settings.Default.Setting = "Hr";
-                AuThink.Desktop.Model.Properties.Settings.Default.Save();
-            }
-            else
-            {
-                AuThink.Desktop.Model.Properties.Settings.Default.Setting = "En";
-                AuThink.Desktop.Model.Properties.Settings.Default.Save();
-            }
-        }
     }
 
     public partial class SettingsViewModel

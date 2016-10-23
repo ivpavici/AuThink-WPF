@@ -26,12 +26,12 @@ namespace AuThink.Desktop.Model.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Hr")]
-        public string Setting {
+        public string Language {
             get {
-                return ((string)(this["Setting"]));
+                return ((string)(this["Language"]));
             }
             set {
-                this["Setting"] = value;
+                this["Language"] = value;
             }
         }
     }

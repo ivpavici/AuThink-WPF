@@ -134,12 +134,12 @@
                 return
                     AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Glasovne upute:" : "Voice instructions:";
             }
-            public static string SoundButtonContent_on()
+            public static string SoundButtonContentOn()
             {
                 return
                     AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Ukljuci" : "On";
             }
-            public static string SoundButtonContent_off()
+            public static string SoundButtonContentOff()
             {
                 return
                     AuThink.Desktop.Properties.Settings.Default.Language == "Hr" ? "Iskljuci" : "Off";

@@ -40,12 +40,10 @@ namespace AuThink.Desktop.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("true")]
         public bool IsRewardSoundEnabled
         {
-            get
-            {
+            get {
                 return ((bool)(this["IsRewardSoundEnabled"]));
-            }
-            set
-            {
+            } 
+            set {
                 this["IsRewardSoundEnabled"] = value;
             }
         }
@@ -55,12 +53,10 @@ namespace AuThink.Desktop.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("true")]
         public bool IsInstructionSoundEnabled
         {
-            get
-            {
+            get {
                 return ((bool)(this["IsInstructionSoundEnabled"]));
             }
-            set
-            {
+            set {
                 this["IsInstructionSoundEnabled"] = value;
             }
         }

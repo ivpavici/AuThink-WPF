@@ -12,7 +12,7 @@ namespace AuThink.Desktop.Model.Data.Local
     {
         public IEnumerable<ent::Test> GetAll()
         {
-            return AuThink.Desktop.Model.Properties.Settings.Default.Setting == "Hr"
+            return AuThink.Desktop.Model.Properties.Settings.Default.Language == "Hr"
               ? PrivateDataModel_Hr()
               : PrivateDataModel_En();
         }
