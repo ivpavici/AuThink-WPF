@@ -6,6 +6,23 @@
       mc:Ignorable="d" 
       d:DesignHeight="768" d:DesignWidth="1366"
       DataContext="{Binding Game, Source={StaticResource Locator}}">
+
+    <UserControl.Resources>
+        <Storyboard x:Key="PopupStoryboard" >
+            <ObjectAnimationUsingKeyFrames x:Name="Open" Storyboard.TargetName="MenuPopup" Storyboard.TargetProperty="Visibility" Duration="0">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="MenuPopup">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
     <Grid Background="White">
         <MediaElement x:Name="mediaElement" LoadedBehavior="Manual" Visibility="Collapsed"/>
 
@@ -15,8 +32,11 @@
         <Button 
             x:Name="PauseMenuButton" 
             Command="{Binding OpenPopupCommand}" 
-            Width="100" Height="100" VerticalAlignment="Top" HorizontalAlignment="right" Opacity="0.3">
-            
+            Width="100" 
+            Height="100" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="right" 
+            Opacity="0.3">
             <Image Source="/Assets/Gear.png"/>
         </Button>
 
@@ -27,6 +47,7 @@
                         <Button 
         					x:Name="PopupContinue" 
         					HorizontalAlignment="Center" 
+                            Command="{Binding ClosePopupCommand}" 
         					Content="{Binding PopupClose}" 
         					MinWidth="360" MinHeight="41" FontSize="29.333"
         					Click="PopupContinueOnClick" Margin="0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" />

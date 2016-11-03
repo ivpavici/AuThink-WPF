@@ -1,5 +1,6 @@
 ﻿using AuThink.Desktop.Services;
 using AuThink.Desktop.Settings;
+using AuThink.Desktop.Views;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
@@ -92,13 +93,13 @@ namespace AuThink.Desktop.ViewModels
         public RelayCommand PopupButtonMainMenuCommand { get; set; }
         private void PopupButtonMainMenu()
         {
-            //navigation.NavigateTo(typeof(MainPage));
+            _navigation.NavigateTo(new MainMenu());
         }
 
         public RelayCommand PopupButtonTestMenuCommand { get; set; }
         private void PopupButtonTestMenu()
         {
-            //navigation.NavigateTo(typeof(TestListView));
+            _navigation.NavigateTo(new TestListView());
         }
     }
 

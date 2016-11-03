@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -244,7 +245,7 @@ namespace AuThink.Desktop.Views
             //this.AddHandler(UIElement.PointerReleasedEvent, new PointerEventHandler(_DropPlaceholder_PointerReleased), true);
 
             SoundServices.Instance.Initialize(this.mediaElement);
-            //PopUpService.Instance.Initialize(this.PopupStoryboard);
+            PopUpService.Instance.Initialize(((Storyboard)this.Resources["PopupStoryboard"]));
         }
     }
 }
