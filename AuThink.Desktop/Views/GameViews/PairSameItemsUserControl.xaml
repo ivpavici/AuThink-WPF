@@ -10,22 +10,21 @@
 
         <UserControl.Resources>
             <DataTemplate x:Key="DraggableElementTemplate">
-                <controls:DraggableElement 
-                VerticalAlignment="Stretch" 
-                HorizontalAlignment="Stretch"
-                PairId="{Binding Id}" Padding="0"
-                Width="150" 
-                Height="150">
+<!--                <controls:DraggableElement -->
+<!--                VerticalAlignment="Stretch" -->
+<!--                HorizontalAlignment="Stretch"-->
+<!--                PairId="{Binding Id}" Padding="0"-->
+<!--                Width="150" -->
+<!--                Height="150">-->
                     <Button 
                         Width="150" 
                         Height="150"
                         HorizontalAlignment="Center"
                         Padding="0">
                         <Image
-                            Source="{Binding Path=Url}">
-                        </Image>
+                            Source="{Binding Url}"/>
                     </Button>
-                </controls:DraggableElement>
+<!--                </controls:DraggableElement>-->
             </DataTemplate>
             <DataTemplate x:Key="DropPlaceholderTemplate">
                 <controls:DropPlaceholder

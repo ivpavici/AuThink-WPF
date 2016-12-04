@@ -51,7 +51,6 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                     (
                         new PairSameItemsPicture(picture.Id, picture.Url, currentPictureIndex.ToString())
                     );
-
                 }
                 else if (currentPictureIndex >= 3)
                 {

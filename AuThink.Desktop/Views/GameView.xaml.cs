@@ -87,136 +87,136 @@ namespace AuThink.Desktop.Views
             return FindParentOfElement<T>(VisualTreeHelper.GetParent(element));
         }
 
-        //private void _DraggableElement_PointerPressed(object sender, PointerRoutedEventArgs e)
-        //{
-        //    if (isDragging)
-        //    {
-        //        CancelDragging();
-        //        return;
-        //    }
-
-        //    if (!(e.OriginalSource is DependencyObject)) { return; }
-
-        //    draggingElement = FindParentOfElement<DraggableElement>(e.OriginalSource as DependencyObject) as DraggableElement;
-
-        //    if (draggingElement == null) { return; }
-
-        //    if (draggingElement.Content is UIElement)
-        //    {
-        //        InitDraggingElement
-        //        (
-        //            pointerEventArgs: e,
-        //            draggableElement: draggingElement
-        //        );
-        //    }
-
-        //    TransferDraggingContentToDraggingElement
-        //    (
-        //        sourceElement: draggingElement
-        //    );
-
-        //    isDragging = true;
-        //}
-        //private void _DropPlaceholder_PointerReleased(object sender, PointerRoutedEventArgs e)
-        //{
-        //    if (!isDragging || draggingElement_content == null)
-        //    {
-        //        return;
-        //    }
-
-        //    var dropPlaceholder = FindParentOfElement<DropPlaceholder>(e.OriginalSource as DependencyObject) as DropPlaceholder;
-
-        //    if (dropPlaceholder == null)
-        //    {
-        //        CancelDragging();
-        //        return;
-        //    }
-
-        //    if (IsDropSuccessful(dropPlaceholder))
-        //    {
-        //        TransferDraggingContentToDropElement
-        //        (
-        //            destinationElement: dropPlaceholder
-        //        );
-
-        //        SoundServices.Instance.Play();
-
-        //        isDragging = false;
-        //    }
-        //    else
-        //    {
-        //        CancelDragging();
-        //    }
-        //}
-        //protected override void OnPointerMoved(PointerRoutedEventArgs e)
-        //{
-        //    if (!isDragging)
-        //    {
-        //        return;
-        //    }
-
-        //    base.OnPointerMoved(e);
-        //    var position = e.GetCurrentPoint(this.Parent as UIElement).Position;
-
-        //    draggingContentControl.Margin = new Thickness
-        //    (
-        //        left: position.X - startPosition.X,
-        //        top: position.Y - startPosition.Y,
-        //        right: 0,
-        //        bottom: 0
-        //    );
-        //}
-
-        //private void InitDraggingElement(PointerRoutedEventArgs pointerEventArgs, DraggableElement draggableElement)
-        //{
-        //    startPosition = pointerEventArgs.GetCurrentPoint(draggableElement.Content as UIElement).Position;
-        //    var positionRelativeToParent = pointerEventArgs.GetCurrentPoint(this.Parent as UIElement).Position;
-
-        //    draggingContentControl.Margin = new Thickness
-        //    (
-        //        left: positionRelativeToParent.X - startPosition.X,
-        //        top: positionRelativeToParent.Y - startPosition.Y,
-        //        right: 0,
-        //        bottom: 0
-        //    );
-        //}
-        private bool IsDropSuccessful(DropPlaceholder dropedOn)
-        {
-            if (_taskKey == AuThink.Desktop.Model.Rules.Keys.PairHalves)
-            {
-                return dropedOn.ExpectedPairId == _draggingElement.PairId;
-            }
-            else if (_taskKey == AuThink.Desktop.Model.Rules.Keys.PairSameItems)
-            {
-                return dropedOn.ExpectedPairId.ToString() == _draggingElement.PairId.ToString();
-            }
-
-            return false;
-        }
-        private void CancelDragging()
-        {
-            draggingContentControl.Content = null;
-            _draggingElement.Content = _draggingElementContent;
-            _draggingElement = null;
-            _isDragging = false;
-        }
-        private void TransferDraggingContentToDraggingElement(DraggableElement sourceElement)
-        {
-            _draggingElement = sourceElement;
-            _draggingElementContent = _draggingElement.Content;
-            _draggingElement.Content = null;
-            draggingContentControl.DataContext = _draggingElement.DataContext;
-            draggingContentControl.Content = _draggingElementContent;
-        }
-        private void TransferDraggingContentToDropElement(DropPlaceholder destinationElement)
-        {
-            draggingContentControl.Content = null;
-
-            //destinationElement.Content = draggingElement_content;
-            destinationElement.DropElement(_draggingElementContent);
-            _draggingElement.Visibility = Visibility.Collapsed;
-            _draggingElement = null;
-        }
+//        private void _DraggableElement_PointerPressed(object sender, MouseEventArgs e)
+//        {
+//            if (_isDragging)
+//            {
+//                CancelDragging();
+//                return;
+//            }
+//
+//            if (!(e.OriginalSource is DependencyObject)) { return; }
+//
+//            _draggingElement = FindParentOfElement<DraggableElement>(e.OriginalSource as DependencyObject) as DraggableElement;
+//
+//            if (_draggingElement == null) { return; }
+//
+//            if (_draggingElement.Content is UIElement)
+//            {
+//                InitDraggingElement
+//                (
+//                    e: e,
+//                    draggableElement: _draggingElement
+//                );
+//            }
+//
+//            TransferDraggingContentToDraggingElement
+//            (
+//                sourceElement: _draggingElement
+//            );
+//
+//            _isDragging = true;
+//        }
+//        private void _DropPlaceholder_PointerReleased(object sender, MouseEventArgs e)
+//        {
+//            if (!_isDragging || _draggingElementContent == null)
+//            {
+//                return;
+//            }
+//
+//            var dropPlaceholder = FindParentOfElement<DropPlaceholder>(e.OriginalSource as DependencyObject) as DropPlaceholder;
+//
+//            if (dropPlaceholder == null)
+//            {
+//                CancelDragging();
+//                return;
+//            }
+//
+//            if (IsDropSuccessful(dropPlaceholder))
+//            {
+//                TransferDraggingContentToDropElement
+//                (
+//                    destinationElement: dropPlaceholder
+//                );
+//
+//                SoundServices.Instance.Play();
+//
+//                _isDragging = false;
+//            }
+//            else
+//            {
+//                CancelDragging();
+//            }
+//        }
+//        protected override void OnMouseMove(MouseEventArgs e)
+//        {
+//            if (!_isDragging)
+//            {
+//                return;
+//            }
+//
+//            base.OnMouseMove(e);
+//            var position = e.GetPosition(this.Parent as UIElement);
+//
+//            draggingContentControl.Margin = new Thickness
+//            (
+//                left: position.X - _startPosition.X,
+//                top: position.Y - _startPosition.Y,
+//                right: 0,
+//                bottom: 0
+//            );
+//        }
+//
+//        private void InitDraggingElement(MouseEventArgs e, DraggableElement draggableElement)
+//        {
+//            _startPosition = e.GetPosition(draggableElement.Content as UIElement);
+//            var positionRelativeToParent = e.GetPosition(this.Parent as UIElement);
+//
+//            draggingContentControl.Margin = new Thickness
+//            (
+//                left: positionRelativeToParent.X - _startPosition.X,
+//                top: positionRelativeToParent.Y - _startPosition.Y,
+//                right: 0,
+//                bottom: 0
+//            );
+//        }
+//        private bool IsDropSuccessful(DropPlaceholder dropedOn)
+//        {
+//            if (_taskKey == AuThink.Desktop.Model.Rules.Keys.PairHalves)
+//            {
+//                return dropedOn.ExpectedPairId == _draggingElement.PairId;
+//            }
+//            else if (_taskKey == AuThink.Desktop.Model.Rules.Keys.PairSameItems)
+//            {
+//                return dropedOn.ExpectedPairId.ToString() == _draggingElement.PairId.ToString();
+//            }
+//
+//            return false;
+//        }
+//        private void CancelDragging()
+//        {
+//            draggingContentControl.Content = null;
+//            _draggingElement.Content = _draggingElementContent;
+//            _draggingElement = null;
+//            _isDragging = false;
+//        }
+//        private void TransferDraggingContentToDraggingElement(DraggableElement sourceElement)
+//        {
+//            _draggingElement = sourceElement;
+//            _draggingElementContent = _draggingElement.Content;
+//            _draggingElement.Content = null;
+//            draggingContentControl.DataContext = _draggingElement.DataContext;
+//            draggingContentControl.Content = _draggingElementContent;
+//        }
+//        private void TransferDraggingContentToDropElement(DropPlaceholder destinationElement)
+//        {
+//            draggingContentControl.Content = null;
+//
+//            //destinationElement.Content = _draggingElementContent;
+//            destinationElement.DropElement(_draggingElementContent);
+//            _draggingElement.Visibility = Visibility.Collapsed;
+//            _draggingElement = null;
+//        }
 
         private void PopupContinueOnClick(object sender, RoutedEventArgs e)
         {
@@ -241,8 +241,8 @@ namespace AuThink.Desktop.Views
 
             _taskQueries = (ITaskQueries)SimpleIoc.Default.GetInstance(typeof(ITaskQueries));
 
-            //this.AddHandler(UIElement.press.PointerPressedEvent, new PointerEventHandler(_DraggableElement_PointerPressed), true);
-            //this.AddHandler(UIElement.PointerReleasedEvent, new PointerEventHandler(_DropPlaceholder_PointerReleased), true);
+            //this.AddHandler(UIElement.MouseEnterEvent, new MouseEventHandler(_DraggableElement_PointerPressed), true);
+            //this.AddHandler(UIElement.MouseLeaveEvent, new MouseEventHandler(_DropPlaceholder_PointerReleased), true);
 
             SoundServices.Instance.Initialize(this.mediaElement);
             PopUpService.Instance.Initialize(((Storyboard)this.Resources["PopupStoryboard"]));

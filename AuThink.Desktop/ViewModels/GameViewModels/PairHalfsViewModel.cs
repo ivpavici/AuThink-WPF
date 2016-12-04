@@ -20,7 +20,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             foreach (var picture in picturesData)
             {
 //                var halves = await PictureService.GetHalves(picture);
-
+//
 //                this.PairPictureCollection.Add(new PairHalfsPicture(picture.Id, halves.Item2, halves.Item1, picture.Url, picture.Id.ToString()));
 
             }
