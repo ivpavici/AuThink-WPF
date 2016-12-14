@@ -72,6 +72,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\DragDrop\CanvasDragDropAdvisor.cs" />
+    <Compile Include="Controls\DragDrop\DragDropManager.cs" />
+    <Compile Include="Controls\DragDrop\DragSourceBase.cs" />
+    <Compile Include="Controls\DragDrop\DropPreviewAdorner.cs" />
+    <Compile Include="Controls\DragDrop\DropTargetBase.cs" />
     <Compile Include="Controls\DraggableElement.cs" />
     <Compile Include="Controls\DropPlaceholder.cs" />
     <Compile Include="Converters\EnableButtonConverter.cs" />
@@ -157,6 +162,10 @@
     <Compile Include="Views\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Skins\GlobalStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\EndTestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -265,7 +274,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Skins\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Logo\authink-background.jpg" />

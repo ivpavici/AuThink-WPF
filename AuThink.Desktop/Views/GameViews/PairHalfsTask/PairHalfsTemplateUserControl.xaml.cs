@@ -24,5 +24,10 @@ namespace AuThink.Desktop.Views.GameViews.PairHalfsTask
         {
             InitializeComponent();
         }
+
+	    private void DropPlaceholder_OnOnDropSuccessful(object sender, EventArgs e)
+	    {
+		    //throw new NotImplementedException();
+	    }
     }
 }

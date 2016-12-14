@@ -79,5 +79,6 @@ namespace AuThink.Desktop.Core.Entities
             public string UniquePairId { get; private set; }
             public bool IsLeftHalf { get; private set; }
         }
+
     }
 }

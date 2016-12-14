@@ -3,97 +3,78 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Net;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 using AuThink.Desktop.Core.Entities;
 
 
 namespace AuThink.Desktop.Services
 {
-//    public class PictureService
-//    {
-//        async static public Task<Tuple<ImageSource, ImageSource>> GetHalves(ent.Picture picture)
-//        {
-//            IRandomAccessStream stream;
+	public class PictureService
+	{
+		async static public Task<Tuple<ImageSource, ImageSource>> GetHalves(Picture picture)
+		{
+			//Stream imageStream;
+			//if (picture.Url.StartsWith("https://") || picture.Url.StartsWith("http://"))
+			//{
+			//	var httpRequest = (HttpWebRequest)WebRequest.Create(picture.Url);
+			//	var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
 
-//            if (picture.Url.StartsWith("https://"))
-//            {
-//                var client = new HttpClient();
+			//	imageStream = httpResponse.GetResponseStream();
+			//}
+			//else
+			//{
+			//	imageStream = File.OpenRead(picture.Url);
+			//}
 
-//                var request = new HttpRequestMessage(HttpMethod.Get, picture.Url);
-//                var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
+			BitmapImage src = new BitmapImage();
+			src.BeginInit();
+			src.UriSource = new Uri(picture.Url, UriKind.Relative);
+			src.CacheOption = BitmapCacheOption.OnLoad;
+			src.EndInit();
 
-//                var randomAccessStream = new InMemoryRandomAccessStream();
-//                var writer = new DataWriter(randomAccessStream.GetOutputStreamAt(0));
-//                writer.WriteBytes(await response.Content.ReadAsByteArrayAsync());
-//                await writer.StoreAsync();
+			var leftImagePart = new CroppedBitmap(src, new Int32Rect(0, 0, (int)src.Width / 2, (int)src.Height));
+			var rightImagePart = new CroppedBitmap(src, new Int32Rect((int)src.Width / 2, 0, (int)src.Width / 2, (int)src.Height));
 
-//                stream = randomAccessStream;
-//            }
-//            else
-//            {
-//                var storageFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri(picture.Url));
+			return new Tuple<ImageSource, ImageSource>(leftImagePart, rightImagePart);
+		}
 
-//                stream = await storageFile.OpenReadAsync();
-//            }
+		//async static private Task<byte[]> _GetPixelData(BitmapDecoder decoder, uint startPointX, uint startPointY, uint width, uint height)
+		//{
+		//	return await _GetPixelData(decoder, startPointX, startPointY, width, height, decoder.PixelWidth, decoder.PixelHeight);
+		//}
 
-//            using (stream)
-//            {
-//                var decoder = await BitmapDecoder.CreateAsync(stream);
+		//async static private Task<byte[]> _GetPixelData(BitmapDecoder decoder, uint startPointX, uint startPointY, uint width, uint height, uint scaledWidth, uint scaledHeight)
+		//{
+		//	var transform = new BitmapTransform();
+		//	var bounds = new BitmapBounds
+		//	{
+		//		X = startPointX,
+		//		Y = startPointY,
+		//		Height = height,
+		//		Width = width,
+		//	};
+		//	transform.Bounds = bounds;
 
-//                var newWidth = decoder.PixelWidth / 2;
-//                var newHeight = decoder.PixelHeight;
+		//	transform.ScaledWidth = scaledWidth;
+		//	transform.ScaledHeight = scaledHeight;
 
-//                var leftPixels = await _GetPixelData(decoder, 0, 0, newWidth, newHeight);
+		//	// Get the cropped pixels within the bounds of transform. 
+		//	var pix = await decoder.GetPixelDataAsync(
+		//		BitmapPixelFormat.Bgra8,
+		//		BitmapAlphaMode.Straight,
+		//		transform,
+		//		ExifOrientationMode.IgnoreExifOrientation,
+		//		ColorManagementMode.ColorManageToSRgb);
+		//	var pixels = pix.DetachPixelData();
 
-//                // Stream the left part bytes into a WriteableBitmap 
-//                var leftCropBmp = new WriteableBitmap((int)newWidth, (int)newHeight);
-//                var leftPixStream = leftCropBmp.PixelBuffer.AsStream();
-//                leftPixStream.Write(leftPixels, 0, (int)(newWidth * newHeight * 4));
-
-//                var rightPixels = await _GetPixelData(decoder, newWidth, 0, newWidth, newHeight);
-
-//                // Stream the right part bytes into a WriteableBitmap 
-//                var rightCropBmp = new WriteableBitmap((int)newWidth, (int)newHeight);
-//                var rightPixStream = rightCropBmp.PixelBuffer.AsStream();
-//                rightPixStream.Write(rightPixels, 0, (int)(newWidth * newHeight * 4));
-
-//                return new Tuple<ImageSource, ImageSource>(leftCropBmp, rightCropBmp);
-//            }
-//        }
-
-//        async static private Task<byte[]> _GetPixelData(BitmapDecoder decoder, uint startPointX, uint startPointY, uint width, uint height)
-//        {
-//            return await _GetPixelData(decoder, startPointX, startPointY, width, height, decoder.PixelWidth, decoder.PixelHeight);
-//        }
-
-//        async static private Task<byte[]> _GetPixelData(BitmapDecoder decoder, uint startPointX, uint startPointY, uint width, uint height, uint scaledWidth, uint scaledHeight)
-//        {
-//            var transform = new BitmapTransform();
-//            var bounds = new BitmapBounds
-//            {
-//                X = startPointX,
-//                Y = startPointY,
-//                Height = height,
-//                Width = width,
-//            };
-//            transform.Bounds = bounds;
-
-//            transform.ScaledWidth = scaledWidth;
-//            transform.ScaledHeight = scaledHeight;
-
-//            // Get the cropped pixels within the bounds of transform. 
-//            var pix = await decoder.GetPixelDataAsync(
-//                BitmapPixelFormat.Bgra8,
-//                BitmapAlphaMode.Straight,
-//                transform,
-//                ExifOrientationMode.IgnoreExifOrientation,
-//                ColorManagementMode.ColorManageToSRgb);
-//            var pixels = pix.DetachPixelData();
-
-//            return pixels;
-//        }
-//    }
+		//	return pixels;
+		//}
+	}
 
     public class PopUpService
     {

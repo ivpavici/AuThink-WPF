@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 using AuThink.Desktop.Core;
 using AuThink.Desktop.Core.Entities;
@@ -15,13 +13,13 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 {
     public partial class PairHalfsViewModel: ViewModelBase
     {
-        async private void TransformPicturesDataToModelData(List<Picture.PairHalfPicture> picturesData)
+        async private void TransformPicturesDataToModelData(List<Picture> picturesData)
         {
             foreach (var picture in picturesData)
             {
-//                var halves = await PictureService.GetHalves(picture);
+                var halves = await PictureService.GetHalves(picture);
 
-//                this.PairPictureCollection.Add(new PairHalfsPicture(picture.Id, halves.Item2, halves.Item1, picture.Url, picture.Id.ToString()));
+                this.PairPictureCollection.Add(new PairHalfsPicture(picture.Id, halves.Item2, halves.Item1, picture.Url, picture.Id.ToString()));
 
             }
 
@@ -31,7 +29,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
         private void Init()
         {
             var pictures = _pictureQueries.GetAllPicturesForTask(GameState.GetTask())
-                                         .Select(picture => (Picture.PairHalfPicture)picture)
+                                         .Select(picture => picture)
                                          .ToList();
 
             SoundUrl = SoundServices.GetInstructionsSoundUrl
@@ -39,10 +37,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                 sound: _taskQueries.GetSingleById(GameState.GetTask()).VoiceCommand
             );
 
-            TransformPicturesDataToModelData
-            (
-                picturesData: pictures
-            );
+            TransformPicturesDataToModelData(pictures);
 
             PictureCount = pictures.Count();
         }
