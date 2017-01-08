@@ -5,33 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:Authink.Desktop.Controls"
              xmlns:pairHalfsTask="clr-namespace:AuThink.Desktop.Views.GameViews.PairHalfsTask"
-             xmlns:dragDrop="clr-namespace:AuThink.Desktop.Controls.DragDrop"
              mc:Ignorable="d" 
-			 Loaded="PairHalfsUserControl_OnLoaded"
+			 xmlns:dd="urn:gong-wpf-dragdrop"
              d:DesignHeight="300" d:DesignWidth="300"
              DataContext ="{Binding PairHalfs, Source={StaticResource Locator}}">
     
     <UserControl.Resources>
-		<dragDrop:CanvasDragSource x:Key="sourceForDragOp"/>
-		<dragDrop:CanvasDropTarget x:Key="targetForDragOp"/>
 		<DataTemplate x:Key="DraggableElementTemplate">
-            <controls:DraggableElement
-                PairId="{Binding UniquePairId}"
-				Style="{StaticResource PictureButtonStyle}"
-                Width="150"
-                Height="150"
-                Padding="0">
-				<Image Source="{Binding Path=RightImageSource}" />
-			</controls:DraggableElement>
+			<Border 
+				Width="150" Height="150"
+				BorderThickness="5"
+				Margin="10 0 0 0"
+				BorderBrush="LightGray">
+				<StackPanel Orientation="Horizontal">
+					<controls:DraggableElement
+						PairId="{Binding UniquePairId}"
+						HorizontalAlignment="Left"
+						Source="{Binding Path=RightImageSource}"/>
+					<Image Height="150" Source="../../../Assets/empty.png" />
+				</StackPanel>
+			</Border>
+<!--				<Image Source="{Binding Path=RightImageSource}" />-->
+			
         </DataTemplate>
         <DataTemplate x:Key="PairHalfsConteinerTemplate">
-			<pairHalfsTask:PairHalfsTemplateUserControl AllowDrop="True" Margin="10,0,10,0" />
+			<pairHalfsTask:PairHalfsTemplateUserControl Margin="10,0,10,0" />
         </DataTemplate>
     </UserControl.Resources>
-	<Canvas x:Name="CanvasContainer"
-			HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-			dragDrop:DragDropManager.DragSource="{StaticResource sourceForDragOp}"
-			>
+
 		<Grid x:Name="MainContainer"
 			HorizontalAlignment="Stretch" 
 			Background="White">
@@ -43,12 +44,14 @@
 			<Grid Grid.Row="0">
 				<MediaElement Source="{Binding SoundUrl}" Visibility="Collapsed"/>
 				<ItemsControl 
-					dragDrop:DragDropManager.DropTarget="{StaticResource targetForDragOp}"
 					ItemTemplate="{StaticResource PairHalfsConteinerTemplate}" 
 					HorizontalContentAlignment="Center" 
 					ItemsSource="{Binding PairPictureCollection}"
 					AllowDrop="False" 
 					VerticalAlignment="Center" 
+					dd:DragDrop.IsDragSource="True"
+					dd:DragDrop.IsDropTarget="True"
+					dd:DragDrop.DropHandler="{Binding}"
 					HorizontalAlignment="Center">
 					<ItemsControl.ItemsPanel>
 						<ItemsPanelTemplate>
@@ -68,15 +71,18 @@
 				LIST OF RIGHT HALVES     
 				-->
 				<ItemsControl  
-					
-        			ItemTemplate="{StaticResource DraggableElementTemplate}"
+					ItemTemplate="{StaticResource DraggableElementTemplate}"
         			ItemsSource="{Binding PairPictureCollection}"
         			AllowDrop="False" 
         			ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
         			ScrollViewer.VerticalScrollBarVisibility="Hidden" 
 					HorizontalAlignment="Center" 
 					VerticalAlignment="Center" 
-					Margin="0,10,0,0">
+					Margin="0,10,0,0"
+					dd:DragDrop.IsDragSource="True"
+					dd:DragDrop.UseDefaultDragAdorner="True"
+					dd:DragDrop.UseDefaultEffectDataTemplate="True"
+					dd:DragDrop.DragHandler="{Binding}">
 					<ItemsControl.ItemsPanel>
 						<ItemsPanelTemplate>
 							<VirtualizingStackPanel Orientation="Horizontal" />
@@ -84,7 +90,8 @@
 					</ItemsControl.ItemsPanel>
 				</ItemsControl>
 			</Border>
-		</Grid>
-		<Image x:Name="DraggableImage" Visibility="Collapsed" />
-	</Canvas>
+<!--		<Image x:Name="DraggableImage" Visibility="Collapsed" />-->
+	</Grid>
+		
+
 </UserControl>

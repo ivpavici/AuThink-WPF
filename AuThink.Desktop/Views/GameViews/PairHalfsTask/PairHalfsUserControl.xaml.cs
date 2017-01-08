@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AuThink.Desktop.Views.GameViews.PairHalfsTask
 {
@@ -23,40 +12,59 @@ namespace AuThink.Desktop.Views.GameViews.PairHalfsTask
         public PairHalfsUserControl()
         {
 			InitializeComponent();
+			//Mouse.AddMouseDownHandler(this, CanvasMouseLeftButtonDown);
+			//Mouse.AddMouseUpHandler(this, CanvasMouseLeftButtonUp);
+			//Mouse.AddMouseMoveHandler(this, CanvasMouseMove);
         }
-
-	    private void UIElement_OnDrop(object sender, DragEventArgs e)
-	    {
-		    
-	    }
-
-	    private bool _IsDragging = false;
+		
+		
+		private Point mousePosition;
 	    private Image _DraggingImage;
-		private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+
+		private void CanvasMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{
-			var image = sender as Image;
-			DragDrop.DoDragDrop(image, image, DragDropEffects.Copy);
-			_DraggingImage = image;
-			_IsDragging = true;
+			_DraggingImage = e.Source as Image;
+
+//			if (_DraggingImage != null && CanvasContainer.CaptureMouse())
+//			{
+//				DraggableImage.Source = _DraggingImage.Source;
+//				DraggableImage.Visibility = Visibility.Visible;
+//				Canvas.SetLeft(DraggableImage, Canvas.GetLeft(_DraggingImage));
+//				Canvas.SetTop(DraggableImage, Canvas.GetTop(_DraggingImage));
+//				DraggableImage.Width = _DraggingImage.ActualWidth;
+//				DraggableImage.Height = _DraggingImage.ActualHeight;
+//				mousePosition = e.GetPosition(CanvasContainer);
+//				//draggedImage = image;
+//				//Panel.SetZIndex(DraggableImage, 1); // in case of multiple images
+//				DragDrop.DoDragDrop(_DraggingImage, _DraggingImage, DragDropEffects.Copy);
+//			}
 		}
 
-	    private void PairHalfsUserControl_OnLoaded(object sender, RoutedEventArgs e)
-	    {
-			double left = (CanvasContainer.ActualWidth - MainContainer.ActualWidth) / 2;
-			Canvas.SetLeft(MainContainer, left);
+		private void CanvasMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		{
+//			if (DraggableImage.Visibility == Visibility.Visible)
+//			{
+//				counter = 0;
+//				DraggableImage.Visibility = Visibility.Collapsed;
+//				CanvasContainer.ReleaseMouseCapture();
+//				
+//				//Panel.SetZIndex(DraggableImage, 0);
+//				//DraggableImage = null;
+//			}
+		}
 
-			double top = (CanvasContainer.ActualHeight - MainContainer.ActualHeight) / 2;
-			Canvas.SetTop(MainContainer, top);
-	    }
-		
-	    private void UIElement_OnDragOver(object sender, DragEventArgs e)
-	    {
-			DraggableImage.Source = _DraggingImage.Source;
-			DraggableImage.Visibility = Visibility.Visible;
-			var mousePosition = e.GetPosition(CanvasContainer);
-			Canvas.SetLeft(DraggableImage, mousePosition.X);
-			Canvas.SetTop(DraggableImage, mousePosition.Y);
-	    }
-
+	    private int counter = 0;
+		private void CanvasMouseMove(object sender, MouseEventArgs e)
+		{
+//			if (DraggableImage.Visibility == Visibility.Visible)
+//			{
+//				counter++;
+//				var position = e.GetPosition(CanvasContainer);
+//				var offset = position - mousePosition;
+//				mousePosition = position;
+//				Canvas.SetLeft(DraggableImage, mousePosition.X);
+//				Canvas.SetTop(DraggableImage, mousePosition.Y);
+//			}
+		}
     }
 }

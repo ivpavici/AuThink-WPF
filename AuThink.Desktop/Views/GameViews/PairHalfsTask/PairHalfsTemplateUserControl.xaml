@@ -5,30 +5,38 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:Authink.Desktop.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="310">
     <Grid x:Name="grid">
         <StackPanel
             x:Name="dropContainer"
             Orientation="Horizontal" >
-            <Button
-              Width="150"
-              Height="150"
-              Style="{StaticResource PictureButtonStyle}"
-              Padding="0" HorizontalAlignment="Right" HorizontalContentAlignment="Right">
+            <Border
+				BorderThickness="5"
+				BorderBrush="LightGray"
+				Width="150"
+				Height="150"
+				HorizontalAlignment="Right" >
                 <Image
-                HorizontalAlignment="Right"
-                Source="{Binding Path=LeftImageSource}">
+					HorizontalAlignment="Right"
+					Source="{Binding Path=LeftImageSource}">
                 </Image>
-            </Button>
-            <controls:DropPlaceholder
-              ExpectedPairId="{Binding UniquePairId}"
-              OnDropSuccessful="DropPlaceholder_OnOnDropSuccessful"
-              HorizontalAlignment="Left"
-              Margin="0" VerticalAlignment="Center">
-                <Button Width="150" Height="150" Style="{StaticResource PictureButtonStyle}" Padding="0" HorizontalContentAlignment="Left">
-                    <Image Source="{Binding Path=LeftImageSource}" Visibility="Collapsed" HorizontalAlignment="Left"></Image>
-                </Button>
-            </controls:DropPlaceholder>
+            </Border>
+			<Border
+				BorderThickness="5"
+				BorderBrush="LightGray"
+				Width="150"
+				Height="150"
+				Margin="10 0 0 0"
+				HorizontalAlignment="Right" >
+				<controls:DropPlaceholder
+				  ExpectedPairId="{Binding UniquePairId}"
+				  OnDropSuccessful="DropPlaceholder_OnOnDropSuccessful"
+				  HorizontalAlignment="Left"
+					Source="{Binding Path=RightImageSource}"
+					
+				  Margin="0" VerticalAlignment="Center">
+				</controls:DropPlaceholder>
+			</Border>
         </StackPanel>
         <StackPanel
               x:Name="wholePictureContainer"

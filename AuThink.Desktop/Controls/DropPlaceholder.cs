@@ -6,7 +6,7 @@ using System.Windows.Controls;
 
 namespace Authink.Desktop.Controls
 {
-    public sealed class DropPlaceholder : Button
+    public sealed class DropPlaceholder : Image
     {
         public bool IsFull { get; private set; }
 
@@ -38,9 +38,11 @@ namespace Authink.Desktop.Controls
 
         public bool DropElement(object draggableElementContent)
         {
-            if (!this.IsFull)
+	        var image = draggableElementContent as Image;
+
+            if (image != null && !this.IsFull)
             {
-                this.Content = draggableElementContent;
+                this.Source = image.Source;
 
                 this.IsFull = true;
 

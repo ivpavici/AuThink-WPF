@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Authink.Desktop.Controls
 {
-    public sealed class DraggableElement : Button
+    public sealed class DraggableElement : Image
     {
         public DraggableElement()
         {

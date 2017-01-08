@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/Reward_screen/reward_screen.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <MediaElement x:Name="mediaPlayer" Source="{Binding SoundUrl}"/>
+<!--        <MediaElement x:Name="mediaPlayer" Source="{Binding SoundUrl}"/>-->
         <Viewbox Stretch="Uniform">
             <Grid x:Name="RewardContainer" 
                   Height="768" 
@@ -25,10 +25,11 @@
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
                     <TextBlock 
-                        FontSize="36" 
+                        FontSize="36pt" 
                         HorizontalAlignment="Center" 
                         VerticalAlignment="Center" 
-                        FontFamily="/Fonts/ObelixPro.ttf#ObelixPro" 
+                        FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"
+						Foreground="White"
                         Margin="40"
                         Text="{Binding RewardTextContent}">
                     </TextBlock>
@@ -38,6 +39,8 @@
                             VerticalAlignment="Bottom">
                         <Button x:Name="continueFurtherButton" 
                                 Content="{Binding ContinueButtonContent}" 
+								Template="{StaticResource GlobalYellowButtonStyle}"
+								FontSize="24pt"
                                 Margin="20"
     				            HorizontalAlignment="Center"
                                 FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"

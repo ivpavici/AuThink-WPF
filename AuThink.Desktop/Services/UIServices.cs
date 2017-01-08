@@ -37,8 +37,8 @@ namespace AuThink.Desktop.Services
 			src.CacheOption = BitmapCacheOption.OnLoad;
 			src.EndInit();
 
-			var leftImagePart = new CroppedBitmap(src, new Int32Rect(0, 0, (int)src.Width / 2, (int)src.Height));
-			var rightImagePart = new CroppedBitmap(src, new Int32Rect((int)src.Width / 2, 0, (int)src.Width / 2, (int)src.Height));
+			var leftImagePart = new CroppedBitmap(src, new Int32Rect(0, 0, (int)src.PixelWidth / 2, (int)src.PixelHeight));
+			var rightImagePart = new CroppedBitmap(src, new Int32Rect((int)src.PixelWidth / 2, 0, (int)src.PixelWidth / 2 - 0, (int)src.PixelHeight));
 
 			return new Tuple<ImageSource, ImageSource>(leftImagePart, rightImagePart);
 		}
