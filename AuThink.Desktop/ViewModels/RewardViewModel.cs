@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using AuThink.Desktop.Services;
@@ -72,9 +73,6 @@ namespace AuThink.Desktop.ViewModels
         {
             _navigationService = navigationService;
             this.TempRewordCommand = new RelayCommand(Continue);
-            this.SoundUrl = AuThink.Desktop.Properties.Settings.Default.IsInstructionSoundEnabled
-                ? new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/aplauz-dugi.mp3"))
-                : null;
         }
     }
 }

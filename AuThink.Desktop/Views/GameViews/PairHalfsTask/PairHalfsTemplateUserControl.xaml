@@ -6,7 +6,7 @@
              xmlns:controls="clr-namespace:Authink.Desktop.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="310">
-    <Grid x:Name="grid">
+	<Grid x:Name="grid">
         <StackPanel
             x:Name="dropContainer"
             Orientation="Horizontal" >
@@ -32,7 +32,7 @@
 				  ExpectedPairId="{Binding UniquePairId}"
 				  OnDropSuccessful="DropPlaceholder_OnOnDropSuccessful"
 				  HorizontalAlignment="Left"
-					Source="{Binding Path=RightImageSource}"
+					Source="../../../Assets/empty.png"
 					
 				  Margin="0" VerticalAlignment="Center">
 				</controls:DropPlaceholder>
@@ -40,16 +40,20 @@
         </StackPanel>
         <StackPanel
               x:Name="wholePictureContainer"
-             Visibility="Collapsed">
-            <Button
+			VerticalAlignment="Center"
+             Visibility="{Binding IsWholeImage, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Border
+				BorderThickness="5"
+				BorderBrush="LightGray"
+				Background="White"
                     Height="150"
-                    Style="{StaticResource PictureButtonStyle}"
+				Width="310"
                     Padding="0" HorizontalAlignment="Stretch">
                 <Image
                         HorizontalAlignment="Center"
                         Source="{Binding Path=WholeImageSource}">
                 </Image>
-            </Button>
+            </Border>
         </StackPanel>
     </Grid>
 </UserControl>

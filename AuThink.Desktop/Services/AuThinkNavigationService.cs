@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using AuThink.Desktop.Views;
 
 namespace AuThink.Desktop.Services
 {
@@ -13,6 +14,9 @@ namespace AuThink.Desktop.Services
 
             if (_currentWindow == null) return;
             
+			if(navigateTo is RewardView)
+				SoundServices.Instance.PlayAplauz();
+
             _currentWindow.Content = null;    
             _currentWindow.Content =  navigateTo;
         }      

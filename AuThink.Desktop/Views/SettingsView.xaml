@@ -49,16 +49,20 @@
                             <ColumnDefinition Width="0.33*"/>
                             <ColumnDefinition Width="0.33*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock            			
+                        <TextBlock
             			    Grid.Column="0" 
             			    Text="{Binding ChooseLangText, Mode=TwoWay}" 
             			    FontSize="33.333"
+							Foreground="White"
             			    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"/>
                         <RadioButton 
             			Grid.Column="1"
             			x:Name="ChooseCroatianButton" 
             			Content="{Binding CroatianLanguage, Mode=TwoWay}"
             			Loaded="ChooselanguageButton_Loaded"
+							Foreground="White"
+							FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"
+							VerticalAlignment="Center"
             		    HorizontalAlignment="Right">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Checked">
@@ -71,6 +75,9 @@
             			x:Name="ChooseEnglishButton"
             			Content="{Binding EnglishLanguage, Mode=TwoWay}" 
             			Loaded="ChooselanguageButton_Loaded" 
+							Foreground="White"
+							FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro"
+							VerticalAlignment="Center"
             			HorizontalAlignment="Left"
             			Margin="20,0,0,0">
                             <i:Interaction.Triggers>
@@ -90,13 +97,16 @@
             			    Grid.Column="0" 
             			    Text="{Binding RewardSoundText, Mode=TwoWay}" 
             			    FontSize="33.333"
+							Foreground="White"
             			    FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"/>
                         <RadioButton
                         Grid.Column="1"
             			x:Name="EnableRewardSound"
             			Content="{Binding RewardSoundButtonContentOn, Mode=TwoWay}"
             			Loaded="RadioButton_Loaded"
+							VerticalAlignment="Center"
             			HorizontalAlignment="Right"
+							Foreground="White"
                         FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Checked">
@@ -109,7 +119,9 @@
             			x:Name="DisableRewardSound"
             			Content="{Binding RewardSoundButtonContentOff, Mode=TwoWay}"
             			Loaded="RadioButton_Loaded"
+							VerticalAlignment="Center"
             			HorizontalAlignment="Left"
+							Foreground="White"
                         FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" Margin="20,0,0,0">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Checked">
@@ -128,12 +140,14 @@
             			Grid.Column="0" 
             			Text="{Binding InstructionsSoundText, Mode=TwoWay}" 
             			FontSize="33.333"
+							Foreground="White"
             			FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" VerticalAlignment="Center" HorizontalAlignment="Right"/>
                         <RadioButton
                             Grid.Column="1"
             			    x:Name="EnableSoundInstructions"
             			    Content="{Binding InstructionsSoundButtonContentOn, Mode=TwoWay}"
             			    Loaded="RadioButton_Loaded"
+							Foreground="White"
             			    VerticalAlignment="Center" HorizontalAlignment="Right" 
                             FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro">
                             <i:Interaction.Triggers>
@@ -147,6 +161,7 @@
             			x:Name="DisableSoundInstructions"
             			Content="{Binding InstructionsSoundButtonContentOff, Mode=TwoWay}"
             			Loaded="RadioButton_Loaded"
+							Foreground="White"
             			VerticalAlignment="Center" HorizontalAlignment="Left" 
                         FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" Margin="20,0,0,0">
                             <i:Interaction.Triggers>

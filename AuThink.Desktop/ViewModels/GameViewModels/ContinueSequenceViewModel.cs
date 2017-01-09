@@ -31,7 +31,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
                 PicturesSequence[PicturesSequence.IndexOf(pictureToUpdate)] = pictureToUpdate;
 
-                SoundServices.Instance.Play();
+                SoundServices.Instance.PlayExcellent();
 
                 source.IsHitTestVisible = false;
 

@@ -25,7 +25,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
             if (selectedPicture.Index == CurrentIndex)
             {
-                //SoundServices.Instance.Play();
+                //SoundServices.Instance.PlayExcellent();
 
                 this.SelectedPictures[CurrentIndex] = selectedPicture;
                 this.Pictures.Remove(selectedPicture);

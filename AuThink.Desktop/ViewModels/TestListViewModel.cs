@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using AuThink.Desktop.Core;
 using AuThink.Desktop.Core.Entities;
 using AuThink.Desktop.Services;
@@ -80,6 +81,9 @@ namespace AuThink.Desktop.ViewModels
         public RelayCommand RunTestCommand { get; private set; }
         private void RunTest()
         {
+	        if (SelectedTest == null)
+		        return;
+
             var tasksIds = _taskQueries.GetAllTasksForTest(SelectedTest.Id).Select(task => task.Id).SkipWhile(x => SelectedTask != null && x != SelectedTask.Id).ToList();
 
             GameState.Start(SelectedTest.Id, tasksIds);

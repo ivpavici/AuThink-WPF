@@ -27,7 +27,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             if (picture.IsAnswer)
             {
                 source.IsHitTestVisible = false;
-                //SoundServices.Instance.Play();
+                //SoundServices.Instance.PlayExcellent();
 
                 await System.Threading.Tasks.Task.Delay(2000);
 

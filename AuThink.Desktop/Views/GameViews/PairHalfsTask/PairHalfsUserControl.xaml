@@ -7,6 +7,7 @@
              xmlns:pairHalfsTask="clr-namespace:AuThink.Desktop.Views.GameViews.PairHalfsTask"
              mc:Ignorable="d" 
 			 xmlns:dd="urn:gong-wpf-dragdrop"
+			 
              d:DesignHeight="300" d:DesignWidth="300"
              DataContext ="{Binding PairHalfs, Source={StaticResource Locator}}">
     
@@ -81,7 +82,6 @@
 					Margin="0,10,0,0"
 					dd:DragDrop.IsDragSource="True"
 					dd:DragDrop.UseDefaultDragAdorner="True"
-					dd:DragDrop.UseDefaultEffectDataTemplate="True"
 					dd:DragDrop.DragHandler="{Binding}">
 					<ItemsControl.ItemsPanel>
 						<ItemsPanelTemplate>

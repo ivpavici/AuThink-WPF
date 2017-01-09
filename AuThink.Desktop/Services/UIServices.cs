@@ -120,6 +120,7 @@ namespace AuThink.Desktop.Services
     {
         private static volatile SoundServices _instance;
         private MediaElement _mediaElement;
+	    private MediaElement _aplauzMediaElement;
         public bool IsInitialized { get; private set; }
 
         private SoundServices() { }
@@ -137,14 +138,15 @@ namespace AuThink.Desktop.Services
             }
 
             _mediaElement = mediaElement;
-            _mediaElement.Source = AuThink.Desktop.Properties.Settings.Default.Language == "En"
-                                      ? new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/excellent.mp3"))
-                                      : new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/bravo.mp3"));
+            
+
+			_aplauzMediaElement = new MediaElement();
+			
 
             this.IsInitialized = true;
         }
 
-        public void Play()
+        public void PlayExcellent()
         {
             if (!this.IsInitialized)
             {
@@ -153,9 +155,30 @@ namespace AuThink.Desktop.Services
 
             if (AuThink.Desktop.Properties.Settings.Default.IsRewardSoundEnabled)
             {
+				_mediaElement.Source = Properties.Settings.Default.Language == "En"
+					? new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/excellent.mp3"))
+					: new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/bravo.mp3"));
+	            _mediaElement.Position = TimeSpan.Zero;
                 _mediaElement.Play();
             }
         }
+
+	    public void PlayAplauz()
+	    {
+			if (!this.IsInitialized)
+			{
+				throw new InvalidOperationException("Player first needs to be initialized!");
+			}
+
+			if (Properties.Settings.Default.IsRewardSoundEnabled)
+			{
+				_mediaElement.Source = Properties.Settings.Default.IsInstructionSoundEnabled
+					? new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/aplauz-dugi.mp3"))
+					: null;
+				_mediaElement.Position = TimeSpan.Zero;
+				_mediaElement.Play();
+			}
+	    }
 
         public static Uri GetInstructionsSoundUrl(Sound sound)
         {

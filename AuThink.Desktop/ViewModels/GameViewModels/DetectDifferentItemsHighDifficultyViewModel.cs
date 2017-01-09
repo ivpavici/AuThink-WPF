@@ -24,7 +24,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 //            {
 //                img.IsHitTestVisible = false;
 //
-//                SoundServices.Instance.Play();
+//                SoundServices.Instance.PlayExcellent();
 //
 //                await System.Threading.Tasks.Task.Delay(2000);
 //

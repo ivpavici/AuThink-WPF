@@ -8,9 +8,11 @@ using AuThink.Desktop.Core;
 using AuThink.Desktop.Core.Entities;
 using AuThink.Desktop.Services;
 using Authink.Desktop.Services;
+using AuThink.Desktop.Views;
 using GalaSoft.MvvmLight;
 using GongSolutions.Wpf.DragDrop;
 using GongSolutions.Wpf.DragDrop.Utilities;
+using PropertyChanged;
 
 
 namespace AuThink.Desktop.ViewModels.GameViewModels
@@ -46,6 +48,8 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             PictureCount = pictures.Count();
         }
 
+	    private IDragInfo _DragInfo;
+
 		public virtual void StartDrag(IDragInfo dragInfo)
 		{
 			var itemCount = dragInfo.SourceItems.Cast<object>().Count();
@@ -62,6 +66,8 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 			dragInfo.Effects = (dragInfo.Data != null) ?
 								 DragDropEffects.Copy | DragDropEffects.Move :
 								 DragDropEffects.None;
+
+			_DragInfo = dragInfo;
 		}
 
 		/// <summary>
@@ -80,6 +86,12 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 		/// <param name="dropInfo">Information about the drop.</param>
 		public virtual void Dropped(IDropInfo dropInfo)
 		{
+			var sourceItem = dropInfo.DragInfo.SourceItem as PairHalfsPicture;
+			
+			if (sourceItem != null && sourceItem.IsWholeImage)
+				return;
+
+			dropInfo.DragInfo.VisualSourceItem.Visibility = Visibility.Visible;
 		}
 
 		/// <summary>
@@ -87,6 +99,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 		/// </summary>
 		public virtual void DragCancelled()
 		{
+			_DragInfo.VisualSourceItem.Visibility = Visibility.Visible;
 		}
 
 		/// <summary>
@@ -104,12 +117,38 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
 	    public void DragOver(IDropInfo dropInfo)
 	    {
-		    
+		    var targetItem = dropInfo.TargetItem as PairHalfsPicture;
+		    if (targetItem != null && !targetItem.IsWholeImage)
+		    {
+			    dropInfo.DropTargetAdorner = DropTargetAdorners.Highlight;
+			    dropInfo.Effects = DragDropEffects.Move;
+		    }
 	    }
 
-	    public void Drop(IDropInfo dropInfo)
+	    public async void Drop(IDropInfo dropInfo)
 	    {
-		    
+		    var targetItem = dropInfo.TargetItem as PairHalfsPicture;
+		    var sourceItem = dropInfo.DragInfo.SourceItem as PairHalfsPicture;
+
+		    if (targetItem == null || sourceItem == null)
+		    {
+				dropInfo.DragInfo.VisualSourceItem.Visibility = Visibility.Visible;
+			    return;
+		    }
+
+		    if (targetItem.UniquePairId == sourceItem.UniquePairId)
+		    {
+				dropInfo.DragInfo.VisualSourceItem.Visibility = Visibility.Collapsed;
+				targetItem.IsWholeImage = true;
+				SoundServices.Instance.PlayExcellent();
+		    }
+
+		    if (PairPictureCollection.All(item => item.IsWholeImage))
+		    {
+				await System.Threading.Tasks.Task.Delay(2000);
+				_navigationService.NavigateTo(new RewardView());
+		    }
+			
 	    }
     }
 
@@ -118,11 +157,13 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
         public PairHalfsViewModel
         (
             ITaskQueries taskQueries,
-            IPictureQueries pictureQueries
+            IPictureQueries pictureQueries,
+			AuthinkNavigationService navigationService
         )
         {
             _pictureQueries = pictureQueries;
             _taskQueries = taskQueries;
+	        _navigationService = navigationService;
             this.PairPictureCollection = new ObservableCollection<PairHalfsPicture>();
 
             Init();
@@ -130,12 +171,14 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 
         private readonly ITaskQueries _taskQueries;
         private readonly IPictureQueries _pictureQueries;
+	    private readonly AuthinkNavigationService _navigationService;
 
         public int PictureCount { get; set; }
         public ObservableCollection<PairHalfsPicture> PairPictureCollection { get; set; }
         public Uri SoundUrl { get; set; }
     }
 
+	[ImplementPropertyChanged]
     public class PairHalfsPicture
     {
         public PairHalfsPicture
@@ -158,5 +201,6 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
         public ImageSource LeftImageSource { get; private set; }
         public string WholeImageSource { get; set; }
         public string UniquePairId { get; private set; }
+		public bool IsWholeImage { get; set; }
     }
 }

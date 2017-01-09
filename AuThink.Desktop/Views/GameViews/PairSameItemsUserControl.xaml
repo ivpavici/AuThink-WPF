@@ -5,43 +5,43 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:Authink.Desktop.Controls"
              mc:Ignorable="d" 
+			 xmlns:dd="urn:gong-wpf-dragdrop"
              d:DesignHeight="300" d:DesignWidth="300"
              DataContext ="{Binding PairSameItems, Source={StaticResource Locator}}">
 
-        <UserControl.Resources>
-            <DataTemplate x:Key="DraggableElementTemplate">
-<!--                <controls:DraggableElement -->
-<!--                VerticalAlignment="Stretch" -->
-<!--                HorizontalAlignment="Stretch"-->
-<!--                PairId="{Binding Id}" Padding="0"-->
-<!--                Width="150" -->
-<!--                Height="150">-->
-                    <Button 
-                        Width="150" 
-                        Height="150"
-                        HorizontalAlignment="Center"
-                        Padding="0">
-                        <Image
-                            Source="{Binding Url}"/>
-                    </Button>
-<!--                </controls:DraggableElement>-->
-            </DataTemplate>
-            <DataTemplate x:Key="DropPlaceholderTemplate">
-                <controls:DropPlaceholder
-                ExpectedPairId="{Binding Id}"
-                OnDropSuccessful ="DropSuccessful">
-                    <Button 
-            		    Width="150" 
-            		    Height="150"
-                        HorizontalAlignment="Center"
-                        Padding="0">
-                        <Image
-            			    Source="{Binding Url}" 
-                            Visibility="Collapsed"/>
-                    </Button>
-                </controls:DropPlaceholder>
-            </DataTemplate>
-        </UserControl.Resources>
+    <UserControl.Resources>
+        <DataTemplate x:Key="DraggableElementTemplate">
+
+                <Border
+                    Width="150" 
+                    Height="150"
+					BorderBrush="LightGray"
+					BorderThickness="5"
+                    HorizontalAlignment="Center"
+                    Padding="0">
+                    <Image Source="{Binding Url}"/>
+                </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="DropPlaceholderTemplate">
+			<Border
+				Width="150" 
+				Height="150"
+				BorderBrush="LightGray"
+				BorderThickness="5">
+				<Grid>
+						
+					<Image Source="../../Assets/empty.png" />
+					<controls:DropPlaceholder
+						ExpectedPairId="{Binding Id}"
+						Source="{Binding Url}"
+						Visibility="{Binding IsRight, Converter={StaticResource BooleanToVisibilityConverter}}"
+						OnDropSuccessful ="DropSuccessful">
+
+					</controls:DropPlaceholder>
+				</Grid>
+			</Border>
+		</DataTemplate>
+    </UserControl.Resources>
 
     <Grid  
         HorizontalAlignment="Stretch"
@@ -82,9 +82,11 @@
                     Grid.Column="1"
                     x:Name="emptyControl" 
                     HorizontalContentAlignment="Center" 
-                    AllowDrop="True" 
                     ItemsSource="{Binding ItemsLeftEmpty}"
                     ItemTemplate="{StaticResource DropPlaceholderTemplate}" 
+					dd:DragDrop.IsDragSource="True"
+					dd:DragDrop.IsDropTarget="True"
+					dd:DragDrop.DropHandler="{Binding}"
                     HorizontalAlignment="Left" VerticalAlignment="Center" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -110,6 +112,9 @@
         		ItemsSource="{Binding ItemsRight}" 
         		VerticalAlignment="Center" 
         		AllowDrop="False" 
+				dd:DragDrop.IsDragSource="True"
+					dd:DragDrop.IsDropTarget="True"
+					dd:DragDrop.DropHandler="{Binding}"
         		IsHitTestVisible="false" HorizontalAlignment="Right" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -126,9 +131,11 @@
         		x:Name="emptyControl2" 
         		HorizontalContentAlignment="Center" 
         		VerticalAlignment="Center" 
-        		AllowDrop="True" 
         		ItemTemplate="{StaticResource DropPlaceholderTemplate}" 
         		ItemsSource="{Binding ItemsRightEmpty}"
+				dd:DragDrop.IsDragSource="True"
+					dd:DragDrop.IsDropTarget="True"
+					dd:DragDrop.DropHandler="{Binding}"
                 HorizontalAlignment="Left">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -145,6 +152,9 @@
         		ItemTemplate="{StaticResource DraggableElementTemplate}"
         		ItemsSource="{Binding ItemsSelectionList}"
         		AllowDrop="False" 
+				dd:DragDrop.IsDragSource="True"
+				dd:DragDrop.UseDefaultDragAdorner="True"
+				dd:DragDrop.DragHandler="{Binding}"
         		ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
         		ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
                 <ItemsControl.ItemsPanel>

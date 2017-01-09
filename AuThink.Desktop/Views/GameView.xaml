@@ -46,6 +46,7 @@
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
                         <Button 
         					x:Name="PopupContinue" 
+							Template="{StaticResource GlobalYellowButtonStyle}"
         					HorizontalAlignment="Center" 
                             Command="{Binding ClosePopupCommand}" 
         					Content="{Binding PopupClose}" 
@@ -53,12 +54,14 @@
         					Click="PopupContinueOnClick" Margin="0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" />
                         <Button 
         					x:Name="PopupButtonMainMenu" 
+							Template="{StaticResource GlobalYellowButtonStyle}"
         					HorizontalAlignment="Center" 
         					Command="{Binding PopupButtonMainMenuCommand}" 
         					Content="{Binding PopupMainMenu}" 
         					MinWidth="360" MinHeight="41" Margin="0,25,0,0" FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro" FontSize="29.333"/>
                         <Button 
         					x:Name="PopupButtonTestMenu" 
+							Template="{StaticResource GlobalYellowButtonStyle}"
         					HorizontalAlignment="Center"
         					Command="{Binding PopupButtonTestMenuCommand}" 
         					Content="{Binding PopupTestMenu}"

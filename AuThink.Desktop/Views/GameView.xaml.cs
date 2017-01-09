@@ -139,7 +139,7 @@ namespace AuThink.Desktop.Views
 //                    destinationElement: dropPlaceholder
 //                );
 //
-//                SoundServices.Instance.Play();
+//                SoundServices.Instance.PlayExcellent();
 //
 //                _isDragging = false;
 //            }
