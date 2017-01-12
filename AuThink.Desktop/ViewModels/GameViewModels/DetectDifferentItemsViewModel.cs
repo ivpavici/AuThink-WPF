@@ -20,8 +20,8 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
     {
         private async void ItemClick(RoutedEventArgs e)
         {
-            var list = (ListView)e.OriginalSource;
-            var selectedPicture = (DetectSamePicture)e.Source;
+            var list = (FrameworkElement)e.OriginalSource;
+            var selectedPicture = (DetectDifferentPicture)list.DataContext;
             var container = list.Parent as StackPanel;
 
             //BravoTalker = (kontejner.Parent as Grid).Children.First(child => (child is MediaElement)) as MediaElement;
@@ -34,7 +34,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                 //picture.Source = new BitmapImage(new Uri("/Resources/Nagradni ekran/checkmark.png", UriKind.RelativeOrAbsolute));
                 //BravoTalker.Source = new Uri("ms-appx:///Resources/Sounds/bravo.mp3");
                 //BravoTalker.Play();
-
+				SoundServices.Instance.PlayExcellent();
                 list.IsHitTestVisible = false;
             }
             else

@@ -9,7 +9,8 @@
              d:DesignHeight="300" d:DesignWidth="300"
              DataContext="{Binding VoiceCommands,Source={StaticResource Locator}}"
              >
-    <UserControl.Resources>
+	
+	<UserControl.Resources>
         <DataTemplate x:Key="ItemTemplate">
             <Image 
                 Margin="30"
@@ -33,7 +34,7 @@
             Height="100" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Left" Opacity="0.3">
-                    <Image Source="/Assets/refresh.png"/>
+					<Image Source="/Assets/refresh.png"/>
                 </Button>
                 <Grid 
             VerticalAlignment="Center" 
@@ -46,7 +47,13 @@
                 HorizontalAlignment="Center" 
                 Margin="20,0,0,0" 
                 Grid.Column="0">
-                        <MediaElement x:Name="Sound" Source="{Binding SoundUrl}" Visibility="Collapsed"/>
+						<MediaElement x:Name="Sound" Source="{Binding SoundUrl}" Visibility="Collapsed" LoadedBehavior="Manual" UnloadedBehavior="Manual">
+							<i:Interaction.Triggers>
+								<i:EventTrigger EventName="Loaded">
+									<i:InvokeCommandAction Command="{Binding LoadedCommand}" CommandParameter="{Binding ElementName=Sound}" />
+								</i:EventTrigger>
+							</i:Interaction.Triggers>
+						</MediaElement>
                         <ListView 
                         ItemTemplate="{StaticResource ItemTemplate}"
         	            ItemsSource="{Binding Pictures}"

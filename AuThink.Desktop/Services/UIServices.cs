@@ -112,7 +112,7 @@ namespace AuThink.Desktop.Services
     
         public void Close()
         {
-            _storyboard.Begin();
+            _storyboard.Stop();
         }
     }
 
@@ -138,9 +138,6 @@ namespace AuThink.Desktop.Services
             }
 
             _mediaElement = mediaElement;
-            
-
-			_aplauzMediaElement = new MediaElement();
 			
 
             this.IsInitialized = true;
@@ -175,6 +172,8 @@ namespace AuThink.Desktop.Services
 				_mediaElement.Source = Properties.Settings.Default.IsInstructionSoundEnabled
 					? new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources/Sounds/aplauz-dugi.mp3"))
 					: null;
+				_mediaElement.LoadedBehavior = MediaState.Manual;
+				_mediaElement.UnloadedBehavior = MediaState.Manual;
 				_mediaElement.Position = TimeSpan.Zero;
 				_mediaElement.Play();
 			}

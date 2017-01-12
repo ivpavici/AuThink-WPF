@@ -27,7 +27,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             if (picture.IsAnswer)
             {
                 source.IsHitTestVisible = false;
-                //SoundServices.Instance.PlayExcellent();
+                SoundServices.Instance.PlayExcellent();
 
                 await System.Threading.Tasks.Task.Delay(2000);
 
@@ -70,6 +70,15 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
                 picturesData: pictures
             );
         }
+
+		public RelayCommand<MediaElement> LoadedCommand { get; set; }
+
+	    private void OnLoaded(MediaElement sound)
+	    {
+			sound.Position = TimeSpan.Zero;
+			sound.Play();
+	    }
+
         /// <summary>
         /// HAX
         /// </summary>
@@ -99,7 +108,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             this.Pictures = new ObservableCollection<Picture.AnswerPicture>();
 
             this.ReplayVoiceInstructionCommand = new RelayCommand<object>(ReplayVoiceInstruction);
-
+			LoadedCommand = new RelayCommand<MediaElement>(OnLoaded);
             Init();
         }
 

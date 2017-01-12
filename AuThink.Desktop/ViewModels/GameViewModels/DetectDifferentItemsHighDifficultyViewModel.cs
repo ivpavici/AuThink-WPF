@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AuThink.Desktop.Core;
 using AuThink.Desktop.Core.Entities;
 using AuThink.Desktop.Services;
@@ -16,21 +14,22 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
 {
     public partial class DetectDifferentItemsHighDifficultyViewModel: ViewModelBase
     {
-//        private async void PointerPressed(PointerRoutedEventArgs e)
-//        {
-//            var img = (Image)e.OriginalSource;
-//
-//            if (this.CorrectPicture.Id == Convert.ToInt32(img.Tag))
-//            {
-//                img.IsHitTestVisible = false;
-//
-//                SoundServices.Instance.PlayExcellent();
-//
-//                await System.Threading.Tasks.Task.Delay(2000);
-//
-//                _navigationService.NavigateTo(new RewardView());
-//            }
-//        }
+		private async void PointerPressed(int id)
+		{
+
+			if (this.CorrectPicture.Id == Convert.ToInt32(id))
+			{
+				//img.IsHitTestVisible = false;
+
+				SoundServices.Instance.PlayExcellent();
+
+				await System.Threading.Tasks.Task.Delay(2000);
+
+				_navigationService.NavigateTo(new RewardView());
+			}
+		}
+
+		public RelayCommand<int> PointerPressedCommand { get; set; }
 
         public void TransformPicturesDataToModelData(List<Picture.AnswerPicture> picturesData)
         {
@@ -78,7 +77,7 @@ namespace AuThink.Desktop.ViewModels.GameViewModels
             _navigationService = navigationService;
 
             this.Pictures              = new ObservableCollection<Picture.AnswerPicture>();
-            //this.PointerPressedCommand = new RelayCommand<PointerRoutedEventArgs>(PointerPressed);
+			PointerPressedCommand = new RelayCommand<int>(PointerPressed);
 
             Init();
         }
