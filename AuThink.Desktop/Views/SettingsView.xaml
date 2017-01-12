@@ -60,6 +60,7 @@
             					HorizontalAlignment="Right">
 							<RadioButton 
             					x:Name="ChooseCroatianButton" 
+								GroupName="Language"
             					Content="{Binding CroatianLanguage, Mode=TwoWay}"
             					Loaded="ChooselanguageButton_Loaded"
 									Foreground="White"
@@ -77,6 +78,7 @@
             					Margin="20,0,0,0">
 							<RadioButton 
             					x:Name="ChooseEnglishButton"
+								GroupName="Language"
             					Content="{Binding EnglishLanguage, Mode=TwoWay}" 
             					Loaded="ChooselanguageButton_Loaded" 
 								Foreground="White"
@@ -108,6 +110,7 @@
             					HorizontalAlignment="Right">
 							<RadioButton
 							x:Name="EnableRewardSound"
+								GroupName="RewardSound"
             				Content="{Binding RewardSoundButtonContentOn, Mode=TwoWay}"
             				Loaded="RadioButton_Loaded"
 							Foreground="White"
@@ -125,6 +128,7 @@
             					Margin="20,0,0,0">
 							<RadioButton
 							x:Name="DisableRewardSound"
+								GroupName="RewardSound"
             				Content="{Binding RewardSoundButtonContentOff, Mode=TwoWay}"
             				Loaded="RadioButton_Loaded"
 							Foreground="White"
@@ -154,10 +158,11 @@
             					HorizontalAlignment="Right">
 							<RadioButton
 								x:Name="EnableSoundInstructions"
+								GroupName="SoundInstructions"
             					Content="{Binding InstructionsSoundButtonContentOn, Mode=TwoWay}"
             					Loaded="RadioButton_Loaded"
 								Foreground="White"
-            					FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro">
+								FontFamily="/Assets/Fonts/ObelixPro.ttf#ObelixPro">
 								<i:Interaction.Triggers>
 									<i:EventTrigger EventName="Checked">
 										<i:InvokeCommandAction CommandParameter="true" Command="{Binding ToggleInstructionSoundEnableCommand}"/>
@@ -171,6 +176,7 @@
             					Margin="20,0,0,0">
 							<RadioButton
             					x:Name="DisableSoundInstructions"
+								GroupName="SoundInstructions"
             					Content="{Binding InstructionsSoundButtonContentOff, Mode=TwoWay}"
             					Loaded="RadioButton_Loaded"
 								Foreground="White"
