@@ -37,19 +37,14 @@
         </DataTemplate>
     </UserControl.Resources>
 	<Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="*" />
-			<ColumnDefinition Width="3*" />
-		</Grid.ColumnDefinitions>
-		<Rectangle Fill="#FF116C98"></Rectangle>
-		<Viewbox Stretch="Uniform" Grid.Column="0" Grid.ColumnSpan="2">
+		
 			<Grid 
-       x:Name="TestListContainer" Height="768" Width="1366">
+       x:Name="TestListContainer" >
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="3*" />
 					<ColumnDefinition Width="7*" />
 				</Grid.ColumnDefinitions>
-				<Grid Background="#FF116C98" >
+				<Grid Grid.Column="0" Background="#FF116C98" >
 					<Grid.RowDefinitions>
 						<RowDefinition Height="0.15*" />
 						<RowDefinition Height="0.85*"/>
@@ -140,6 +135,5 @@
 					</StackPanel>
 				</Grid>
 			</Grid>
-		</Viewbox>
 	</Grid>
 </UserControl>

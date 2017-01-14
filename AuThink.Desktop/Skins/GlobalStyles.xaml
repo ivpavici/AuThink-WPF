@@ -162,4 +162,35 @@
 				StrokeDashOffset="0.5" />
 		</Grid>
 	</ControlTemplate>
+
+	<ControlTemplate x:Key="SettingsRadioButtonTemplate" TargetType="{x:Type RadioButton}">
+		<Grid>
+			<Border x:Name="Border"
+				BorderBrush="#FFFFB703"
+				BorderThickness="0"
+				Background="#FFFFB703"
+				CornerRadius="5"
+					HorizontalAlignment="Left"
+					Margin="5 5 0 0"
+					Width="50" Height="50">
+
+				<Rectangle StrokeDashOffset="1.5" StrokeEndLineCap="Round"  Stroke="{StaticResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="5,3" Width="42" Height="42"></Rectangle>
+			</Border>
+			<Image x:Name="PART_Image" Source="../Assets/Reward_screen/checkmark.png" HorizontalAlignment="Left" Width="60" Height="60"/>
+			<TextBlock x:Name="ContentPresenter"
+						Text="{TemplateBinding Content}"
+					   FontSize="{TemplateBinding FontSize}"
+					   Foreground="{TemplateBinding Foreground}"
+						Margin="65 10 0 0"
+						VerticalAlignment="Center"/>
+		</Grid>
+		<ControlTemplate.Triggers>
+			<Trigger Property="IsChecked" Value="True">
+				<Setter TargetName="PART_Image" Property="Source" Value="../Assets/Reward_screen/checkmark.png"/>
+			</Trigger>
+			<Trigger Property="IsChecked" Value="False">
+				<Setter TargetName="PART_Image" Property="Source" Value="{x:Null}"/>
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
 </ResourceDictionary>

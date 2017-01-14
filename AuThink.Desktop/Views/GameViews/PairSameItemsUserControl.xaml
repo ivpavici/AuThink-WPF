@@ -18,6 +18,7 @@
 					BorderBrush="LightGray"
 					BorderThickness="5"
                     HorizontalAlignment="Center"
+					dd:DragDrop.IsDropTarget="True"
                     Padding="0">
                     <Image Source="{Binding Url}"/>
                 </Border>
@@ -47,27 +48,35 @@
         HorizontalAlignment="Stretch"
         Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.8*" />
-            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+            <RowDefinition Height="170" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0"
-              Grid.Column="0">
+		<Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Background="White" dd:DragDrop.IsDropTarget="True" />
+		<Border Grid.Column="0" Grid.Row="1" Background="White" dd:DragDrop.IsDropTarget="True" />
+		<Border Grid.Column="4" Grid.Row="1" Background="White" dd:DragDrop.IsDropTarget="True" />
+		<Border Grid.Column="2" Grid.Row="1" Background="White" dd:DragDrop.IsDropTarget="True" />
+		<Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" Background="White" dd:DragDrop.IsDropTarget="True" />
+		<Grid Grid.Row="1"
+              Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <MediaElement Source="{Binding SoundUrl}" Visibility="Collapsed"/>
-            <ItemsControl 
+			<ItemsControl 
                 Grid.Column="0"
                 ItemTemplate="{StaticResource DraggableElementTemplate}" 
                 HorizontalContentAlignment="Center" 
                 ItemsSource="{Binding ItemsLeft}"
-                AllowDrop="False" 
-                IsHitTestVisible="false" 
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Right">
                 <ItemsControl.ItemsPanel>
@@ -99,8 +108,8 @@
             </ItemsControl>
         </Grid>
         <Grid 
-            Grid.Row="0"
-            Grid.Column="1">
+            Grid.Row="1"
+            Grid.Column="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -112,10 +121,8 @@
         		ItemsSource="{Binding ItemsRight}" 
         		VerticalAlignment="Center" 
         		AllowDrop="False" 
-				dd:DragDrop.IsDragSource="True"
-					dd:DragDrop.IsDropTarget="True"
-					dd:DragDrop.DropHandler="{Binding}"
-        		IsHitTestVisible="false" HorizontalAlignment="Right" >
+				dd:DragDrop.IsDropTarget="True"
+				IsHitTestVisible="false" HorizontalAlignment="Right" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel
@@ -144,25 +151,45 @@
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </Grid>
-        <Border
-        	Grid.Row="1" 
-        	Grid.ColumnSpan="2" Margin="0,-10,0,0" BorderThickness="0,2,0,0" BorderBrush="#33000000" 
-            >
-            <ItemsControl  
+		<Border
+        		Grid.Row="3" 
+				Grid.Column="0"
+        		Grid.ColumnSpan="5" 
+				BorderThickness="0,2,0,0" 
+				BorderBrush="#33000000" 
+				dd:DragDrop.IsDropTarget="True" >
+			<Grid dd:DragDrop.IsDropTarget="True">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Image Source="../../Assets/empty.png" Grid.ColumnSpan="3" Grid.RowSpan="3" 
+					   Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+				<ItemsControl  
+					Grid.Column="1"
+					Grid.Row="1"
         		ItemTemplate="{StaticResource DraggableElementTemplate}"
         		ItemsSource="{Binding ItemsSelectionList}"
         		AllowDrop="False" 
 				dd:DragDrop.IsDragSource="True"
+					dd:DragDrop.IsDropTarget="True"
 				dd:DragDrop.UseDefaultDragAdorner="True"
 				dd:DragDrop.DragHandler="{Binding}"
         		ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
         		ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel Orientation="Horizontal" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-            </ItemsControl>
-        </Border>
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<VirtualizingStackPanel Orientation="Horizontal" />
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+				</ItemsControl>
+			</Grid>
+		</Border>
     </Grid>
 </UserControl>

@@ -13,24 +13,27 @@
     
     <UserControl.Resources>
 		<DataTemplate x:Key="DraggableElementTemplate">
-			<Border 
+			<StackPanel Orientation="Horizontal" Width="160">
+				<Image Source="../../../Assets/empty.png" Width="10" Height="150" Stretch="Fill" />
+				<Border 
 				Width="150" Height="150"
 				BorderThickness="5"
-				Margin="10 0 0 0"
 				BorderBrush="LightGray">
-				<StackPanel Orientation="Horizontal">
-					<controls:DraggableElement
+					<StackPanel Orientation="Horizontal">
+						<controls:DraggableElement
 						PairId="{Binding UniquePairId}"
 						HorizontalAlignment="Left"
 						Source="{Binding Path=RightImageSource}"/>
-					<Image Height="150" Source="../../../Assets/empty.png" />
-				</StackPanel>
-			</Border>
+						<Image Height="150" Source="../../../Assets/empty.png" />
+					</StackPanel>
+				</Border>
+			</StackPanel>
+			
 <!--				<Image Source="{Binding Path=RightImageSource}" />-->
 			
         </DataTemplate>
         <DataTemplate x:Key="PairHalfsConteinerTemplate">
-			<pairHalfsTask:PairHalfsTemplateUserControl Margin="10,0,10,0" />
+			<pairHalfsTask:PairHalfsTemplateUserControl />
         </DataTemplate>
     </UserControl.Resources>
 
@@ -82,20 +85,32 @@
         		Grid.ColumnSpan="2" 
 				BorderThickness="0,2,0,0" 
 				BorderBrush="#33000000" 
-				dd:DragDrop.IsDropTarget="True"
-				Margin="0,-10,0,0" >
-				<!--
-				LIST OF RIGHT HALVES     
-				-->
-				<ItemsControl  
+				dd:DragDrop.IsDropTarget="True" >
+				<Grid dd:DragDrop.IsDropTarget="True">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+				<Image Source="../../../Assets/empty.png" Grid.ColumnSpan="3" Grid.RowSpan="3" 
+					   Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+				<ItemsControl
 					ItemTemplate="{StaticResource DraggableElementTemplate}"
         			ItemsSource="{Binding PairPictureCollection}"
+					Grid.Column="1"
+					Grid.Row="1"
+					Margin="0 10"
         			AllowDrop="False" 
         			ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
         			ScrollViewer.VerticalScrollBarVisibility="Hidden" 
 					HorizontalAlignment="Center" 
 					VerticalAlignment="Center" 
-					Margin="0,10,0,0"
+					
 					dd:DragDrop.IsDragSource="True"
 					dd:DragDrop.IsDropTarget="True"
 					dd:DragDrop.UseDefaultDragAdorner="True"
@@ -106,6 +121,11 @@
 						</ItemsPanelTemplate>
 					</ItemsControl.ItemsPanel>
 				</ItemsControl>
+			</Grid>
+				<!--
+				LIST OF RIGHT HALVES     
+				-->
+				
 			</Border>
 <!--		<Image x:Name="DraggableImage" Visibility="Collapsed" />-->
 	</Grid>

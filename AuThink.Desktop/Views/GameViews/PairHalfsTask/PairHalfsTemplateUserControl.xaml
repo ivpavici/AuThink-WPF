@@ -16,17 +16,20 @@
 				Width="150"
 				Height="150"
 				HorizontalAlignment="Right" >
-                <Image
-					HorizontalAlignment="Right"
-					Source="{Binding Path=LeftImageSource}">
-                </Image>
-            </Border>
+				<Grid>
+					<Image Source="../../../Assets/empty.png"></Image>
+					<Image
+						HorizontalAlignment="Right"
+						Source="{Binding Path=LeftImageSource}">
+					</Image>
+				</Grid>
+			</Border>
+			<Image Source="../../../Assets/empty.png" Width="10" Height="150" Stretch="Fill" />
 			<Border
 				BorderThickness="5"
 				BorderBrush="LightGray"
 				Width="150"
 				Height="150"
-				Margin="10 0 0 0"
 				HorizontalAlignment="Right" >
 				<controls:DropPlaceholder
 				  ExpectedPairId="{Binding UniquePairId}"
